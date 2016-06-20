@@ -128,7 +128,7 @@
 	<key>DVTSourceTextSyntaxFonts</key>
 	<dict>
 		<key>xcode.syntax.attribute</key>
-		<string>MesloLGLDZ-BoldItalic - 12.0</string>
+		<string>MesloLGLDZ-Regular - 12.0</string>
 		<key>xcode.syntax.character</key>
 		<string>MesloLGLDZ-Regular - 12.0</string>
 		<key>xcode.syntax.comment</key>
@@ -140,11 +140,11 @@
 		<key>xcode.syntax.identifier.class</key>
 		<string>MesloLGLDZ-Regular - 12.0</string>
 		<key>xcode.syntax.identifier.class.system</key>
-		<string>MesloLGLDZ-BoldItalic - 12.0</string>
+		<string>MesloLGLDZ-Regular - 12.0</string>
 		<key>xcode.syntax.identifier.constant</key>
-		<string>MesloLGLDZ-Regular - 12.0</string>
+		<string>MesloLGLDZ-Italic - 12.0</string>
 		<key>xcode.syntax.identifier.constant.system</key>
-		<string>MesloLGLDZ-Regular - 12.0</string>
+		<string>MesloLGLDZ-Italic - 12.0</string>
 		<key>xcode.syntax.identifier.function</key>
 		<string>MesloLGLDZ-Regular - 12.0</string>
 		<key>xcode.syntax.identifier.function.system</key>

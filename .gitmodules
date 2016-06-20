@@ -1,0 +1,3 @@
+[submodule "xcode/Meslo-Font"]
+	path = xcode/Meslo-Font
+	url = https://github.com/andreberg/Meslo-Font
