@@ -9,6 +9,8 @@ GapStyle is designed base on default Intellij Color(Darcula) with Monokai. You s
 
 # Supported Language
 
+Kotlin, Java, Swift, Scala, Javascript, Android Logcat, HTML, CSS, PHP
+
 ### Kotlin (Android Studio / Intellij)
 ![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-kotlin.png)
 
