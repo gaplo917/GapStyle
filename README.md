@@ -7,23 +7,25 @@ GapStyle is designed base on default Intellij Color(Darcula) with Monokai. You s
 * Quickly learn similar syntax with a universal designed color across different languages
 * Spot syntax error before compilation
 
-### Kotlin
-![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/0a0c7191/preview/gap-style-kotlin.png)
+# Support Language
 
-### Swift
-![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/0a0c7191/preview/gap-style-swift.png)
+### Kotlin(Android Studio / Intellij)
+![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-kotlin.png)
 
-### Scala
-![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/0a0c7191/preview/gap-style-scala.png)
+### Java(Android Studio / Intellij)
+![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-java.png)
 
-### Java
-![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/0a0c7191/preview/gap-style-java.png)
+### Swift(App Code)
+![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-swift.png)
 
-### Javascript
-![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/0a0c7191/preview/gap-style-javascript.png)
+### Scala(Intellij)
+![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-scala.png)
 
-### Android Logcat
-![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/0a0c7191/preview/gap-style-android-logcat.png)
+### Javascript(Intellij)
+![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-javascript.png)
 
-### HTML & CSS
+### Android Logcat(Android Studio)
+![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-android-logcat.png)
+
+### HTML & CSS & PHP (Intellij)
 Similar to Monokai
