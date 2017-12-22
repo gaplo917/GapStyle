@@ -3,28 +3,28 @@ GapStyle is designed base on default Intellij Color(Darcula) with Monokai. You s
 
 **Objectives**: 
 
-* Optimize languages' color scheme to boost productivity on reading/writing code (Especially the language your are not familiar)
+* Optimize languages' color schemes to boost productivity on reading/writing code (Especially the language your are not familiar)
 * Quickly learn similar syntax with a universal designed color across different languages
 * Spot syntax error before compilation
 
-# Support Language
+# Supported Language
 
-### Kotlin(Android Studio / Intellij)
+### Kotlin (Android Studio / Intellij)
 ![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-kotlin.png)
 
-### Java(Android Studio / Intellij)
+### Java (Android Studio / Intellij)
 ![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-java.png)
 
-### Swift(App Code)
+### Swift (App Code)
 ![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-swift.png)
 
-### Scala(Intellij)
+### Scala (Intellij)
 ![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-scala.png)
 
-### Javascript(Intellij)
+### Javascript (Intellij)
 ![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-javascript.png)
 
-### Android Logcat(Android Studio)
+### Android Logcat (Android Studio)
 ![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/gap-style-android-logcat.png)
 
 ### HTML & CSS & PHP (Intellij)
