@@ -47,5 +47,5 @@ Kotlin, Java, Swift, Scala, Javascript, Android Logcat, HTML, CSS, PHP
 ### Android Logcat (Android Studio)
 ![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/android-logcat.png)
 
-### HTML & CSS & PHP (PhpStorm/ WebStorm/ Intellij)
-Similar to Monokai
+### PHP (PhpStorm/ WebStorm/ Intellij)
+![PHP](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/php.png)
