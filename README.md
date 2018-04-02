@@ -10,7 +10,7 @@ GapStyle is designed base on default Intellij Color(Darcula) with Monokai. You s
 # Installation(Recommended)
 Preference -> Plugins -> Browser repositories -> Search 'GapStyle' -> install
 
-![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/intellij-gapstyle-plugin-tutorial.png)
+![](https://cdn.rawgit.com/gaplo917/GapStyle/master/intellij-gapstyle-plugin-tutorial.png)
 
 # Installation(Manual)
 1. Download from https://plugins.jetbrains.com/plugin/10559-gapstyle-color-scheme or
@@ -29,25 +29,25 @@ Preference -> Plugins -> Browser repositories -> Search 'GapStyle' -> install
 Kotlin, Java, Swift, Scala, Javascript, Android Logcat, HTML, CSS, PHP
 
 ### Kotlin (Android Studio / Intellij)
-![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/kotlin.png)
+![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/kotlin.png)
 
 ### Java (Android Studio / Intellij)
-![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/java.png)
+![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/java.png)
 
 ### Swift (App Code)
-![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/swift.png)
+![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/swift.png)
 
 ### Scala (Intellij)
-![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/scala.png)
+![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/scala.png)
 
 ### Javascript (Intellij)
-![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/javascript.png)
+![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/javascript.png)
 
 ### Go (GoLand / Intellij)
-![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/go.png)
+![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/go.png)
 
 ### Android Logcat (Android Studio)
-![Android Logcat](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/android-logcat.png)
+![Android Logcat](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/android-logcat.png)
 
 ### PHP (PhpStorm/ WebStorm/ Intellij)
-![PHP](https://cdn.rawgit.com/gaplo917/IDE_Style/master/preview/php.png)
+![PHP](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/php.png)
