@@ -10,6 +10,8 @@ GapStyle is designed base on default Intellij Color(Darcula) with Monokai. You s
 # Installation(Recommended)
 Preference -> Plugins -> Browser repositories -> Search 'GapStyle' -> install
 
+![](https://cdn.rawgit.com/gaplo917/IDE_Style/master/intellij-gapstyle-plugin-tutorial.png)
+
 # Installation(Manual)
 1. Download from https://plugins.jetbrains.com/plugin/10559-gapstyle-color-scheme or
 `git clone https://github.com/gaplo917/GapStyle`
