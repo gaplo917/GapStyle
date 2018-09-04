@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>color.scheme.GapStyle</id>
   <name>GapStyle Color Scheme</name>
-  <version>1.4</version>
+  <version>1.5</version>
   <vendor email="gaplotech@gmail.com" url="https://github.com/gaplo917/GapStyle">Gary Lo</vendor>
 
   <description>
@@ -10,12 +10,12 @@
     &lt;ul&gt;
     &lt;li&gt;&lt;b&gt;Objective 1:&lt;/b&gt;Optimize languages' color schemes to boost productivity on reading/writing code (Especially the language your are not familiar)&lt;/li&gt;
     &lt;li&gt;&lt;b&gt;Objective 2:&lt;/b&gt;Quickly learn similar syntax with a universal designed color across different languages. &lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Supported Languages:&lt;/b&gt;Kotlin, Java, Swift, Scala, Javascript, Go, Android Logcat, Android Native (C / C++), HTML, CSS, PHP&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Supported Languages:&lt;/b&gt;Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android Native (C / C++), SQL, HTML, CSS, PHP&lt;/li&gt;
     &lt;/ul&gt;
   </description>
 
   <change-notes><![CDATA[
-      update description, support C/C++
+      Support Python & PyCharm. Coloring bug fixed on Debugger, Bash, GQL, YAML, .ignore file types/
     ]]>
   </change-notes>
 

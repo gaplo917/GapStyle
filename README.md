@@ -25,8 +25,7 @@ Preference -> Plugins -> Browser repositories -> Search 'GapStyle' -> install
 
 
 # Actively Maintain Language
-
-Kotlin, Java, Swift, Scala, Javascript, Android Logcat, HTML, CSS, PHP
+Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android Native (C / C++), SQL, HTML, CSS, PHP
 
 ### Kotlin (Android Studio / Intellij)
 ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/kotlin.png)
@@ -42,6 +41,9 @@ Kotlin, Java, Swift, Scala, Javascript, Android Logcat, HTML, CSS, PHP
 
 ### Javascript (Intellij)
 ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/javascript.png)
+
+### Python (PyCharm / Intellij)
+![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/python.png)
 
 ### Go (GoLand / Intellij)
 ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/go.png)
