@@ -1151,6 +1151,12 @@
         <option name="FOREGROUND" value="a6e22f" />
       </value>
     </option>
+    <option name="PY.KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="f92672" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
     <option name="PY.KEYWORD_ARGUMENT">
       <value>
         <option name="FOREGROUND" value="cf8822" />
@@ -1174,6 +1180,11 @@
       <value>
         <option name="FOREGROUND" value="f92672" />
         <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="PY.STRING.B">
+      <value>
+        <option name="FOREGROUND" value="e6db74" />
       </value>
     </option>
     <option name="PY.STRING.U">
