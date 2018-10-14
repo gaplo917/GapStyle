@@ -1,8 +1,12 @@
 # Gap-Style Theme For IDEs
-GapStyle is designed base on default Intellij Color(Darcula) with Monokai. You should feel comfortable if you are using default intellij(Darcula) or Sublime Text(default) color scheme.
+GapStyle is a productivity-oriented color scheme designed base on key theme color of 'Darcula' and 'Monokai' with a list of supported languages.
+
+**Introduction**:
+* GapStyle is designed base on key theme color of 'Darcula' and 'Monokai'.
+* GapStyle is a productivity-oriented color scheme with a list of supported languages.
+* Each supported language is tailor made and carefully tuned with rationale.
 
 **Objectives**:
-
 * Optimize languages' color schemes to boost productivity on reading/writing code (Especially the language your are not familiar)
 * Quickly learn similar syntax with a universal designed color across different languages
 * Spot syntax error before compilation

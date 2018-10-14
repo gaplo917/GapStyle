@@ -1,11 +1,11 @@
 <idea-plugin>
   <id>color.scheme.GapStyle</id>
   <name>GapStyle Color Scheme</name>
-  <version>1.6</version>
+  <version>2.0</version>
   <vendor email="gaplotech@gmail.com" url="https://github.com/gaplo917/GapStyle">Gary Lo</vendor>
 
   <description>
-    &lt;p&gt;GapStyle is designed base on 'Darcula' with 'Monokai'.&lt;/p&gt;
+    &lt;p&gt;GapStyle is designed base on key theme color of 'Darcula' and 'Monokai'.&lt;/p&gt;
     &lt;p&gt;GapStyle is a productivity-oriented color scheme with a list of supported languages.&lt;/p&gt;
     &lt;p&gt;Each supported language is tailor made and carefully tuned with rationale.&lt;/p&gt;
     &lt;ul&gt;
@@ -16,7 +16,9 @@
   </description>
 
   <change-notes><![CDATA[
-      Fix color inheritance bug on Python. Update description.
+      Completely remove color inheritance for better compatibility.
+      Fix HTML & Java & Kotlin keyword color is damaged by color inheritance
+      Kotlin Smart cast styling enhancement
     ]]>
   </change-notes>
 
