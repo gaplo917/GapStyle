@@ -1,9 +1,10 @@
-<scheme name="GapStyle" version="142">
+<scheme name="GapStyle" version="142" parent_scheme="Default">
     <metaInfo>
-        <property name="created">2018-03-25T17:19:13</property>
+        <property name="created">2018-10-15T04:33:26</property>
         <property name="ide">idea</property>
         <property name="ideVersion">2018.2.4.0.0</property>
-        <property name="modified">2018-10-14T13:00:12</property>
+        <property name="modified">2018-10-15T04:33:51</property>
+        <property name="originalScheme">GapStyle</property>
     </metaInfo>
     <option name="LINE_SPACING" value="1.2" />
     <colors>

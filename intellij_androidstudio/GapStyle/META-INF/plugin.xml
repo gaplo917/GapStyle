@@ -17,8 +17,8 @@
 
   <change-notes><![CDATA[
       Completely remove color inheritance for better compatibility.
-      Fix HTML & Java & Kotlin keyword color is damaged by color inheritance
-      Kotlin Smart cast styling enhancement
+      Fix HTML & Java & Kotlin keyword color is damaged by color inheritance.
+      Kotlin Smart cast styling enhancement.
     ]]>
   </change-notes>
 
