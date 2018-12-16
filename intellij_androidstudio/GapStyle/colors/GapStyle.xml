@@ -1,10 +1,9 @@
-<scheme name="GapStyle" version="142" parent_scheme="Default">
+<scheme name="GapStyle 2.1" version="142" parent_scheme="Darcula">
     <metaInfo>
         <property name="created">2018-10-15T04:33:26</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2018.2.4.0.0</property>
-        <property name="modified">2018-10-15T04:33:51</property>
-        <property name="originalScheme">GapStyle</property>
+        <property name="ideVersion">2018.3.1.0.0</property>
+        <property name="modified">2018-12-17T01:03:41</property>
     </metaInfo>
     <option name="LINE_SPACING" value="1.2" />
     <colors>
@@ -43,6 +42,7 @@
         <option name="SELECTION_FOREGROUND" value="" />
         <option name="TEARLINE_COLOR" value="555555" />
         <option name="WHITESPACES" value="505050" />
+        <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="eddcbc" />
     </colors>
     <attributes>
         <option name="ABSTRACT_CLASS_NAME_ATTRIBUTES">
@@ -78,102 +78,117 @@
             </value>
         </option>
         <option name="BASH.BACKQUOTE">
-            <value>
-                <option name="FOREGROUND" value="c57633" />
-                <option name="FONT_TYPE" value="2" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="e6db7e" />
+            <option name="BACKGROUND" value="143d1b" />
+            <option name="FONT_TYPE" value="2" />
+          </value>
         </option>
         <option name="BASH.BRACE">
-            <value />
+          <value />
         </option>
         <option name="BASH.CONDITIONAL">
-            <value>
-                <option name="FOREGROUND" value="f92673" />
-                <option name="FONT_TYPE" value="1" />
-                <option name="EFFECT_TYPE" value="1" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="f92673" />
+            <option name="FONT_TYPE" value="1" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
+        </option>
+        <option name="BASH.EXTERNAL_COMMAND">
+          <value>
+            <option name="FOREGROUND" value="a9b7c7" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
         </option>
         <option name="BASH.FUNCTION_CALL">
-            <value>
-                <option name="FOREGROUND" value="a6e22e" />
-                <option name="FONT_TYPE" value="2" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="a6e22f" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
         </option>
         <option name="BASH.FUNCTION_DEF_NAME">
-            <value>
-                <option name="FOREGROUND" value="a6e22e" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="a6e22f" />
+          </value>
         </option>
         <option name="BASH.HERE_DOC">
-            <value>
-                <option name="FOREGROUND" value="e6db73" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="e6db73" />
+            <option name="BACKGROUND" value="143d1b" />
+          </value>
         </option>
         <option name="BASH.HERE_DOC_END">
-            <value>
-                <option name="FOREGROUND" value="f92673" />
-                <option name="FONT_TYPE" value="1" />
-                <option name="EFFECT_TYPE" value="1" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="f92673" />
+            <option name="FONT_TYPE" value="1" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
         </option>
         <option name="BASH.HERE_DOC_START">
-            <value>
-                <option name="FOREGROUND" value="f92673" />
-                <option name="FONT_TYPE" value="1" />
-                <option name="EFFECT_TYPE" value="1" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="f92673" />
+            <option name="FONT_TYPE" value="1" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
         </option>
         <option name="BASH.INTERNAL_COMMAND">
-            <value>
-                <option name="FONT_TYPE" value="2" />
-            </value>
+          <value>
+            <option name="FONT_TYPE" value="2" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
         </option>
         <option name="BASH.KEYWORD">
-            <value>
-                <option name="FOREGROUND" value="f92673" />
-                <option name="FONT_TYPE" value="1" />
-                <option name="EFFECT_TYPE" value="1" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="f92673" />
+            <option name="FONT_TYPE" value="1" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
         </option>
         <option name="BASH.LINE_COMMENT">
-            <value>
-                <option name="FOREGROUND" value="808081" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="808081" />
+          </value>
         </option>
         <option name="BASH.NUMBER">
-            <value>
-                <option name="FOREGROUND" value="ae81fe" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="ae81fe" />
+          </value>
+        </option>
+        <option name="BASH.REDIRECTION">
+          <value />
         </option>
         <option name="BASH.STRING">
-            <value>
-                <option name="FOREGROUND" value="e6db73" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="e6db73" />
+          </value>
         </option>
         <option name="BASH.STRING2">
-            <value>
-                <option name="FOREGROUND" value="e6db73" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="e6db73" />
+          </value>
         </option>
         <option name="BASH.VAR_DEF">
-            <value>
-                <option name="FOREGROUND" value="cbad96" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="cbad96" />
+            <option name="FONT_TYPE" value="1" />
+          </value>
         </option>
         <option name="BASH.VAR_USE">
-            <value>
-                <option name="FOREGROUND" value="cbad96" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="cbad96" />
+          </value>
         </option>
         <option name="BASH.VAR_USE_BUILTIN">
-            <value>
-                <option name="FOREGROUND" value="cbad96" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="fd971e" />
+            <option name="FONT_TYPE" value="1" />
+          </value>
         </option>
         <option name="BASH.VAR_USE_COMPOSED">
-            <value>
-                <option name="FOREGROUND" value="cbad96" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="cbad96" />
+            <option name="FONT_TYPE" value="1" />
+          </value>
         </option>
         <option name="BREADCRUMBS_CURRENT">
             <value>
@@ -192,7 +207,7 @@
         </option>
         <option name="BREADCRUMBS_INACTIVE">
             <value>
-                <option name="FOREGROUND" value="a9b7c6" />
+                <option name="FOREGROUND" value="808080" />
             </value>
         </option>
         <option name="BREAKPOINT_ATTRIBUTES">
@@ -224,6 +239,23 @@
             <value>
                 <option name="FOREGROUND" value="769aa5" />
             </value>
+        </option>
+        <option name="COFFEESCRIPT.CLASS_NAME">
+          <value>
+            <option name="FOREGROUND" value="66d9ef" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
+        </option>
+        <option name="COFFEESCRIPT.FUNCTION_NAME" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
+        <option name="COFFEESCRIPT.HEREDOC_CONTENT">
+          <value>
+            <option name="FOREGROUND" value="e6db74" />
+          </value>
+        </option>
+        <option name="COFFEESCRIPT.HEREDOC_ID">
+          <value>
+            <option name="FOREGROUND" value="e6db74" />
+          </value>
         </option>
         <option name="CONDITIONALLY_NOT_COMPILED">
             <value>
@@ -460,7 +492,7 @@
         </option>
         <option name="CUSTOM_KEYWORD2_ATTRIBUTES">
             <value>
-                <option name="FOREGROUND" value="ab51ba" />
+                <option name="FOREGROUND" value="89bb26" />
             </value>
         </option>
         <option name="CUSTOM_KEYWORD3_ATTRIBUTES">
@@ -484,6 +516,11 @@
             <value>
                 <option name="FOREGROUND" value="cc7833" />
             </value>
+        </option>
+        <option name="CfmlAttribute name">
+          <value>
+            <option name="FOREGROUND" value="89bb26" />
+          </value>
         </option>
         <option name="DEFAULT_ATTRIBUTE">
             <value>
@@ -986,7 +1023,13 @@
                 <option name="FOREGROUND" value="808080" />
             </value>
         </option>
-        <option name="GROOVY_KEYWORD" baseAttributes="JAVA_KEYWORD" />
+        <option name="GROOVY_KEYWORD">
+          <value>
+            <option name="FOREGROUND" value="f92672" />
+            <option name="FONT_TYPE" value="1" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
+        </option>
         <option name="HANDLEBARS.IDENTIFIERS">
             <value>
                 <option name="FOREGROUND" value="f92674" />
@@ -1204,6 +1247,11 @@
                 <option name="EFFECT_TYPE" value="2" />
             </value>
         </option>
+        <option name="JAVA_KEYWORD">
+          <value>
+            <option name="FOREGROUND" value="f92673" />
+          </value>
+        </option>
         <option name="JAVA_NUMBER">
             <value>
                 <option name="FOREGROUND" value="ae81ff" />
@@ -1411,6 +1459,7 @@
                 <option name="FONT_TYPE" value="1" />
             </value>
         </option>
+        <option name="KOTLIN_PACKAGE_FUNCTION_CALL" baseAttributes="DEFAULT_STATIC_METHOD" />
         <option name="KOTLIN_SMART_CAST_RECEIVER">
             <value>
                 <option name="BACKGROUND" value="2f4830" />
@@ -1511,6 +1560,13 @@
                 <option name="FONT_TYPE" value="1" />
                 <option name="EFFECT_TYPE" value="1" />
             </value>
+        </option>
+        <option name="LESS_INJECTED_CODE">
+          <value>
+            <option name="FOREGROUND" value="a9b7c6" />
+            <option name="BACKGROUND" value="2f4830" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
         </option>
         <option name="LESS_JS_CODE_DELIM">
             <value>
@@ -1666,7 +1722,7 @@
         </option>
         <option name="MAKO.TAG_ID">
             <value>
-                <option name="FOREGROUND" value="f92672" />
+                <option name="FOREGROUND" value="e8bf6a" />
                 <option name="FONT_TYPE" value="1" />
                 <option name="EFFECT_TYPE" value="1" />
             </value>
@@ -2139,6 +2195,180 @@
             <value>
                 <option name="FOREGROUND" value="cc7833" />
             </value>
+        </option>
+        <option name="RHTML_COMMENT_ID">
+          <value>
+            <option name="FOREGROUND" value="808081" />
+          </value>
+        </option>
+        <option name="RHTML_EXPRESSION_END_ID">
+          <value>
+            <option name="FOREGROUND" value="e8bf6b" />
+          </value>
+        </option>
+        <option name="RHTML_EXPRESSION_START_ID">
+          <value>
+            <option name="FOREGROUND" value="e8bf6b" />
+          </value>
+        </option>
+        <option name="RHTML_OMIT_NEW_LINE_ID">
+          <value>
+            <option name="FOREGROUND" value="bababa" />
+          </value>
+        </option>
+        <option name="RHTML_SCRIPTING_BACKGROUND_ID">
+          <value>
+            <option name="FOREGROUND" value="e8bf6b" />
+          </value>
+        </option>
+        <option name="RHTML_SCRIPTLET_END_ID">
+          <value>
+            <option name="FOREGROUND" value="e8bf6b" />
+          </value>
+        </option>
+        <option name="RHTML_SCRIPTLET_START_ID">
+          <value>
+            <option name="FOREGROUND" value="e8bf6b" />
+          </value>
+        </option>
+        <option name="RUBY_COMMENT">
+          <value>
+            <option name="FOREGROUND" value="629756" />
+            <option name="FONT_TYPE" value="2" />
+          </value>
+        </option>
+        <option name="RUBY_CONSTANT">
+          <value>
+            <option name="FOREGROUND" value="4186f8" />
+            <option name="FONT_TYPE" value="2" />
+          </value>
+        </option>
+        <option name="RUBY_CONSTANT_DECLARATION">
+          <value>
+            <option name="FOREGROUND" value="4186f9" />
+            <option name="FONT_TYPE" value="2" />
+          </value>
+        </option>
+        <option name="RUBY_EXPR_IN_STRING">
+          <value>
+            <option name="FOREGROUND" value="cf8822" />
+          </value>
+        </option>
+        <option name="RUBY_GVAR" baseAttributes="DEFAULT_GLOBAL_VARIABLE" />
+        <option name="RUBY_HASH_ASSOC">
+          <value />
+        </option>
+        <option name="RUBY_HASH_KEY">
+          <value>
+            <option name="FOREGROUND" value="cf8823" />
+          </value>
+        </option>
+        <option name="RUBY_HEREDOC_CONTENT">
+          <value>
+            <option name="FOREGROUND" value="a9b7c6" />
+            <option name="BACKGROUND" value="143d1b" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
+        </option>
+        <option name="RUBY_HEREDOC_ID">
+          <value>
+            <option name="FOREGROUND" value="a9b7c6" />
+            <option name="BACKGROUND" value="143d1b" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
+        </option>
+        <option name="RUBY_IDENTIFIER">
+          <value>
+            <option name="FOREGROUND" value="a6e22f" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
+        </option>
+        <option name="RUBY_IVAR">
+          <value>
+            <option name="FOREGROUND" value="cf8823" />
+          </value>
+        </option>
+        <option name="RUBY_KEYWORD">
+          <value>
+            <option name="FOREGROUND" value="f92673" />
+            <option name="FONT_TYPE" value="1" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
+        </option>
+        <option name="RUBY_LINE_CONTINUATION">
+          <value />
+        </option>
+        <option name="RUBY_LOCAL_VAR_ID">
+          <value>
+            <option name="FOREGROUND" value="cbad98" />
+          </value>
+        </option>
+        <option name="RUBY_METHOD_NAME">
+          <value>
+            <option name="FOREGROUND" value="a6e22f" />
+          </value>
+        </option>
+        <option name="RUBY_NTH_REF">
+          <value>
+            <option name="FOREGROUND" value="cf8823" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
+        </option>
+        <option name="RUBY_NUMBER">
+          <value>
+            <option name="FOREGROUND" value="ae81fe" />
+          </value>
+        </option>
+        <option name="RUBY_PARAMDEF_CALL">
+          <value>
+            <option name="FOREGROUND" value="a6e22f" />
+            <option name="FONT_TYPE" value="2" />
+          </value>
+        </option>
+        <option name="RUBY_PARAMETER_ID">
+          <value>
+            <option name="FOREGROUND" value="fd971e" />
+          </value>
+        </option>
+        <option name="RUBY_REGEXP">
+          <value>
+            <option name="FOREGROUND" value="a9b7c6" />
+            <option name="BACKGROUND" value="143d1b" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
+        </option>
+        <option name="RUBY_SPECIFIC_CALL">
+          <value>
+            <option name="FOREGROUND" value="a6e22f" />
+            <option name="FONT_TYPE" value="2" />
+          </value>
+        </option>
+        <option name="RUBY_STRING">
+          <value>
+            <option name="FOREGROUND" value="e6db75" />
+          </value>
+        </option>
+        <option name="RUBY_SYMBOL">
+          <value>
+            <option name="FOREGROUND" value="cf8823" />
+          </value>
+        </option>
+        <option name="RUBY_WORDS">
+          <value>
+            <option name="FOREGROUND" value="e6db7e" />
+            <option name="FONT_TYPE" value="1" />
+          </value>
+        </option>
+        <option name="SASS_MIXIN">
+          <value>
+            <option name="FOREGROUND" value="d0d0ff" />
+          </value>
+        </option>
+        <option name="SEARCH_RESULT_ATTRIBUTES">
+          <value>
+            <option name="BACKGROUND" value="155221" />
+            <option name="ERROR_STRIPE_COLOR" value="246e00" />
+          </value>
         </option>
         <option name="SASS_MIXIN">
             <value>
