@@ -12,7 +12,7 @@ GapStyle is a productivity-oriented color scheme designed base on key theme colo
 * Spot syntax error before compilation
 
 # Installation(Recommended)
-Preference -> Plugins -> Browser repositories -> Search 'GapStyle' -> install
+Preference -> Plugins -> Search 'GapStyle' -> install
 
 ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/intellij-gapstyle-plugin-tutorial.png)
 
