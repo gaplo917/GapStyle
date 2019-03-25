@@ -1,9 +1,9 @@
-<scheme name="GapStyle 2.1" version="142" parent_scheme="Darcula">
+<scheme name="GapStyle 2.2" version="142" parent_scheme="Darcula">
     <metaInfo>
         <property name="created">2018-10-15T04:33:26</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2018.3.1.0.0</property>
-        <property name="modified">2018-12-17T01:03:41</property>
+        <property name="ideVersion">2018.3.4.0.0</property>
+        <property name="modified">2019-03-25T08:00:00</property>
     </metaInfo>
     <option name="LINE_SPACING" value="1.2" />
     <colors>
@@ -522,6 +522,73 @@
             <option name="FOREGROUND" value="89bb26" />
           </value>
         </option>
+        <option name="DART_ANNOTATION">
+          <value>
+            <option name="FOREGROUND" value="bbb529" />
+          </value>
+        </option>
+        <option name="DART_DYNAMIC_LOCAL_VARIABLE_DECLARATION">
+          <value>
+            <option name="FOREGROUND" value="cbad96" />
+            <option name="BACKGROUND" value="2f4830" />
+          </value>
+        </option>
+        <option name="DART_DYNAMIC_PARAMETER_DECLARATION">
+          <value>
+            <option name="FOREGROUND" value="fd971f" />
+            <option name="BACKGROUND" value="2f4830" />
+          </value>
+        </option>
+        <option name="DART_ENUM_CONSTANT">
+          <value>
+            <option name="FOREGROUND" value="4186f8" />
+          </value>
+        </option>
+        <option name="DART_FUNCTION_TYPE_ALIAS">
+          <value>
+            <option name="FOREGROUND" value="507874" />
+          </value>
+        </option>
+        <option name="DART_IDENTIFIER">
+          <value>
+            <option name="FOREGROUND" value="4186f8" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
+        </option>
+        <option name="DART_LABEL">
+          <value>
+            <option name="FOREGROUND" value="bbb529" />
+            <option name="EFFECT_TYPE" value="5" />
+          </value>
+        </option>
+        <option name="DART_TOP_LEVEL_GETTER_DECLARATION">
+          <value>
+            <option name="FOREGROUND" value="fd971f" />
+            <option name="FONT_TYPE" value="3" />
+          </value>
+        </option>
+        <option name="DART_TOP_LEVEL_GETTER_REFERENCE">
+          <value>
+            <option name="FOREGROUND" value="bbb529" />
+          </value>
+        </option>
+        <option name="DART_TOP_LEVEL_SETTER_DECLARATION">
+          <value>
+            <option name="FOREGROUND" value="fd971f" />
+            <option name="FONT_TYPE" value="3" />
+          </value>
+        </option>
+        <option name="DART_TOP_LEVEL_VARIABLE_DECLARATION">
+          <value>
+            <option name="FOREGROUND" value="fd971f" />
+            <option name="FONT_TYPE" value="3" />
+          </value>
+        </option>
+        <option name="DART_TYPE_PARAMETER">
+          <value>
+            <option name="FOREGROUND" value="507874" />
+          </value>
+        </option>
         <option name="DEFAULT_ATTRIBUTE">
             <value>
                 <option name="FOREGROUND" value="89bb26" />
@@ -871,6 +938,41 @@
             <value>
                 <option name="BACKGROUND" value="696969" />
             </value>
+        </option>
+        <option name="FLUTTER_LOG_CONFIG_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="c507" />
+          </value>
+        </option>
+        <option name="FLUTTER_LOG_FINER_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="979797" />
+          </value>
+        </option>
+        <option name="FLUTTER_LOG_FINEST_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="818181" />
+          </value>
+        </option>
+        <option name="FLUTTER_LOG_FINE_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="b3b3b3" />
+          </value>
+        </option>
+        <option name="FLUTTER_LOG_INFO_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="23b1c8" />
+          </value>
+        </option>
+        <option name="FLUTTER_LOG_NONE_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="656565" />
+          </value>
+        </option>
+        <option name="FLUTTER_LOG_WARNING_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="fffa12" />
+          </value>
         </option>
         <option name="EXECUTIONPOINT_ATTRIBUTES">
             <value>
@@ -1687,10 +1789,30 @@
                 <option name="FOREGROUND" value="fffa12" />
             </value>
         </option>
+        <option name="LOG_DEBUG_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="c507" />
+          </value>
+        </option>
         <option name="LOG_ERROR_OUTPUT">
-            <value>
-                <option name="FOREGROUND" value="ff6b68" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="ff6b68" />
+          </value>
+        </option>
+        <option name="LOG_INFO_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="23b1c8" />
+          </value>
+        </option>
+        <option name="LOG_VERBOSE_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="656565" />
+          </value>
+        </option>
+        <option name="LOG_WARNING_OUTPUT">
+          <value>
+            <option name="FOREGROUND" value="fffa12" />
+          </value>
         </option>
         <option name="List/map to object conversion">
             <value>
@@ -1766,6 +1888,11 @@
                 <option name="EFFECT_TYPE" value="2" />
             </value>
         </option>
+        <option name="OC.CLASS_REFERENCE">
+          <value>
+            <option name="FOREGROUND" value="49d5ec" />
+          </value>
+        </option>
         <option name="OC.CONDITIONALLY_NOT_COMPILED">
             <value>
                 <option name="FOREGROUND" value="686a4e" />
@@ -1838,20 +1965,28 @@
             </value>
         </option>
         <option name="OC.MACRONAME">
-            <value>
-                <option name="FOREGROUND" value="a9b7c6" />
-                <option name="FONT_TYPE" value="1" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="328f54" />
+            <option name="FONT_TYPE" value="1" />
+          </value>
         </option>
         <option name="OC.MACRO_PARAMETER">
             <value>
                 <option name="FOREGROUND" value="fd971f" />
             </value>
         </option>
+        <option name="OC.MESSAGE_ARGUMENT">
+          <value>
+            <option name="FOREGROUND" value="9cda3e" />
+          </value>
+        </option>
+        <option name="OC.METHOD_DECLARATION" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
         <option name="OC.NAMESPACE_LIKE">
-            <value>
-                <option name="FOREGROUND" value="a9b7c6" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="49d5ec" />
+            <option name="FONT_TYPE" value="3" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
         </option>
         <option name="OC.NUMBER">
             <value>
@@ -1869,9 +2004,14 @@
             </value>
         </option>
         <option name="OC.PROPERTY">
-            <value>
-                <option name="FOREGROUND" value="cdbcac" />
-            </value>
+          <value>
+            <option name="FOREGROUND" value="a9b7c6" />
+          </value>
+        </option>
+        <option name="OC.PROTOCOL_REFERENCE">
+          <value>
+            <option name="FOREGROUND" value="26dda2" />
+          </value>
         </option>
         <option name="OC.SELFSUPERTHIS">
             <value>
@@ -2520,6 +2660,29 @@
                 <option name="FOREGROUND" value="a6e22e" />
                 <option name="FONT_TYPE" value="2" />
             </value>
+        </option>
+        <option name="SWIFT_EXTERNAL_PARAMETER">
+          <value>
+            <option name="FOREGROUND" value="fd971f" />
+          </value>
+        </option>
+        <option name="SWIFT_GLOBAL_VARIABLE">
+          <value>
+            <option name="FOREGROUND" value="4186f8" />
+            <option name="EFFECT_COLOR" value="7e7e7f" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
+        </option>
+        <option name="SWIFT_PROPERTY">
+          <value>
+            <option name="FOREGROUND" value="fd971f" />
+            <option name="FONT_TYPE" value="2" />
+          </value>
+        </option>
+        <option name="SWIFT_TYPE_PARAMETER">
+          <value>
+            <option name="FOREGROUND" value="44716c" />
+          </value>
         </option>
         <option name="Scala Abstract class">
             <value>
