@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>color.scheme.GapStyle</id>
   <name>GapStyle Color Scheme</name>
-  <version>2.2</version>
+  <version>2.3</version>
   <vendor email="gaplotech@gmail.com" url="https://github.com/gaplo917/GapStyle">Gary Lo</vendor>
 
   <description><![CDATA[
@@ -16,6 +16,11 @@
   ]]></description>
 
   <change-notes><![CDATA[
+      <h1>2.3</h1>
+      <ul>
+        <li>Add Support for javascript `instance member function` syntax highlight (newly added in 2019.2+)</li>
+        <li>Fix javascript `global function / exported function` using wrong color</li>
+      </ul>
       <h1>2.2</h1>
       <ul>
         <li>Add Dart Support</li>

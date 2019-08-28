@@ -1,9 +1,9 @@
-<scheme name="GapStyle 2.2" version="142" parent_scheme="Darcula">
+<scheme name="GapStyle 2.3" version="142" parent_scheme="Darcula">
     <metaInfo>
         <property name="created">2018-10-15T04:33:26</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2018.3.4.0.0</property>
-        <property name="modified">2019-03-25T08:00:00</property>
+        <property name="ideVersion">2019.2.1.0.0</property>
+        <property name="modified">2019-08-28T11:43:11</property>
     </metaInfo>
     <option name="LINE_SPACING" value="1.2" />
     <colors>
@@ -1364,9 +1364,16 @@
                 <option name="FOREGROUND" value="e6db74" />
             </value>
         </option>
+        <option name="JS.EXPORTED.FUNCTION">
+          <value>
+            <option name="FOREGROUND" value="a6e22f" />
+            <option name="FONT_TYPE" value="2" />
+          </value>
+        </option>
         <option name="JS.GLOBAL_FUNCTION">
             <value>
-                <option name="FOREGROUND" value="a4ff38" />
+                <option name="FOREGROUND" value="a6e22f" />
+                <option name="FONT_TYPE" value="2" />
             </value>
         </option>
         <option name="JS.GLOBAL_VARIABLE">
@@ -1375,7 +1382,11 @@
                 <option name="FONT_TYPE" value="2" />
             </value>
         </option>
-        <option name="JS.INSTANCE_MEMBER_FUNCTION" baseAttributes="DEFAULT_INSTANCE_METHOD" />
+        <option name="JS.INSTANCE_MEMBER_FUNCTION">
+          <value>
+            <option name="FOREGROUND" value="a6e22f" />
+          </value>
+        </option>
         <option name="JS.KEYWORD">
             <value>
                 <option name="FOREGROUND" value="f92672" />
