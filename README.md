@@ -39,7 +39,7 @@ GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
 ### Color Palette
 | Syntax | Theme | Color | Philosophy |
 |:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
-|Default|Darcula|![](https://placehold.it/15/A9B7C6/000000?text=+)| Monokai default pure white color is too high contrast |
+|Default|Darcula|![](https://placehold.it/15/A9B7C6/000000?text=+)| Monokai's default pure white color is too high contrast |
 |Keyword|Monokai|![](https://placehold.it/15/F92672/000000?text=+)| |
 |String|Monokai|![](https://placehold.it/15/E6DB74/000000?text=+)| |
 |Number|Monokai|![](https://placehold.it/15/AE81FF/000000?text=+)| |
@@ -68,7 +68,7 @@ GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
 ### Special File Type
 | File | Theme | Philosophy |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|XML|Darcula|NOT to use HTML-like highlighting because JSX in IntelliJ use XML syntax highlight the tags internally, too prevent from having too much **Keyword** color|
+|XML|Darcula|NOT to use HTML-like highlighting because IntelliJ use XML color scheme to highlight JSX's tags internally. Using Darcula original color can prevent from having too much Monokai's **Keyword** color|
 |JSON|Derived from **JavaScript**|**Property Key** color should align with **JavaScript** Object|
 
 
