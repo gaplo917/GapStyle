@@ -10,6 +10,21 @@ So, GapStyle is a unique and opinionated color scheme that has converged Gap's 5
 * Quickly learn similar syntax with a universal designed color across different languages
 * Spot syntax error before IDE inspection
 
+Table of Contents
+=================
+* [GapStyle Specification](#gapstyle-specification)
+  * [Recommended Font](#recommended-font)
+  * [Color Palette](#color-palette)
+  * [Special Styling](#special-styling)
+  * [Special File Type](#special-file-type)
+* [Installation(IntelliJ)](#installationintellij)
+  * [Install from IntelliJ Plugins](#install-from-intellij-plugins)
+  * [Install manually](#install-manually)
+* [Installation(XCode)](#installationxcode)
+* [IntelliJ Enable font ligatures](#intellij-enable-font-ligatures)
+* [Actively Maintain Language](#actively-maintain-language)
+* [Screenshots](#screenshots)
+
 # GapStyle Specification
 GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
 
