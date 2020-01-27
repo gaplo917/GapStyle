@@ -30,15 +30,15 @@ GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
 
 ### Recommended Font
 
-|Font|Platform|Ligature Support|Description||
-|:-----:|:-----:|:-----:|:-----:|:-----:|
+|Font|Platform|Ligature Support|Description|Action|
+|-----|-----|:-----:|-----|:-----:|
 |[Ligatured Hack](https://github.com/gaplo917/Ligatured-Hack)|IntelliJ|✅|Hack font that support ligature, built by Gap|[Download](https://github.com/gaplo917/Ligatured-Hack/releases)|
 |[Hack](https://github.com/source-foundry/Hack)|IntelliJ|❌|Standard Hack font|[Download](https://github.com/source-foundry/Hack/releases) |
 |[Meslo LG DZ](https://github.com/andreberg/Meslo-Font)|Xcode|❌|Solve Xcode no line-spacing settings|[Download](https://github.com/andreberg/Meslo-Font/releases) |
 
 ### Color Palette
 | Syntax | Theme | Color | Philosophy |
-|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+|-------------------------|-------------------------|:-------------------------:|-------------------------|
 |Default|Darcula|![](https://placehold.it/15/A9B7C6/000000?text=+)| Monokai's default pure white color is too high contrast |
 |Keyword|Monokai|![](https://placehold.it/15/F92672/000000?text=+)| |
 |String|Monokai|![](https://placehold.it/15/E6DB74/000000?text=+)| |
@@ -57,7 +57,7 @@ GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
 
 ### Special Styling
 | Syntax | Style | Philosophy |
-|:-------------------------:|:-------------------------:|:-------------------------:|
+|-------------------------|-------------------------|-------------------------|
 |Keyword|Bold|Bold to standout and outweight the importance|
 |Singleton|Bold|preserve same color but also should be distinguished easily from non-singleton object|
 |Global/Static variable|Italic + Bold|preserve same color but also should be distinguished easily from **Parameter** and **Local variable**|
@@ -67,7 +67,7 @@ GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
 
 ### Special File Type
 | File | Theme | Philosophy |
-|:-------------------------:|:-------------------------:|:-------------------------:|
+|-------------------------|-------------------------|-------------------------|
 |XML|Darcula|NOT to use HTML-like highlighting because IntelliJ use XML color scheme to highlight JSX's tags internally. Using Darcula original color can prevent from having too much Monokai's **Keyword** color|
 |JSON|Derived from **JavaScript**|**Property Key** color should align with **JavaScript** Object|
 
