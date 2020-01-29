@@ -32,7 +32,8 @@ GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
 
 |Font|Platform|Ligature Support|Description|Action|
 |-----|-----|:-----:|-----|:-----:|
-|[Hack Ligatured](https://github.com/gaplo917/Ligatured-Hack)|IntelliJ|✅|Hack font that support ligature, built by Gap|[Download](https://github.com/gaplo917/Ligatured-Hack/releases)|
+|[Hack JBM Ligatured](https://github.com/gaplo917/Ligatured-Hack)|IntelliJ|✅|Hack font with [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) ligature, built by Gap|[Download](https://github.com/gaplo917/Ligatured-Hack/releases)|
+|[Hack FC Ligatured](https://github.com/gaplo917/Ligatured-Hack)|IntelliJ|✅|Hack font with [FIRA Code](https://github.com/tonsky/FiraCode) ligature, built by Gap|[Download](https://github.com/gaplo917/Ligatured-Hack/releases)|
 |[Hack](https://github.com/source-foundry/Hack)|IntelliJ|❌|Standard Hack font|[Download](https://github.com/source-foundry/Hack/releases) |
 |[Meslo LG DZ](https://github.com/andreberg/Meslo-Font)|Xcode|❌|Solve Xcode no line-spacing settings|[Download](https://github.com/andreberg/Meslo-Font/releases) |
 
