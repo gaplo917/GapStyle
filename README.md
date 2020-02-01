@@ -3,7 +3,7 @@ GapStyle is a ***productivity-oriented*** and ***experience-driven*** designed c
 
 The first draft of GapStyle was created on 2014 in PhpStorm 8. After that, Gap have spent 10,000+ hours of using GapStyle scheme and at least 500+ hours of A/B testing, tuning and stablizing throughout the years. 
 
-So, GapStyle is a unique and opinionated color scheme that has converged Gap's 5+ years of software development experience (learning, reading and writing on various programming languages) into productivity-oriented syntax hightlight GapStyle specification.
+So, GapStyle is a unique and opinionated color scheme that has converged [Gap's 5+ years of software development experience](https://github.com/gaplotech/bio) (learning, reading and writing on various programming languages) into productivity-oriented syntax hightlight GapStyle specification.
 
 ### Objectives
 * Optimize languages' color schemes to boost productivity on reading/writing code (Especially the language your are not familiar)
