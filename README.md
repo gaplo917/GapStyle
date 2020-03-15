@@ -1,4 +1,7 @@
 # Gap-Style Theme For IntelliJ & XCode
+
+![GapStyle](gap-style-github-og-image-v2.png)
+
 GapStyle is a ***productivity-oriented*** and ***experience-driven*** designed color scheme with a [list of supported languages](#actively-maintain-language). Each supported language is tailor made and carefully tuned with [rationale](#gapstyle-specification).
 
 The first draft of GapStyle was created on 2014 in PhpStorm 8. After that, Gap have spent 10,000+ hours of using GapStyle scheme and at least 500+ hours of A/B testing, tuning and stablizing throughout the years. 
