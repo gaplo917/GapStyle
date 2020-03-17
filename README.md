@@ -13,6 +13,8 @@ So, GapStyle is a unique and opinionated color scheme that has converged [Gap's 
 * Quickly learn similar syntax with a universal designed color across different languages
 * Spot syntax error before IDE inspection
 
+[Install Now](#installationintellij)
+
 Table of Contents
 =================
 * [GapStyle Specification](#gapstyle-specification)
