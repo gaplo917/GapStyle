@@ -1,10 +1,15 @@
-# Gap-Style Theme For IntelliJ & XCode
-
 ![GapStyle](gap-style-github-og-image-v2.png)
 
-GapStyle is a ***productivity-oriented*** designed color scheme that base on key color of 'Darcula' and 'Monokai'. You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
+# Gap-Style Theme For IntelliJ & XCode & VSCode
+
+GapStyle is a ***productivity-oriented*** designed color scheme 
+with a [list of supported languages](#actively-maintain-language). 
+Each supported language is tailor made and carefully tuned with [rationale](#gapstyle-specification).
+
+You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 
 ## Objectives
+
 * Optimize languages' color schemes to boost productivity on reading/writing code (Especially the language your are not familiar)
 * Quickly learn similar syntax with a universal designed color across different languages
 * Spot syntax error before IDE inspection
@@ -12,7 +17,9 @@ GapStyle is a ***productivity-oriented*** designed color scheme that base on key
 [Install Now](#installationintellij)
 
 ## Actively Maintain Language
-Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android Native (C / C++), SQL, HTML, CSS, PHP
+IntelliJ: Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android Native (C / C++), SQL, HTML, CSS, PHP
+XCode: Swift, ObjC
+VSCode: (Comming Soon...)
 
 ## Screenshots
 | | |
