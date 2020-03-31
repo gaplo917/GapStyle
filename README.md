@@ -2,21 +2,30 @@
 
 ![GapStyle](gap-style-github-og-image-v2.png)
 
-GapStyle is a ***productivity-oriented*** and ***experience-driven*** designed color scheme with a [list of supported languages](#actively-maintain-language). Each supported language is tailor made and carefully tuned with [rationale](#gapstyle-specification).
+GapStyle is a ***productivity-oriented*** designed color scheme that base on key color of 'Darcula' and 'Monokai'. You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 
-The first draft of GapStyle was created on 2014 in PhpStorm 8. After that, Gap have spent 10,000+ hours of using GapStyle scheme and at least 500+ hours of A/B testing, tuning and stablizing throughout the years. 
-
-So, GapStyle is a unique and opinionated color scheme that has converged [Gap's 5+ years of software development experience](https://github.com/gaplotech/bio) (learning, reading and writing on various programming languages) into productivity-oriented syntax hightlight GapStyle specification.
-
-### Objectives
+## Objectives
 * Optimize languages' color schemes to boost productivity on reading/writing code (Especially the language your are not familiar)
 * Quickly learn similar syntax with a universal designed color across different languages
 * Spot syntax error before IDE inspection
 
 [Install Now](#installationintellij)
 
-Table of Contents
-=================
+## Actively Maintain Language
+Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android Native (C / C++), SQL, HTML, CSS, PHP
+
+## Screenshots
+| | |
+|:-------------------------:|:-------------------------:|
+|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/kotlin.png)  Kotlin (Android Studio / Intellij) | ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/java.png)  Java (Android Studio / Intellij) |
+|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/swift.png)  Swift (App Code) | ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/scala.png)  Scala (Intellij) |
+|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/javascript.png)  Javascript (Intellij) | ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/python.png)  Python (PyCharm / Intellij) |
+|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/go.png)  Go (GoLand / Intellij) | ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/php.png)  PHP (PhpStorm/ WebStorm/ Intellij)) |
+|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/android-logcat.png)  Android Logcat |  |
+
+
+# Learn More About GapStyle
+
 * [GapStyle Specification](#gapstyle-specification)
   * [Recommended Font](#recommended-font)
   * [Color Palette](#color-palette)
@@ -30,8 +39,15 @@ Table of Contents
 * [Actively Maintain Language](#actively-maintain-language)
 * [Screenshots](#screenshots)
 
-# GapStyle Specification
+## GapStyle Specification
 GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
+
+GapStyle is a ***productivity-oriented*** and ***experience-driven*** designed color scheme with a [list of supported languages](#actively-maintain-language). Each supported language is tailor made and carefully tuned with [rationale](#gapstyle-specification).
+
+The first draft of GapStyle was created on 2014 in PhpStorm 8. After that, Gap have spent 10,000+ hours of using GapStyle scheme and at least 500+ hours of A/B testing, tuning and stablizing throughout the years. 
+
+So, GapStyle is a unique and opinionated color scheme that has converged [Gap's 5+ years of software development experience](https://github.com/gaplotech/bio) (learning, reading and writing on various programming languages) into productivity-oriented syntax hightlight GapStyle specification.
+
 
 ### Recommended Font
 
@@ -78,9 +94,6 @@ GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
 |JSON|Derived from **JavaScript**|**Property Key** color should align with **JavaScript** Object|
 
 
-# Actively Maintain Language
-Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android Native (C / C++), SQL, HTML, CSS, PHP
-
 # Installation(IntelliJ)
 ### Install from IntelliJ Plugins
 1. Preference -> Plugins -> Search 'GapStyle' in Market Place -> install
@@ -96,20 +109,11 @@ Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android Nati
 
 2. Preference -> Editor -> Color Scheme -> click the settings icon(next to the scheme name) -> import scheme -> select GapStyle.jar
 
-# Installation(XCode)
+## Installation(XCode)
 1. Copy the `xcode/Gap Style.dvtcolortheme` to `~/Library/Developer/Xcode/UserData/FontAndColorThemes`
 1. Restart Xcode and you will see the color theme.
 
-# IntelliJ Enable font ligatures
+## IntelliJ Enable font ligatures
 1. Go to 'Preference > Editor > Color Scheme > Color Scheme Font'
 1. Check 'Use color scheme font instead of default'
 1. Check 'Enable font ligatures'
-
-# Screenshots
-| | |
-|:-------------------------:|:-------------------------:|
-|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/kotlin.png)  Kotlin (Android Studio / Intellij) | ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/java.png)  Java (Android Studio / Intellij) |
-|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/swift.png)  Swift (App Code) | ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/scala.png)  Scala (Intellij) |
-|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/javascript.png)  Javascript (Intellij) | ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/python.png)  Python (PyCharm / Intellij) |
-|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/go.png)  Go (GoLand / Intellij) | ![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/php.png)  PHP (PhpStorm/ WebStorm/ Intellij)) |
-|![](https://cdn.rawgit.com/gaplo917/GapStyle/master/preview/android-logcat.png)  Android Logcat |  |
