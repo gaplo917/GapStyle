@@ -1370,3 +1370,12 @@ tokenColors:
     settings:
       foreground: *PREDEFINED
       fontStyle: regular
+# =============================================================================
+# Go
+# =============================================================================
+  - name: Go Keywords
+    scope:
+      - constant.language.go
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold

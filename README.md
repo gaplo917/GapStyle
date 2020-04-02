@@ -15,25 +15,19 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 - Quickly learn similar syntax with a universal designed color across different languages
 - Spot syntax error before IDE inspection
 
-[Install Now](#installationintellij)
-
 ## Actively Maintain Language
 
-| IDE      | Supported Language                                                          |
-| -------- | --------------------------------------------------------------------------- |
-| IntelliJ | Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android |
-| VSCode   | Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android |
-| XCode    | Swift, Objective C                                                          |
+| IDE                                                       | Supported Language                                                                                                               |
+| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [IntelliJ](https://github.com/gaplo917/GapStyle/intellij) | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, Android Logcat, Android, PHP, HTML, XML, JSX, CSS/SCSS/SASS |
+| [VSCode](https://github.com/gaplo917/GapStyle/vscode)     | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS                          |
+| [XCode](https://github.com/gaplo917/GapStyle/xcode)       | Swift, Objective C                                                                                                               |
 
 ## Screenshots
 
-|                                                                                                                 |                                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-| ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/kotlin.png) Kotlin (Android Studio / Intellij) |  ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/java.png) Java (Android Studio / Intellij)  |
-|          ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/swift.png) Swift (App Code)           |         ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/scala.png) Scala (Intellij)          |
-|     ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/javascript.png) Javascript (Intellij)      |   ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/python.png) Python (PyCharm / Intellij)    |
-|         ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/go.png) Go (GoLand / Intellij)         | ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/php.png) PHP (PhpStorm/ WebStorm/ Intellij)) |
-|       ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/android-logcat.png) Android Logcat       |                                                                                                               |
+[IntelliJ](https://github.com/gaplo917/GapStyle/intellij)
+[VSCode](https://github.com/gaplo917/GapStyle/vscode)  
+[XCode](https://github.com/gaplo917/GapStyle/xcode)
 
 # Learn More About GapStyle
 
@@ -113,34 +107,3 @@ productivity-oriented syntax hightlight GapStyle specification.
 | ---- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | XML  | Darcula                     | NOT to use HTML-like highlighting because IntelliJ use XML color scheme to highlight JSX's tags internally. Using Darcula original color can prevent from having too much Monokai's **Keyword** color |
 | JSON | Derived from **JavaScript** | **Property Key** color should align with **JavaScript** Object                                                                                                                                        |
-
-# Installation(IntelliJ)
-
-### Install from IntelliJ Plugins
-
-1. Preference -> Plugins -> Search 'GapStyle' in Market Place -> install
-   ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/intellij-gapstyle-plugin-tutorial.png)
-
-2. Restart IntelliJ
-
-3. Preference -> Editor -> Color Scheme -> Choose `GapStyle`
-
-### Install manually
-
-1. Download from https://plugins.jetbrains.com/plugin/10559-gapstyle-color-scheme or
-   `git clone https://github.com/gaplo917/GapStyle`
-
-2. Preference -> Editor -> Color Scheme -> click the settings icon(next to the scheme
-   name) -> import scheme -> select GapStyle.jar
-
-## Installation(XCode)
-
-1. Copy the `xcode/Gap Style.dvtcolortheme` to
-   `~/Library/Developer/Xcode/UserData/FontAndColorThemes`
-1. Restart Xcode and you will see the color theme.
-
-## IntelliJ Enable font ligatures
-
-1. Go to 'Preference > Editor > Color Scheme > Color Scheme Font'
-1. Check 'Use color scheme font instead of default'
-1. Check 'Enable font ligatures'

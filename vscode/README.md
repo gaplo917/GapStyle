@@ -19,17 +19,17 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 
 ## Actively Maintain Language
 
-| IDE      | Supported Language                                                          |
-| -------- | --------------------------------------------------------------------------- |
-| IntelliJ | Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android |
-| VSCode   | Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android |
-| XCode    | Swift, Objective C                                                          |
+| IDE      | Supported Language                                                                                                               |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| IntelliJ | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, Android Logcat, Android, PHP, HTML, XML, JSX, CSS/SCSS/SASS |
+| VSCode   | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS                          |
+| XCode    | Swift, Objective C                                                                                                               |
 
 ## Enable Semantic Highlighting
 
 1. Command + Shift + P
 2. Search "settings.json" & Open
-3. Paste the follow config on the
+3. Paste the follow config
 
 ```
 {
