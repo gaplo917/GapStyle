@@ -34,7 +34,6 @@ variables:
   - &MACRO '#328F54'
   - &RELAX_MD_KEYWORD '#F96B9D'
   - &RELAX_MD_STRING '#E6DB85'
-  - &RELAX_MD_INLINE_CODE '#CF8823'
 colors:
     # From my faviourite One Dark Pro Theme
     activityBar.background: "#282c34"
@@ -219,6 +218,7 @@ tokenColors:
     - punctuation.definition.string.end.markdown
     - constant.other.reference.link.markdown
     - punctuation.definition.string.markdown
+    - entity.name.section.markdown
     settings:
       foreground: *RELAX_MD_KEYWORD
       fontStyle: regular
@@ -229,8 +229,10 @@ tokenColors:
     - markup.raw.restructuredtext
     - punctuation.definition.raw.markdown
     - markup.fenced_code.block.markdown punctuation.definition.markdown
+    - fenced_code.block.language.markdown
+    - markup.fenced_code.block.markdown
     settings:
-      foreground: *RELAX_MD_INLINE_CODE
+      foreground: *COMMENT
 
   - name: Links (prose)
     scope:
@@ -657,8 +659,8 @@ tokenColors:
     - variable.other.key.toml
     - entity.name.tag.toml
     settings:
-      foreground: *MEMBER_VAR
-      fontStyle: regular
+      foreground: *KEYWORD
+      fontStyle: bold
 
   - name: Dates / timestamps (serializable languages)
     scope:
@@ -667,28 +669,32 @@ tokenColors:
     settings:
       foreground: *PREDEFINED
 
-  - name: YAML aliases
+  - name: YAML Anchor
+    scope:
+    - punctuation.definition.anchor.yaml
+    - entity.name.type.anchor.yaml
+    settings:
+      foreground: *FUNCTION_PARAM
+
+  - name: YAML Aliases
     scope:
     - variable.other.alias.yaml
+    - punctuation.definition.alias.yaml
     settings:
       fontStyle: italic
-      foreground: *LOCAL_VAR
+      foreground: *MEMBER_VAR
 
-  - name: TOML Table
+  - name: TOML Table / Array
     scope:
     - entity.other.attribute-name.table.toml
-    settings:
-      foreground: *FUNCTION
-
-  - name: TOML Array
-    scope:
     - entity.other.attribute-name.table.array.toml
     settings:
-      foreground: *INTERFACE
+      foreground: *PREDEFINED
   
   - name: Config Default
     scope:
     - source.yaml string.unquoted
+    - text.html.markdown string.unquoted
     settings:
       foreground: *DEFAULT
 
@@ -989,6 +995,13 @@ tokenColors:
     - string.unquoted.cdata.xml punctuation.definition.string.end.xml
     settings:
       foreground: *DEFAULT
+
+  - name: XML Entity
+    scope:
+    - constant.character.entity.xml
+    - punctuation.definition.constant.xml
+    settings:
+      foreground: *PREDEFINED
 
 # =============================================================================
 # JSON
@@ -1615,3 +1628,12 @@ tokenColors:
       - meta.function.parameter.typehinted.php storage.type.php
     settings:
       foreground: *TYPE_PARAM
+# =============================================================================
+# Protobuf
+# =============================================================================
+  - name: Protobuf Keyword
+    scope:
+      - constant.language.proto
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold

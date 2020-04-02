@@ -2,6 +2,11 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.2.0] - 2020-04-03
+
+- Enhance `.md`, `.yaml`, `.toml`, '.xml'
+- Add Protobuf support
+
 ## [1.1.0] - 2020-04-03
 
 - Enhance `.js`, `.ts`, `.tsx`, `.jsx`
