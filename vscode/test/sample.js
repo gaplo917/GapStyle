@@ -22,6 +22,13 @@ function AjaxRequest(url) {
   hello()
 
   something.abc
+
+  const a = 0
+  a++
+  a--
+  a += 1
+  a -= 1
+  a != 1
 }
 
 function testing() {

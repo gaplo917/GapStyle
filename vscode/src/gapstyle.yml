@@ -33,7 +33,6 @@ variables:
   - &SASS_VAR '#6D9CBE'
   - &MACRO '#328F54'
   - &RELAX_MD_KEYWORD '#F96B9D'
-  - &RELAX_MD_LINK '#77ACF6'
   - &RELAX_MD_STRING '#E6DB85'
   - &RELAX_MD_INLINE_CODE '#CF8823'
 colors:
@@ -216,12 +215,10 @@ tokenColors:
     - punctuation.definition.markdown
     - punctuation.definition.quote.begin.markdown
     - punctuation.definition.quote.end.markdown
-    - markup.fenced_code.block.markdown punctuation.definition.markdown
     - punctuation.definition.string.begin.markdown
     - punctuation.definition.string.end.markdown
     - constant.other.reference.link.markdown
     - punctuation.definition.string.markdown
-    - punctuation.definition.raw.markdown
     settings:
       foreground: *RELAX_MD_KEYWORD
       fontStyle: regular
@@ -230,6 +227,8 @@ tokenColors:
     scope:
     - markup.inline.raw
     - markup.raw.restructuredtext
+    - punctuation.definition.raw.markdown
+    - markup.fenced_code.block.markdown punctuation.definition.markdown
     settings:
       foreground: *RELAX_MD_INLINE_CODE
 
@@ -238,7 +237,7 @@ tokenColors:
     - markup.underline.link
     - markup.underline.link.image
     settings:
-      foreground: *RELAX_MD_LINK
+      foreground: *PREDEFINED
 
   - name: Link text, image alt text (prose)
     scope:
@@ -308,7 +307,7 @@ tokenColors:
     - meta.class entity.name.type
     settings:
       foreground: *CLASS
-      fontStyle: normal
+      fontStyle: regular
 
   - name: this, super, self, etc.
     scope:
@@ -440,7 +439,6 @@ tokenColors:
   - name: Function names
     scope:
     - entity.name.function
-    - meta.function
     - meta.method.declaration
     - meta.function-call
     - meta.function-call.generic
@@ -473,7 +471,6 @@ tokenColors:
   - name: Decorator / Annotation
     scope:
     - meta.decorator
-    - meta.decorator.ts # typescript
     - storage.type.annotation
     - punctuation.definition.annotation
     - meta.decorator punctuation.decorator
@@ -658,8 +655,10 @@ tokenColors:
     - entity.name.section.toml
     - entity.name.tag.yaml
     - variable.other.key.toml
+    - entity.name.tag.toml
     settings:
-      foreground: *KEYWORD
+      foreground: *MEMBER_VAR
+      fontStyle: regular
 
   - name: Dates / timestamps (serializable languages)
     scope:
@@ -672,8 +671,27 @@ tokenColors:
     scope:
     - variable.other.alias.yaml
     settings:
-      fontStyle: italic underline
+      fontStyle: italic
+      foreground: *LOCAL_VAR
+
+  - name: TOML Table
+    scope:
+    - entity.other.attribute-name.table.toml
+    settings:
       foreground: *FUNCTION
+
+  - name: TOML Array
+    scope:
+    - entity.other.attribute-name.table.array.toml
+    settings:
+      foreground: *INTERFACE
+  
+  - name: Config Default
+    scope:
+    - source.yaml string.unquoted
+    settings:
+      foreground: *DEFAULT
+
 # =============================================================================
 # Storage
 # =============================================================================
@@ -817,7 +835,7 @@ tokenColors:
 
   - name: Variables and object properties
     scope:
-    - variable
+    - variable.other.object
     - constant.other.key.perl     # Perl edge case
     - support.variable.property   # Object properties
     - variable punctuation.definition.variable.php # Fixes php $ sign and variables
@@ -839,13 +857,14 @@ tokenColors:
     - meta.export variable.other.readwrite.alias                             # Module import aliasing (alias name)
     - meta.variable.assignment.destructured.object.coffee variable variable  # Object destructuring variable (coffeescript)
     settings:
-      fontStyle: normal
+      fontStyle: regular
       foreground: *DEFAULT
 
   - name: Object Properties
     scope:
     - variable.object.property
     - variable.other.property
+    - variable.other.object.property
     - meta.definition.property
     - meta.field.declaration
     - meta.object.member
@@ -885,6 +904,7 @@ tokenColors:
     scope:
     - support.type.primitive
     - storage.type.primitive
+    - constant.language.boolean
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -961,6 +981,15 @@ tokenColors:
     - punctuation.definition.string.end.xml
     settings:
       foreground: *XML_STRING
+
+  - name: XML Default
+    scope:
+    - string.unquoted.cdata.xml
+    - string.unquoted.cdata.xml punctuation.definition.string.begin.xml
+    - string.unquoted.cdata.xml punctuation.definition.string.end.xml
+    settings:
+      foreground: *DEFAULT
+
 # =============================================================================
 # JSON
 # =============================================================================
@@ -977,6 +1006,7 @@ tokenColors:
     - constant.language.json
     settings:
       foreground: *KEYWORD
+      fontStyle: bold
 # =============================================================================
 # CSS
 # =============================================================================
@@ -1002,6 +1032,7 @@ tokenColors:
   - name: Css Function
     scope:
     - meta.function.color.css support.function.misc.css
+    - support.constant.font-name.css
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1028,18 +1059,16 @@ tokenColors:
   - name: SASS/SCSS Variable
     scope:
     - variable.scss
-    - source.sass variable.other.name
+    - source.sass variable
     settings:
       foreground: *SASS_VAR
 
-  - name: SASS Keyword
-    scope:
-    - meta.property-list.css.sass.prop constant.numeric.css.sass  # Fix Unicode
-    - meta.property-list.scss meta.property-value.scss
-    - meta.property-list.scss support.constant.mathematical-symbols.scss
-    settings:
-      foreground: *KEYWORD
-      fontStyle: bold
+  # - name: SASS Keyword
+  #   scope:
+  #   - meta.property-list.scss support.constant.mathematical-symbols.scss
+  #   settings:
+  #     foreground: *KEYWORD
+  #     fontStyle: bold
 
   - name: SASS Interpolation
     scope:
@@ -1054,6 +1083,19 @@ tokenColors:
     settings:
       foreground: *ATTR_NAME
       fontStyle: bold
+
+  - name: SASS Default
+    scope:
+    - comment.punctuation.comma.sass
+    - comment.punctuation.comma.scss
+    - support.constant.property-value.css.sass
+    - meta.property-value.scss
+    - keyword.operator.sass
+    - keyword.operator.scss
+    - support.constant.mathematical-symbols.scss
+    settings:
+      foreground: *STRING
+      
 # =============================================================================
 # Java
 # =============================================================================
@@ -1091,6 +1133,20 @@ tokenColors:
     settings:
       foreground: *CLASS
       fontStyle: regular
+
+  - name: Java Class Fields
+    scope:
+    - meta.class.body.java meta.definition.variable variable.other.definition
+    settings:
+      foreground: *MEMBER_VAR
+
+
+  - name: Java Variable
+    scope:
+    - meta.method.body.java meta.definition.variable variable.other.definition
+    settings:
+      foreground: *LOCAL_VAR
+      fontStyle: regular
 # =============================================================================
 # Kotlin
 # =============================================================================
@@ -1124,10 +1180,10 @@ tokenColors:
     scope:
     - variable.language.this.ts
     - variable.language.this.js
+    - constant.language.null.ts
     - constant.language.null.js
+    - constant.language.undefined.ts
     - constant.language.undefined.js
-    - constant.language.boolean.true.js
-    - constant.language.boolean.false.js
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1137,57 +1193,167 @@ tokenColors:
     - variable.other.constant.js  # Fix incorrect highlighting of pseudo-constants in js, jsx
     - variable.other.constant.ts  # Fixes incorrect highlighting of pseudo-constants in ts
     - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
-    settings:
-      foreground: *LOCAL_VAR
-
-  - name: Typescript / Javascript Default
-    scope:
-    - source.ts keyword.operator.type
-    - source.tsx keyword.operator.type
-    - source.js keyword.operator.type
-    - source.jsx keyword.operator.type
-    - keyword.operator.ternary
-    - variable.other.constant.ts
-    - variable.other.constant.tsx
+    - variable.other.constant.jsx # Fixes incorrect highlighting of pseudo-constants in tsx
     - variable.other.readwrite.js
     - variable.other.readwrite.ts
     - variable.other.readwrite.tsx
     - variable.other.readwrite.jsx
     settings:
-      foreground: *DEFAULT
+      foreground: *LOCAL_VAR
 
-  - name: Typescript / Javascript Destructuring
+  - name: Typescript / Javascript Default
     scope:
+    - source.ts keyword.operator
+    - source.tsx keyword.operator
+    - source.js keyword.operator
+    - source.jsx keyword.operator
+    - support.type.object.module.js
+    - support.type.object.module.ts
+    - source.ts meta.brace
+    - source.tsx meta.brace
+    - source.js meta.brace
+    - source.jsx meta.brace
+    settings:
+      foreground: *DEFAULT
+      fontStyle: regular
+
+  - name: Typescript / Javascript Destructuring Value
+    scope:
+    - meta.object-binding-pattern-variable.js meta.definition.variable.js variable.other.constant.js
     - meta.object-binding-pattern-variable.ts meta.definition.variable.ts variable.other.constant.ts
     settings:
       foreground: *LOCAL_VAR
 
+  - name: Typescript / Javascript Destructuring Key
+    scope:
+    - meta.object-binding-pattern-variable.js variable.object.property.js
+    - meta.object-binding-pattern-variable.ts variable.object.property.ts
+    settings:
+      foreground: *MEMBER_VAR
+
+  - name: Typescript / Javascript Predefined
+    scope:
+    - support.constant.json.js
+    settings:
+      foreground: *PREDEFINED
+
+  - name: Typescript / Javascript Decorator
+    scope:
+    - meta.decorator.ts variable.other.readwrite.ts # typescript
+    settings:
+      foreground: *DECORATOR
 
 # =============================================================================
-# JSX
+# TSX / JSX
 # =============================================================================
   - name: JSX Component
     scope:
-    - support.class.component.tsx
-    - meta.tag.tsx punctuation.definition.tag.begin.tsx
-    - meta.tag.tsx punctuation.definition.tag.end.tsx
-    - meta.tag.jsx punctuation.definition.tag.begin.jsx
-    - meta.tag.jsx punctuation.definition.tag.end.jsx
+    - meta.tag.tsx support.class.component
+    - meta.tag.jsx support.class.component
+    - meta.tag.js support.class.component
+    - meta.tag.ts support.class.component
+    - meta.tag.without-attributes.tsx support.class.component
+    - meta.tag.without-attributes.jsx support.class.component
+    - meta.tag.without-attributes.js support.class.component
+    - meta.tag.without-attributes.ts support.class.component
+    - meta.tag.tsx entity.name.tag
+    - meta.tag.jsx entity.name.tag
+    - meta.tag.js entity.name.tag
+    - meta.tag.ts entity.name.tag
+    - meta.tag.without-attributes.tsx entity.name.tag
+    - meta.tag.without-attributes.jsx entity.name.tag
+    - meta.tag.without-attributes.js entity.name.tag
+    - meta.tag.without-attributes.ts entity.name.tag
+    - meta.tag.tsx punctuation.definition.tag.begin
+    - meta.tag.jsx punctuation.definition.tag.begin
+    - meta.tag.ts punctuation.definition.tag.begin
+    - meta.tag.js punctuation.definition.tag.begin
+    - meta.tag.tsx punctuation.definition.tag.end
+    - meta.tag.jsx punctuation.definition.tag.end
+    - meta.tag.ts punctuation.definition.tag.end
+    - meta.tag.js punctuation.definition.tag.end
+    - meta.tag.without-attributes.tsx punctuation.definition.tag.begin
+    - meta.tag.without-attributes.jsx punctuation.definition.tag.begin
+    - meta.tag.without-attributes.ts punctuation.definition.tag.begin
+    - meta.tag.without-attributes.js punctuation.definition.tag.begin
+    - meta.tag.without-attributes.tsx punctuation.definition.tag.end
+    - meta.tag.without-attributes.jsx punctuation.definition.tag.end
+    - meta.tag.without-attributes.ts punctuation.definition.tag.end
+    - meta.tag.without-attributes.js punctuation.definition.tag.end
     settings:
       foreground: *XML_TAG
 
   - name: JSX Attribute
     scope:
-    - entity.other.attribute-name.tsx
+    - meta.tag.tsx entity.other.attribute-name
+    - meta.tag.jsx entity.other.attribute-name
+    - meta.tag.js entity.other.attribute-name
+    - meta.tag.ts entity.other.attribute-name
     settings:
       foreground: *XML_ATTR
 
   - name: JSX Attribute Punctuation
     scope:
-    - meta.tag.tsx meta.tag.attributes.tsx punctuation.section.embedded.begin.tsx
-    - meta.tag.tsx meta.tag.attributes.tsx punctuation.section.embedded.end.tsx
+    - meta.tag.tsx meta.tag.attributes punctuation.section.embedded.begin
+    - meta.tag.tsx meta.tag.attributes punctuation.section.embedded.end
+    - meta.tag.jsx meta.tag.attributes punctuation.section.embedded.begin
+    - meta.tag.jsx meta.tag.attributes punctuation.section.embedded.end
+    - meta.tag.ts meta.tag.attributes punctuation.section.embedded.begin
+    - meta.tag.ts meta.tag.attributes punctuation.section.embedded.end
+    - meta.tag.js meta.tag.attributes punctuation.section.embedded.begin
+    - meta.tag.js meta.tag.attributes punctuation.section.embedded.end
     settings:
       foreground: *DEFAULT
+
+  - name: JSX String
+    scope:
+    - meta.tag.tsx string.quoted.double
+    - meta.tag.jsx string.quoted.double
+    - meta.tag.js string.quoted.double
+    - meta.tag.ts string.quoted.double
+    - meta.tag.tsx string.quoted.single
+    - meta.tag.jsx string.quoted.single
+    - meta.tag.ts string.quoted.single
+    - meta.tag.js string.quoted.single
+    - meta.tag.tsx punctuation.definition.string.begin
+    - meta.tag.jsx punctuation.definition.string.begin
+    - meta.tag.ts punctuation.definition.string.begin
+    - meta.tag.js punctuation.definition.string.begin
+    - meta.tag.tsx punctuation.definition.string.end
+    - meta.tag.jsx punctuation.definition.string.end
+    - meta.tag.ts punctuation.definition.string.end
+    - meta.tag.js punctuation.definition.string.end
+    settings:
+      foreground: *XML_STRING
+
+  - name: JSX String Expression
+    scope:
+    - meta.tag.tsx meta.tag.attributes meta.embedded.expression string.quoted.single
+    - meta.tag.tsx meta.tag.attributes meta.embedded.expression string.quoted.single punctuation.definition.string.begin
+    - meta.tag.tsx meta.tag.attributes meta.embedded.expression string.quoted.single punctuation.definition.string.end
+    - meta.tag.jsx meta.tag.attributes meta.embedded.expression string.quoted.single
+    - meta.tag.jsx meta.tag.attributes meta.embedded.expression string.quoted.single punctuation.definition.string.begin
+    - meta.tag.jsx meta.tag.attributes meta.embedded.expression string.quoted.single punctuation.definition.string.end
+    - meta.tag.ts meta.tag.attributes meta.embedded.expression string.quoted.single
+    - meta.tag.ts meta.tag.attributes meta.embedded.expression string.quoted.single punctuation.definition.string.begin
+    - meta.tag.ts meta.tag.attributes meta.embedded.expression string.quoted.single punctuation.definition.string.end
+    - meta.tag.js meta.tag.attributes meta.embedded.expression string.quoted.single
+    - meta.tag.js meta.tag.attributes meta.embedded.expression string.quoted.single punctuation.definition.string.begin
+    - meta.tag.js meta.tag.attributes meta.embedded.expression string.quoted.single punctuation.definition.string.end
+    - meta.tag.tsx meta.tag.attributes meta.embedded.expression string.quoted.double
+    - meta.tag.tsx meta.tag.attributes meta.embedded.expression string.quoted.double punctuation.definition.string.begin
+    - meta.tag.tsx meta.tag.attributes meta.embedded.expression string.quoted.double punctuation.definition.string.end
+    - meta.tag.jsx meta.tag.attributes meta.embedded.expression string.quoted.double
+    - meta.tag.jsx meta.tag.attributes meta.embedded.expression string.quoted.double punctuation.definition.string.begin
+    - meta.tag.jsx meta.tag.attributes meta.embedded.expression string.quoted.double punctuation.definition.string.end
+    - meta.tag.ts meta.tag.attributes meta.embedded.expression string.quoted.double
+    - meta.tag.ts meta.tag.attributes meta.embedded.expression string.quoted.double punctuation.definition.string.begin
+    - meta.tag.ts meta.tag.attributes meta.embedded.expression string.quoted.double punctuation.definition.string.end
+    - meta.tag.js meta.tag.attributes meta.embedded.expression string.quoted.double
+    - meta.tag.js meta.tag.attributes meta.embedded.expression string.quoted.double punctuation.definition.string.begin
+    - meta.tag.js meta.tag.attributes meta.embedded.expression string.quoted.double punctuation.definition.string.end
+    settings:
+      foreground: *STRING
 
 # =============================================================================
 # C++
@@ -1277,6 +1443,12 @@ tokenColors:
     - keyword.operator.cpp
     settings:
       foreground: *DEFAULT
+
+  - name: C++ Local Variable
+    scope:
+    - meta.function.definition.cpp meta.body.function.definition.cpp
+    settings:
+      foreground: *LOCAL_VAR
 # =============================================================================
 # Python
 # =============================================================================
@@ -1379,3 +1551,67 @@ tokenColors:
     settings:
       foreground: *KEYWORD
       fontStyle: bold
+# =============================================================================
+# GraphQL (Prisma)
+# =============================================================================
+  - name: GraphQL Function 
+    scope:
+      - entity.name.function.graphql
+    settings:
+      foreground: *DEFAULT
+
+  - name: GraphQL Interface
+    scope:
+      - meta.type.interface.graphql support.type.graphql
+    settings:
+      foreground: *INTERFACE
+
+  - name: GraphQL Arguments
+    scope:
+      - variable.arguments.graphql
+      - variable.graphql
+    settings:
+      foreground: *MEMBER_VAR
+
+  - name: GraphQL Built-in Type
+    scope:
+      - support.type.builtin.graphql
+      - support.type.enum.graphql
+    settings:
+      foreground: *CLASS
+      
+  - name: GraphQL Keyword
+    scope:
+      - constant.language.boolean.graphql
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+# =============================================================================
+# PHP
+# =============================================================================
+  - name: PHP Class Fields
+    scope:
+      - meta.class.body.php variable.other.php
+      - meta.class.body.php variable.other.php punctuation.definition.variable.php
+    settings:
+      foreground: *MEMBER_VAR
+
+  - name: PHP Function parameter
+    scope:
+      - meta.function.parameters.php variable.other.php
+    settings:
+      foreground: *FUNCTION_PARAM
+
+  - name: PHP Keyword
+    scope:
+      - variable.language.this.php
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: PHP Typehints
+    scope:
+      - meta.function.parameter.typehinted.php
+      - meta.function.parameter.typehinted.php storage.type.php
+    settings:
+      foreground: *TYPE_PARAM

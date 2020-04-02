@@ -3,6 +3,7 @@
 static_sidebar:
   id: "foo"
   name: 'side_bar'
+  repo: abcdef
   staged_position: 1
   blog_id: 1
   config: |+
