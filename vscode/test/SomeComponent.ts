@@ -1,5 +1,3 @@
-class SomeComponent {
-
-}
+class SomeComponent {}
 
 export { SomeComponent }

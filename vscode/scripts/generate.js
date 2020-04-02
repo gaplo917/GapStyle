@@ -1,7 +1,7 @@
-const { readFile } = require('fs').promises;
-const { join } = require('path');
-const { Type, Schema, load } = require('js-yaml');
-const tinycolor = require('tinycolor2');
+const { readFile } = require('fs').promises
+const { join } = require('path')
+const { Type, Schema, load } = require('js-yaml')
+const tinycolor = require('tinycolor2')
 
 /**
  * @typedef {Object} TokenColor - Textmate token color.
@@ -23,51 +23,45 @@ const tinycolor = require('tinycolor2');
  */
 
 const withAlphaType = new Type('!alpha', {
-    kind: 'sequence',
-    construct: ([hexRGB, alpha]) => hexRGB + alpha,
-    represent: ([hexRGB, alpha]) => hexRGB + alpha,
-});
+  kind: 'sequence',
+  construct: ([hexRGB, alpha]) => hexRGB + alpha,
+  represent: ([hexRGB, alpha]) => hexRGB + alpha,
+})
 
-const schema = Schema.create([withAlphaType]);
+const schema = Schema.create([withAlphaType])
 
 /**
  * Soft variant transform.
  * @type {ThemeTransform}
  */
 const transformSoft = (yamlContent, yamlObj) => {
-    const variables = [
-        ...yamlObj.variables,
-    ];
-    return load(
-        yamlContent.replace(/#[0-9A-F]{6}/g, color => {
-            if (variables.includes(color)) {
-                return tinycolor(color)
-                    .toHexString();
-            }
-            return color;
-        }),
-        { schema }
-    );
-};
+  const variables = [...yamlObj.variables]
+  return load(
+    yamlContent.replace(/#[0-9A-F]{6}/g, color => {
+      if (variables.includes(color)) {
+        return tinycolor(color).toHexString()
+      }
+      return color
+    }),
+    { schema }
+  )
+}
 
 module.exports = async () => {
-    const yamlFile = await readFile(
-        join(__dirname, '..', 'src', 'gapstyle.yml'),
-        'utf-8'
-    );
+  const yamlFile = await readFile(join(__dirname, '..', 'src', 'gapstyle.yml'), 'utf-8')
 
-    /** @type {Theme} */
-    const base = load(yamlFile, { schema });
+  /** @type {Theme} */
+  const base = load(yamlFile, { schema })
 
-    // Remove nulls and other falsey values from colors
-    for (const key of Object.keys(base.colors)) {
-        if (!base.colors[key]) {
-            delete base.colors[key];
-        }
+  // Remove nulls and other falsey values from colors
+  for (const key of Object.keys(base.colors)) {
+    if (!base.colors[key]) {
+      delete base.colors[key]
     }
+  }
 
-    return {
-        base,
-        soft: transformSoft(yamlFile, base),
-    };
-};
+  return {
+    base,
+    soft: transformSoft(yamlFile, base),
+  }
+}
