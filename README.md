@@ -17,17 +17,17 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 
 ## Actively Maintain Language
 
-| IDE                                                       | Supported Language                                                                                                               |
-| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [IntelliJ](https://github.com/gaplo917/GapStyle/intellij) | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, Android Logcat, Android, PHP, HTML, XML, JSX, CSS/SCSS/SASS |
-| [VSCode](https://github.com/gaplo917/GapStyle/vscode)     | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS                          |
-| [XCode](https://github.com/gaplo917/GapStyle/xcode)       | Swift, Objective C                                                                                                               |
+| IDE                                                                   | Supported Language                                                                                                               |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [IntelliJ](https://github.com/gaplo917/GapStyle/tree/master/intellij) | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, Android Logcat, Android, PHP, HTML, XML, JSX, CSS/SCSS/SASS |
+| [VSCode](https://github.com/gaplo917/GapStyle/tree/master/vscode)     | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS                          |
+| [XCode](https://github.com/gaplo917/GapStyle/tree/master/xcode)       | Swift, Objective C                                                                                                               |
 
 ## Screenshots
 
-[IntelliJ](https://github.com/gaplo917/GapStyle/intellij)
-[VSCode](https://github.com/gaplo917/GapStyle/vscode)  
-[XCode](https://github.com/gaplo917/GapStyle/xcode)
+[IntelliJ](https://github.com/gaplo917/GapStyle/tree/master/intellij)
+[VSCode](https://github.com/gaplo917/GapStyle/tree/master/vscode)  
+[XCode](https://github.com/gaplo917/GapStyle/tree/master/xcode)
 
 # Learn More About GapStyle
 
@@ -36,13 +36,6 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
   - [Color Palette](#color-palette)
   - [Special Styling](#special-styling)
   - [Special File Type](#special-file-type)
-- [Installation(IntelliJ)](#installationintellij)
-  - [Install from IntelliJ Plugins](#install-from-intellij-plugins)
-  - [Install manually](#install-manually)
-- [Installation(XCode)](#installationxcode)
-- [IntelliJ Enable font ligatures](#intellij-enable-font-ligatures)
-- [Actively Maintain Language](#actively-maintain-language)
-- [Screenshots](#screenshots)
 
 ## GapStyle Specification
 
