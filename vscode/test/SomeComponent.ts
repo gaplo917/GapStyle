@@ -1,0 +1,5 @@
+class SomeComponent {
+
+}
+
+export { SomeComponent }

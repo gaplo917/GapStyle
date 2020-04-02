@@ -3,6 +3,39 @@ type: dark
 variables: 
   - &DEFAULT '#A9B7C6'
   - &STRING '#E6DB75'
+  - &STRING_REGEX '#CC7832'
+  - &STRING_INTERPOLATION '#CC7832'
+  - &STRING_INVALID_ESCAPE '#6A8760'
+  - &PREDEFINED '#4186F8'
+  - &CONSTANT '#4186F8'
+  - &KEYWORD '#F92672'
+  - &FUNCTION '#A6E22E'
+  - &FUNCTION_PARAM '#FD971F'
+  - &ATTR_NAME '#89BB26'
+  - &DOC_PARAM '#8A653B'
+  - &DOC '#77B767'
+  - &DOC_TAG '#526D4A'
+  - &COMMENT '#808080'
+  - &CLASS '#66D9EF'
+  - &ABSTRACT_CLASS '#00CFD3'
+  - &SPECIAL_BG '#2F4830'
+  - &REGEX_BRACE '#E8BF6A'
+  - &TYPE_PARAM '#20999D'
+  - &NUMBER '#AE81FE'
+  - &LOCAL_VAR '#CBAD96'
+  - &MEMBER_VAR '#CF8823'
+  - &INTERFACE '#0ED38B'
+  - &DECORATOR '#BBB529'
+  - &XML_TAG '#E8BF6A'
+  - &XML_ATTR '#BABABA'
+  - &XML_STRING '#A5C261'
+  - &JSON_PROPERTY '#CF8823'
+  - &SASS_VAR '#6D9CBE'
+  - &MACRO '#328F54'
+  - &RELAX_MD_KEYWORD '#F96B9D'
+  - &RELAX_MD_LINK '#77ACF6'
+  - &RELAX_MD_STRING '#E6DB85'
+  - &RELAX_MD_INLINE_CODE '#CF8823'
 colors:
     # From my faviourite One Dark Pro Theme
     activityBar.background: "#282c34"
@@ -47,6 +80,8 @@ colors:
     editorSuggestWidget.background: "#21252b"
     editorSuggestWidget.border: "#181a1f"
     editorSuggestWidget.selectedBackground: "#2c313a"
+    editorUnnecessaryCode.opacity: "#00000088"
+    editorUnnecessaryCode.border: "#ffffff00"
     editorWarning.foreground: "#d19a66"
     editorWhitespace.foreground: "#3b4048"
     editorWidget.background: "#21252b"
@@ -110,19 +145,26 @@ tokenColors:
 # =============================================================================
 # General
 # =============================================================================
+  - scope:
+    - source
+    settings:
+      foreground: *DEFAULT
 
   - scope:
     - emphasis
     settings:
       fontStyle: italic
+
   - scope:
     - strong
     settings:
       fontStyle: bold
+
   - scope:
     - header
     settings:
       foreground: *DEFAULT
+
   - scope:
     - source
     settings:
@@ -154,3 +196,1177 @@ tokenColors:
     - punctuation.support.type.property-name.end
     settings:
       foreground: *STRING
+
+  - name: Invalid Escape
+    scope:
+    - invalid.illegal.unrecognized-string-escape
+    settings:
+      foreground: *STRING_INVALID_ESCAPE
+# =============================================================================
+# Markdown
+# =============================================================================
+  - name: Puncuation
+    scope:
+    - punctuation.definition.bold.markdown
+    - punctuation.definition.italic.markdown
+    - punctuation.definition.italic.markdown
+    - punctuation.definition.list.begin.markdown
+    - punctuation.definition.list.end.markdown
+    - punctuation.definition.heading.markdown
+    - punctuation.definition.markdown
+    - punctuation.definition.quote.begin.markdown
+    - punctuation.definition.quote.end.markdown
+    - markup.fenced_code.block.markdown punctuation.definition.markdown
+    - punctuation.definition.string.begin.markdown
+    - punctuation.definition.string.end.markdown
+    - constant.other.reference.link.markdown
+    - punctuation.definition.string.markdown
+    - punctuation.definition.raw.markdown
+    settings:
+      foreground: *RELAX_MD_KEYWORD
+      fontStyle: regular
+
+  - name: Inline code (prose)
+    scope:
+    - markup.inline.raw
+    - markup.raw.restructuredtext
+    settings:
+      foreground: *RELAX_MD_INLINE_CODE
+
+  - name: Links (prose)
+    scope:
+    - markup.underline.link
+    - markup.underline.link.image
+    settings:
+      foreground: *RELAX_MD_LINK
+
+  - name: Link text, image alt text (prose)
+    scope:
+    - meta.link.reference.def.restructuredtext
+    - punctuation.definition.directive.restructuredtext
+    - string.other.link.description
+    - string.other.link.title
+    settings:
+      foreground: *RELAX_MD_STRING
+
+  - name: Blockquotes (prose)
+    scope:
+    - entity.name.directive.restructuredtext
+    - markup.quote
+    settings:
+      foreground: *RELAX_MD_STRING
+      fontStyle: italic
+
+  - name: Horizontal rule (prose)
+    scope:
+    - meta.separator.markdown
+    settings:
+      foreground: *COMMENT
+
+  - name: Code blocks
+    scope:
+    - fenced_code.block.language
+    - markup.raw.inner.restructuredtext
+    settings:
+      foreground: *DEFAULT
+
+  - name: Prose constants
+    scope:
+    - punctuation.definition.constant.restructuredtext
+    settings:
+      foreground: *DEFAULT
+
+  - name: Braces in markdown headings
+    scope:
+    - markup.heading.markdown punctuation.definition.string.begin
+    - markup.heading.markdown punctuation.definition.string.end
+    settings:
+      foreground: *DEFAULT
+
+  - name: Braces in markdown paragraphs
+    scope:
+    - meta.paragraph.markdown punctuation.definition.string.begin
+    - meta.paragraph.markdown punctuation.definition.string.end
+    settings:
+      foreground: *DEFAULT
+
+  - name: Braces in markdown blockquotes
+    scope:
+    - markup.quote.markdown meta.paragraph.markdown punctuation.definition.string.begin
+    - markup.quote.markdown meta.paragraph.markdown punctuation.definition.string.end
+    settings:
+      foreground: *STRING
+
+# =============================================================================
+# Classes
+# =============================================================================
+
+  - name: User-defined class names
+    scope:
+    - entity.name.type.class
+    - entity.name.class
+    - meta.class entity.name.type
+    settings:
+      foreground: *CLASS
+      fontStyle: normal
+
+  - name: this, super, self, etc.
+    scope:
+    - keyword.expressions-and-types.swift
+    - keyword.other.this
+    - variable.language
+    - variable.language punctuation.definition.variable.php # the "$" symbol in $this
+    - variable.other.readwrite.instance.ruby                # ruby's "@" instance symbol
+    - variable.parameter.function.language.special          # Special words as parameters
+    settings:
+      foreground: *KEYWORD
+
+  - name: Inherited classes
+    scope:
+    - entity.other.inherited-class
+    settings:
+      foreground: *ABSTRACT_CLASS
+
+# =============================================================================
+# Comments
+# =============================================================================
+
+  - name: Comments
+    scope:
+    - comment
+    - comment.block.documentation punctuation.definition.comment
+    - unused.comment
+    - wildcard.comment
+    settings:
+      foreground: *DOC
+
+  - name: Slash Comment
+    scope:
+    - comment.line
+    - comment.line.double-slash punctuation.definition.comment
+    - comment.block
+    - comment.block punctuation.definition.comment
+    - comment.line.number-sign punctuation.definition.comment
+    settings:
+      foreground: *COMMENT
+
+  - name: JSDoc-style keywords
+    scope:
+    - comment keyword.codetag.notation
+    - comment.block.documentation keyword
+    - comment.block.documentation storage.type.class
+    - comment.block.documentation storage.type.class punctuation.definition.block.tag
+    settings:
+      foreground: *DOC_TAG
+      fontStyle: underline
+
+  - name: JSDoc-style types
+    scope:
+    - meta.class comment.block.documentation
+    - meta.class comment.block.documentation punctuation.definition.comment
+    - comment.block.documentation entity.name.type
+    - comment.block.documentation
+    settings:
+      foreground: *DOC
+      fontStyle: italic
+
+  - name: JSDoc-style type brackets
+    scope:
+    - comment.block.documentation entity.name.type punctuation.definition.bracket
+    settings:
+      foreground: *DOC
+
+  - name: JSDoc-style comment parameters
+    scope:
+    - comment.block.documentation variable
+    settings:
+      foreground: *DOC_PARAM
+      fontStyle: italic
+
+  - name: Docstrings
+    scope:
+    - string.quoted.docstring.multi
+    - string.quoted.docstring.multi.python punctuation.definition.string.begin
+    - string.quoted.docstring.multi.python punctuation.definition.string.end
+    - string.quoted.docstring.multi.python constant.character.escape
+    settings:
+      foreground: *DOC
+
+# =============================================================================
+# Constants
+# =============================================================================
+
+  - name: Constants
+    scope:
+    - constant
+    settings:
+      foreground: *CONSTANT
+
+  - name: Constant escape sequences
+    scope:
+    - constant.character.escape
+    - constant.character.string.escape
+    - constant.regexp
+    settings:
+      foreground: *STRING_REGEX
+
+# =============================================================================
+# Entities
+# =============================================================================
+
+  - name: HTML tags
+    scope:
+    - entity.name.tag
+    settings:
+      foreground: *KEYWORD
+
+  - name: CSS attribute parent selectors ('&')
+    scope:
+    - entity.other.attribute-name.parent-selector
+    settings:
+      foreground: *KEYWORD
+
+  - name: HTML/CSS attribute names
+    scope:
+    - entity.other.attribute-name
+    settings:
+      foreground: *ATTR_NAME
+      fontStyle: italic
+
+# =============================================================================
+# Functions/Methods
+# =============================================================================
+
+  - name: Function names
+    scope:
+    - entity.name.function
+    - meta.function
+    - meta.method.declaration
+    - meta.function-call
+    - meta.function-call.generic
+    - meta.function-call.object
+    - meta.function-call.php
+    - meta.function-call.static
+    - meta.method-call.java meta.method
+    - meta.method.groovy
+    - support.function.any-method.lua
+    - keyword.operator.function.infix
+    - support.function
+    settings:
+      foreground: *FUNCTION
+
+  - name: Function parameters
+    scope:
+    - entity.name.variable.parameter
+    - meta.at-rule.function variable # Sass function params
+    - meta.at-rule.mixin variable    # Sass mixin params
+    - meta.function.arguments variable.other.php
+    - meta.selectionset.graphql meta.arguments.graphql variable.arguments.graphql
+    - variable.parameter
+    - meta.parameters entity.name.function
+    settings:
+      foreground: *FUNCTION_PARAM
+
+# =============================================================================
+# Decorator / Annotation
+# =============================================================================
+  - name: Decorator / Annotation
+    scope:
+    - meta.decorator
+    - meta.decorator.ts # typescript
+    - storage.type.annotation
+    - punctuation.definition.annotation
+    - meta.decorator punctuation.decorator
+    settings:
+      foreground: *DECORATOR
+      fontStyle: regular
+
+  - name: Decorators
+    scope:
+    - meta.decorator variable.other.readwrite
+    - meta.decorator variable.other.property
+    - meta.decorator meta.function-call entity.name.function
+    settings:
+      foreground: *DECORATOR
+
+  - name: Decorator Objects
+    scope:
+      - meta.decorator variable.other.object
+    settings:
+      foreground: *FUNCTION
+
+# =============================================================================
+# Keywords
+# =============================================================================
+
+  - name: Keywords
+    scope:
+    - keyword
+    - punctuation.definition.keyword
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Keyword "new"
+    scope:
+    - keyword.control.new
+    - keyword.operator.new
+    settings:
+      fontStyle: bold
+
+  - name: Generic selectors (CSS/SCSS/Less/Stylus)
+    scope:
+    - meta.selector
+    settings:
+      foreground: *KEYWORD
+
+  - name: Language specific Keywords
+    scope:
+    - constant.language.java
+    - punctuation.section.embedded.begin.php
+    - punctuation.section.embedded.end.php
+    settings:
+      fontStyle: bold
+      foreground: *KEYWORD
+
+
+# =============================================================================
+# Language Built-ins
+# =============================================================================
+
+  - name: Language Built-ins
+    scope:
+    - support
+    settings:
+      foreground: *DEFAULT
+
+  - name: Built-in magic functions and constants
+    scope:
+    - support.function.magic
+    - support.variable
+    - variable.other.predefined
+    - meta.function-call support.class.builtin
+    - meta.function-call support.class
+    settings:
+      fontStyle: italic
+      foreground: *PREDEFINED
+
+  - name: Built-in properties
+    scope:
+    - support.type.property-name
+    settings:
+      fontStyle: regular
+
+# =============================================================================
+# Punctuation / Operators
+# =============================================================================
+
+  - name: Separators (key/value, namespace, inheritance, pointer, hash, slice, etc)
+    scope:
+    - constant.other.symbol.hashkey punctuation.definition.constant.ruby
+    - entity.other.attribute-name.placeholder punctuation # Sass placeholder `%` symbols
+    - entity.other.attribute-name.pseudo-class punctuation
+    - entity.other.attribute-name.pseudo-element punctuation
+    - meta.group.double.toml
+    - meta.group.toml
+    - meta.object-binding-pattern-variable punctuation.destructuring
+    - punctuation.definition.parameters
+    - meta.block punctuation.definition.block
+    - punctuation.colon.graphql
+    - punctuation.definition.block.scalar.folded.yaml
+    - punctuation.definition.block.scalar.literal.yaml
+    - punctuation.definition.block.sequence.item.yaml
+    - punctuation.definition.entity.other.inherited-class
+    - punctuation.function.swift
+    - punctuation.separator.dictionary.key-value
+    - punctuation.separator.hash
+    - punctuation.separator.inheritance
+    - punctuation.separator.key-value
+    - punctuation.separator.key-value.mapping.yaml
+    - punctuation.separator.namespace
+    - punctuation.separator.pointer-access
+    - punctuation.separator.slice
+    - punctuation.terminator.statement
+    - string.unquoted.heredoc punctuation.definition.string
+    - support.other.chomping-indicator.yaml
+    - punctuation.separator.annotation
+    - meta.object-binding-pattern-variable
+    - punctuation.separator.comma
+    - meta.array.literal meta.brace.square
+    - meta.type.parameters punctuation.definition.typeparameters.begin
+    - meta.type.parameters punctuation.definition.typeparameters.end
+    - meta.class punctuation.definition.block
+    - punctuation.section.block.begin.bracket.curly.java
+    - punctuation.section.block.end.bracket.curly.java
+    - punctuation
+    - storage.type.function.arrow
+    - keyword.operator.spread
+    - keyword.operator.comparison
+    - keyword.operator.pattern
+    - keyword.operator.arithmetic
+    - keyword.operator.string
+    - keyword.operator.class
+    - keyword.operator.key
+    settings:
+      foreground: *DEFAULT
+      fontStyle: regular
+
+  - name: Brackets, braces, parens, etc.
+    scope:
+    - keyword.operator.assignment
+    - keyword.operator.other.powershell # Commas
+    - keyword.other.statement-separator.powershell
+    - meta.brace.round
+    - meta.function-call punctuation
+    - punctuation.definition.arguments.begin
+    - punctuation.definition.arguments.end
+    - punctuation.definition.entity.begin
+    - punctuation.definition.entity.end
+    - punctuation.definition.tag.cs # HTML tags in comments
+    - punctuation.definition.type.begin
+    - punctuation.definition.type.end
+    - punctuation.section.scope.begin
+    - punctuation.section.scope.end
+    - storage.type.generic.java
+    - string.template meta.brace
+    - string.template punctuation.accessor
+    settings:
+      foreground: *DEFAULT
+
+  - name: Variable interpolation operators
+    scope:
+    - meta.string-contents.quoted.double punctuation.definition.variable
+    - punctuation.definition.interpolation.begin
+    - punctuation.definition.interpolation.end
+    - punctuation.definition.template-expression.begin
+    - punctuation.definition.template-expression.end
+    - punctuation.section.embedded.begin
+    - punctuation.section.embedded.coffee
+    - punctuation.section.embedded.end
+    - punctuation.section.embedded.end source.php  # PHP edge case
+    - punctuation.section.embedded.end source.ruby # Issue with ruby's tmLanguage
+    - punctuation.definition.variable.makefile
+    settings:
+      foreground: *STRING_INTERPOLATION
+# =============================================================================
+# Serializable / Config Langages
+# =============================================================================
+
+  - name: Keys (serializable languages)
+    scope:
+    - entity.name.function.target.makefile
+    - entity.name.section.toml
+    - entity.name.tag.yaml
+    - variable.other.key.toml
+    settings:
+      foreground: *KEYWORD
+
+  - name: Dates / timestamps (serializable languages)
+    scope:
+    - constant.other.date
+    - constant.other.timestamp
+    settings:
+      foreground: *PREDEFINED
+
+  - name: YAML aliases
+    scope:
+    - variable.other.alias.yaml
+    settings:
+      fontStyle: italic underline
+      foreground: *FUNCTION
+# =============================================================================
+# Storage
+# =============================================================================
+
+  - name: Storage
+    scope:
+    - storage
+    - meta.implementation storage.type.objc
+    - meta.interface-or-protocol storage.type.objc
+    - source.groovy storage.type.def
+    settings:
+      fontStyle: bold
+      foreground: *KEYWORD
+
+  - name: Types
+    scope:
+    - keyword.primitive-datatypes.swift
+    - keyword.type.cs
+    - meta.protocol-list.objc
+    - meta.return-type.objc
+    - source.go storage.type
+    - source.groovy storage.type
+    - source.java storage.type
+    - source.powershell entity.other.attribute-name
+    - storage.class.std.rust
+    - storage.type.attribute.swift
+    - storage.type.c
+    - storage.type.core.rust
+    - storage.type.cs
+    - storage.type.groovy
+    - storage.type.objc
+    - storage.type.php
+    - storage.type.haskell
+    - storage.type.ocaml
+    settings:
+      fontStyle: italic
+      foreground: *PREDEFINED
+
+  - name: Generics, templates, and mapped type declarations
+    scope:
+    - support.type
+    - entity.name.type.type-parameter
+    - entity.name.type.parameter
+    - entity.name.type.alias
+    - meta.indexer.mappedtype.declaration entity.name.type # Mapped type declarations
+    - meta.type.parameters entity.name.type                # Generic type declarations
+    - storage.type.generic.java
+    - meta.definition.variable.java
+    settings:
+      foreground: *TYPE_PARAM
+
+  - name: Modifiers
+    scope:
+    - storage.modifier
+    settings:
+      foreground: *KEYWORD
+
+  - name: Storage import
+    scope:
+    - storage.modifier.import
+    settings:
+      foreground: *DEFAULT
+      fontStyle: regular
+
+# =============================================================================
+# RegExp
+# =============================================================================
+
+  - name: RegExp string
+    scope:
+    - string.regexp
+    - constant.other.character-class.set.regexp
+    - constant.character.escape.backslash.regexp
+    - string.regexp punctuation.definition.string.begin
+    - string.regexp punctuation.definition.string.end
+    settings:
+      foreground: *STRING
+      background: *SPECIAL_BG
+
+  - name: Non-capture operators
+    scope:
+    # NOTE: The scope name is a misnomer. It is actually non-capture operators
+    - punctuation.definition.group.capture.regexp
+    settings:
+      background: *SPECIAL_BG
+
+  - name: Character group
+    scope:
+    - punctuation.definition.character-class.regexp
+    settings:
+      foreground: *PREDEFINED
+
+  - name: Capture groups
+    scope:
+    - punctuation.definition.group.regexp
+    - punctuation.definition.character-class.regexp
+    settings:
+      foreground: *REGEX_BRACE
+
+  - name: Assertion operators
+    scope:
+    - punctuation.definition.group.assertion.regexp
+    - keyword.operator.negation.regexp
+    settings:
+      foreground: *DEFAULT
+
+  - name: Positive lookaheads
+    scope:
+    - meta.assertion.look-ahead.regexp
+    settings:
+      foreground: *FUNCTION
+
+  - name: Character Class
+    scope:
+    - constant.other.character-class.regexp
+    settings:
+      foreground: *DEFAULT
+      
+  - name: Keyword Quantifier
+    scope:
+    - keyword.operator.quantifier.regexp
+    settings:
+      foreground: *NUMBER
+
+  - name: Escape
+    scope:
+    - constant.character.escape.backslash.regexp
+    - constant.other.placeholder
+    settings:
+      foreground: *STRING_REGEX
+
+  - name: Class Range
+    scope:
+    - constant.other.character-class.range.regexp
+    settings:
+      foreground: *DEFAULT
+
+# =============================================================================
+# Variables
+# =============================================================================
+
+  - name: Variables and object properties
+    scope:
+    - variable
+    - constant.other.key.perl     # Perl edge case
+    - support.variable.property   # Object properties
+    - variable punctuation.definition.variable.php # Fixes php $ sign and variables
+    settings:
+      foreground: *LOCAL_VAR
+
+  - name: Destructuring / aliasing reference name (LHS)
+    scope:
+    - meta.import variable.other.readwrite                          # Module import aliasing (real name)
+    - meta.object-binding-pattern-variable variable.object.property # Object destructuring property
+    - meta.variable.assignment.destructured.object.coffee variable  # Object destructuring property (coffeescript)
+    settings:
+      foreground: *DEFAULT
+
+  - name: Destructuring / aliasing variable name (RHS)
+    scope:
+    - constant.language.import-export-all
+    - meta.import variable.other.readwrite.alias                             # Module import aliasing (alias name)
+    - meta.export variable.other.readwrite.alias                             # Module import aliasing (alias name)
+    - meta.variable.assignment.destructured.object.coffee variable variable  # Object destructuring variable (coffeescript)
+    settings:
+      fontStyle: normal
+      foreground: *DEFAULT
+
+  - name: Object Properties
+    scope:
+    - variable.object.property
+    - variable.other.property
+    - meta.definition.property
+    - meta.field.declaration
+    - meta.object.member
+    settings:
+      foreground: *MEMBER_VAR
+
+# =============================================================================
+# Modules or namespace
+# =============================================================================
+  - name: Modules or namespace
+    scope:
+    - entity.name.type.module
+    - meta.namespace.declaration meta.import
+    settings:
+      foreground: *DEFAULT
+
+# =============================================================================
+# Interface
+# =============================================================================
+  - name: Interface
+    scope:
+    - entity.name.type.interface
+    settings:
+      foreground: *INTERFACE
+# =============================================================================
+# Number
+# =============================================================================
+  - name: Numeric
+    scope:
+    - constant.numeric
+    settings:
+      foreground: *NUMBER
+# =============================================================================
+# Primitive
+# =============================================================================
+  - name: Primitive
+    scope:
+    - support.type.primitive
+    - storage.type.primitive
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+
+# Language Specific Extension
+
+# =============================================================================
+# HTML
+# =============================================================================
+  - name: HTML CDATA
+    scope:
+    - string.unquoted.cdata
+    - string.unquoted.cdata punctuation.definition.string.begin
+    - string.unquoted.cdata punctuation.definition.string.end
+    settings:
+      foreground: *DEFAULT
+
+  - name: HTML Tag
+    scope:
+    - text.html meta.tag entity.name.tag
+    - text.html meta.tag entity.name.tag
+    - entity.name.tag.block.any.html
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: HTML Attribute
+    scope:
+    - text.html entity.other.attribute-name
+    settings:
+      foreground: *ATTR_NAME
+      fontStyle: bold
+
+  - name: HTML Speical character
+    scope:
+    - constant.character.entity.numeric.hexadecimal.html
+    - punctuation.definition.entity.html
+    - text.html constant.character.entity.named
+    settings:
+      foreground: *NUMBER
+
+# =============================================================================
+# XML
+# =============================================================================
+  - name: XML TAG
+    scope:
+    - meta.tag.xml
+    - meta.tag.xml entity.name.tag.localname.xml
+    - meta.tag.xml entity.name.tag.namespace.xml
+    - meta.tag.xml entity.other.attribute-name.namespace.xml
+    - meta.tag.preprocessor.xml
+    - meta.tag.preprocessor.xml entity.name.tag.xml
+    - meta.tag.sgml.doctype.xml keyword.other.doctype.xml
+    - meta.tag.sgml.doctype.xml variable.language.documentroot.xml
+    - punctuation.definition.tag.xml
+    settings:
+      foreground: *XML_TAG
+  - name: XML Attribute
+    scope:
+    - meta.tag.xml entity.other.attribute-name.localname.xml
+    - meta.tag.preprocessor.xml entity.other.attribute-name.localname.xml
+    - meta.tag.preprocessor.xml entity.other.attribute-name.xml
+    settings:
+      foreground: *XML_ATTR
+
+  - name: XML String
+    scope:
+    - meta.tag.xml string.quoted.double.xml
+    - meta.tag.preprocessor.xml string.quoted.double.xml
+    - meta.tag.xml string.quoted.single.xml
+    - meta.tag.preprocessor.xml string.quoted.single.xml
+    - punctuation.definition.string.begin.xml
+    - punctuation.definition.string.end.xml
+    settings:
+      foreground: *XML_STRING
+# =============================================================================
+# JSON
+# =============================================================================
+  - name: JSON Property
+    scope:
+    - support.type.property-name.json
+    - support.type.property-name.json punctuation.support.type.property-name.begin.json
+    - support.type.property-name.json punctuation.support.type.property-name.end.json
+    settings:
+      foreground: *JSON_PROPERTY
+
+  - name: JSON Boolean
+    scope:
+    - constant.language.json
+    settings:
+      foreground: *KEYWORD
+# =============================================================================
+# CSS
+# =============================================================================
+  - name: Css Property
+    scope:
+    - meta.property-name support.type.property-name.css
+    - support.type.vendored.property-name.css
+    settings:
+      foreground: *ATTR_NAME
+      fontStyle: bold
+
+  - name: Css URL / Css Color
+    scope:
+    - support.constant.color.w3c-standard-color-name.css
+    - variable.parameter.url.css
+    - constant.other.color.rgb-value.hex.css
+    - constant.other.color.rgb-value.hex.css punctuation.definition.constant.css
+    - constant.language.color.rgb-value.css
+    settings:
+      foreground: *STRING
+      fontStyle: regular
+
+  - name: Css Function
+    scope:
+    - meta.function.color.css support.function.misc.css
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Css Keywords
+    scope:
+    - entity.other.attribute-name.id.css
+    - entity.other.attribute-name.pseudo-element.css
+    - entity.name.tag.css
+    - constant.other.unicode-range.css
+    - punctuation.definition.constant.css
+    - support.constant.language-range.css
+    - meta.property-value.css
+    - entity.other.attribute-name.class.css
+    - entity.other.attribute-name.pseudo-class.css
+    - support.type.property-name.css
+    - support.constant.property-value.css
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+# =============================================================================
+# SASS / SCSS
+# =============================================================================
+  - name: SASS/SCSS Variable
+    scope:
+    - variable.scss
+    - source.sass variable.other.name
+    settings:
+      foreground: *SASS_VAR
+
+  - name: SASS Keyword
+    scope:
+    - meta.property-list.css.sass.prop constant.numeric.css.sass  # Fix Unicode
+    - meta.property-list.scss meta.property-value.scss
+    - meta.property-list.scss support.constant.mathematical-symbols.scss
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: SASS Interpolation
+    scope:
+    - support.function.interpolation.sass
+    settings:
+      foreground: *STRING_INTERPOLATION
+
+  - name: SASS Attribute
+    scope:
+    - support.type.property-name.css.sass.prop.name
+    - entity.other.attribute-name.pseudo-class.css.sass
+    settings:
+      foreground: *ATTR_NAME
+      fontStyle: bold
+# =============================================================================
+# Java
+# =============================================================================
+  - name: JavaDoc
+    scope:
+    - comment.block.javadoc.java
+    - comment.block.javadoc.java punctuation.definition.comment
+    settings:
+      foreground: *DOC
+
+  - name: JavaDoc Tag
+    scope:
+    - keyword.other.documentation.javadoc.java
+    settings:
+      foreground: *DOC_TAG
+      fontStyle: underline
+
+  - name: Java Enum Class
+    scope:
+    - entity.name.type.enum.java
+    settings:
+      foreground: *CLASS
+      fontStyle: regular
+
+  - name: Java Enum Constant
+    scope:
+    - constant.other.enum.java
+    settings:
+      foreground: *PREDEFINED
+      fontStyle: italic
+
+  - name: Java Class
+    scope:
+    - storage.type.java
+    settings:
+      foreground: *CLASS
+      fontStyle: regular
+# =============================================================================
+# Kotlin
+# =============================================================================
+  - name: Kotlin Keyword
+    scope:
+    - constant.language.kotlin
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Kotlin Doc
+    scope:
+    - comment.block.kotlin
+    - comment.block.kotlin punctuation.definition.comment.kotlin
+    settings:
+      foreground: *DOC
+
+# =============================================================================
+# Scala
+# =============================================================================
+  - name: Scala Keyword
+    scope:
+    - constant.language.scala
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+# =============================================================================
+# Typesciprt / Javascript
+# =============================================================================
+  - name: Typescript / Javascript Keyword
+    scope:
+    - variable.language.this.ts
+    - variable.language.this.js
+    - constant.language.null.js
+    - constant.language.undefined.js
+    - constant.language.boolean.true.js
+    - constant.language.boolean.false.js
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Typescript / Javascript Variable
+    scope:
+    - variable.other.constant.js  # Fix incorrect highlighting of pseudo-constants in js, jsx
+    - variable.other.constant.ts  # Fixes incorrect highlighting of pseudo-constants in ts
+    - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
+    settings:
+      foreground: *LOCAL_VAR
+
+  - name: Typescript / Javascript Default
+    scope:
+    - source.ts keyword.operator.type
+    - source.tsx keyword.operator.type
+    - source.js keyword.operator.type
+    - source.jsx keyword.operator.type
+    - keyword.operator.ternary
+    - variable.other.constant.ts
+    - variable.other.constant.tsx
+    - variable.other.readwrite.js
+    - variable.other.readwrite.ts
+    - variable.other.readwrite.tsx
+    - variable.other.readwrite.jsx
+    settings:
+      foreground: *DEFAULT
+
+  - name: Typescript / Javascript Destructuring
+    scope:
+    - meta.object-binding-pattern-variable.ts meta.definition.variable.ts variable.other.constant.ts
+    settings:
+      foreground: *LOCAL_VAR
+
+
+# =============================================================================
+# JSX
+# =============================================================================
+  - name: JSX Component
+    scope:
+    - support.class.component.tsx
+    - meta.tag.tsx punctuation.definition.tag.begin.tsx
+    - meta.tag.tsx punctuation.definition.tag.end.tsx
+    - meta.tag.jsx punctuation.definition.tag.begin.jsx
+    - meta.tag.jsx punctuation.definition.tag.end.jsx
+    settings:
+      foreground: *XML_TAG
+
+  - name: JSX Attribute
+    scope:
+    - entity.other.attribute-name.tsx
+    settings:
+      foreground: *XML_ATTR
+
+  - name: JSX Attribute Punctuation
+    scope:
+    - meta.tag.tsx meta.tag.attributes.tsx punctuation.section.embedded.begin.tsx
+    - meta.tag.tsx meta.tag.attributes.tsx punctuation.section.embedded.end.tsx
+    settings:
+      foreground: *DEFAULT
+
+# =============================================================================
+# C++
+# =============================================================================
+  - name: C++ Control Directives
+    scope:
+    - keyword.control.directive.include.cpp
+    - keyword.control.directive.define.cpp
+    - keyword.control.directive.conditional.ifdef.cpp
+    - keyword.control.directive.endif.cpp
+    - entity.name.label.cpp
+    - punctuation.definition.directive.cpp
+    settings:
+      foreground: *DECORATOR
+      fontStyle: regular
+
+  - name: C++ Global Variable
+    scope:
+    - variable.other.global.cpp
+    settings:
+      foreground: *PREDEFINED
+      fontStyle: italic
+
+  - name: C++ Preprocess
+    scope:
+    - entity.name.function.preprocessor.cpp
+    settings:
+      foreground: *MACRO
+      fontStyle: regular
+
+  - name: C++ Keywords
+    scope:
+    - meta.body.namespace.cpp
+    settings:
+      foreground: *KEYWORD
+
+  - name: C++ Namespace
+    scope:
+    - entity.name.namespace.cpp
+    settings:
+      foreground: *CLASS
+      fontStyle: bold
+
+  - name: C++ Struct / Enum
+    scope:
+    - entity.name.type.class.templated.cpp
+    - entity.name.type.struct.cpp
+    - entity.name.type.enum.cpp
+    settings:
+      foreground: *CLASS
+      fontStyle: regular
+
+  - name: C++ Member variable
+    scope:
+    - meta.body.struct.cpp
+    - meta.preprocessor.macro.cpp
+    settings:
+      foreground: *MEMBER_VAR
+      fontStyle: regular
+
+  - name: C++ Constant
+    scope:
+    - variable.other.enummember.cpp
+    settings:
+      foreground: *PREDEFINED
+      fontStyle: italic
+
+  - name: C++ Typedef
+    scope:
+    - meta.tail.struct.cpp
+    - meta.body.namespace.cpp
+    - entity.name.type.template.cpp
+    settings:
+      foreground: *TYPE_PARAM
+      fontStyle: regular
+
+  - name: C++ Interpolation
+    scope:
+    - string.quoted.double.raw.cpp punctuation.definition.string.begin.cpp
+    - string.quoted.double.raw.cpp punctuation.definition.string.end.cpp
+    settings:
+      foreground: *STRING_INTERPOLATION
+      fontStyle: regular
+
+  - name: C++ Operators
+    scope:
+    - keyword.operator.cpp
+    settings:
+      foreground: *DEFAULT
+# =============================================================================
+# Python
+# =============================================================================
+  - name: Python Decorator
+    scope:
+    - entity.name.function.decorator.python
+    - punctuation.definition.decorator.python
+    settings:
+      foreground: *DECORATOR
+      fontStyle: regular
+
+  - name: Python String Interpolation
+    scope:
+    - constant.character.format.placeholder.other.python
+    - storage.type.format.python
+    - storage.type.string.python
+    settings:
+      foreground: *STRING_INTERPOLATION
+      fontStyle: regular
+
+  - name: Python Property
+    scope:
+    - meta.item-access.python
+    settings:
+      foreground: *DEFAULT
+      fontStyle: regular
+# =============================================================================
+# Swift
+# =============================================================================
+  - name: Swift Class
+    scope:
+    - entity.name.type.struct.swift
+    - entity.name.type.enum.swift
+    settings:
+      foreground: *CLASS
+      fontStyle: regular
+
+  - name: Swift protocol
+    scope:
+    - entity.name.type.protocol.swift
+    - meta.inheritance-clause.swift
+    settings:
+      foreground: *INTERFACE
+      fontStyle: regular
+
+  - name: Swift Type parameter
+    scope:
+    - entity.name.type.typealias.swift
+    - variable.language.generic-parameter.swift
+    - meta.generic-parameter-clause.swift
+    settings:
+      foreground: *TYPE_PARAM
+      fontStyle: regular
+
+  - name: Swift Keyword
+    scope:
+    - punctuation.definition.attribute.swift
+    - storage.modifier.attribute.swift
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Swift Preprocess
+    scope:
+    - punctuation.definition.preprocessor.swift
+    - keyword.control.preprocessor.conditional.swift
+    settings:
+      foreground: *DECORATOR
+      fontStyle: regular
+
+  - name: Swift Function Parameters
+    scope:
+    - meta.parameter-clause.swift variable.parameter.function.swift
+    - meta.parameter-clause.swift entity.name.function.swift
+    settings:
+      foreground: *FUNCTION_PARAM
+      fontStyle: regular
+
+  - name: Swift Default # Because no sematic highlight
+    scope:
+    - support.function.any-method.swift
+    - meta.parameter-clause.swift entity.name.function.swift
+    - meta.function-call.swift
+    settings:
+      foreground: *DEFAULT
+      fontStyle: regular
+
+  - name: Swift Constant 
+    scope:
+    - variable.other.swift
+    settings:
+      foreground: *PREDEFINED
+      fontStyle: regular

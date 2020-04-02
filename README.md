@@ -1,6 +1,6 @@
 ![GapStyle](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/gap-style-github-og-image-v2.png)
 
-# GapStyle Theme For IntelliJ & XCode & VSCode
+# GapStyle Theme For IntelliJ & VSCode & XCode
 
 GapStyle is a **_productivity-oriented_** designed color scheme with a
 [list of supported languages](#actively-maintain-language). Each supported language is
@@ -22,8 +22,8 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 | IDE      | Supported Language                                                          |
 | -------- | --------------------------------------------------------------------------- |
 | IntelliJ | Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android |
+| VSCode   | Kotlin, Java, Swift, Scala, Javascript, Go, Python, Android Logcat, Android |
 | XCode    | Swift, Objective C                                                          |
-| VSCode   | (Comming Soon...)                                                           |
 
 ## Screenshots
 
