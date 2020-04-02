@@ -1,6 +1,6 @@
 # GapStyle VS Theme
 
-![screenshots](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/vscode/screenshots/sample.ts.png)
+![screenshots](https://raw.githubusercontent.com/gaplo917/GapStyle/master/vscode/screenshots/sample.ts.png)
 
 GapStyle is a **_productivity-oriented_** designed color scheme with a
 [list of supported languages](#actively-maintain-language). Each supported language is
