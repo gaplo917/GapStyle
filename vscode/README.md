@@ -1,6 +1,6 @@
 # GapStyle VS Theme
 
-![sample gapstyle](https://raw.githubusercontent.com/gaplo917/GapStyle/screenshots/sample.ts.png)
+![sample gapstyle](screenshots/sample.ts.png)
 
 GapStyle is a **_productivity-oriented_** designed color scheme with a
 [list of supported languages](#actively-maintain-language). Each supported language is
