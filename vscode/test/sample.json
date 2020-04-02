@@ -1,0 +1,15 @@
+{
+    // Line comments are not included in standard but nonetheless allowed.
+    /* As well as block comments. */
+    "the only keywords are": [true, false, null],
+    "strings with": {
+      "no escapes": "pseudopolinomiality"
+      "valid escapes": "C-style\r\n and unicode\u0021",
+      "illegal escapes": "\0377\x\""
+    },
+    "some numbers": [
+      42,
+      -0.0e-0,
+      6.626e-34
+    ] 
+  }

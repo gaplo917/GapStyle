@@ -2,3 +2,6 @@
 build
 .idea
 gh-md-toc
+vscode/node_modules
+vscode/themes/*.json
+*.vsix
