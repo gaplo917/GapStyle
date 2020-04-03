@@ -2,6 +2,10 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.2.2] - 2020-04-03
+
+- Add documentation of installing recommended font procedures
+
 ## [1.2.0] - 2020-04-03
 
 - Enhance `.md`, `.yaml`, `.toml`, '.xml'
