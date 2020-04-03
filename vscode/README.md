@@ -28,7 +28,7 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 ## Enable Semantic Highlighting
 
 1. Command + Shift + P
-2. Search "settings.json" & Open
+2. Search `settings.json` & Open
 3. Paste the follow config
 
 ```
@@ -47,6 +47,24 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 | [Hack JBM Ligatured](https://github.com/gaplo917/Ligatured-Hack) | VSCode   |    ✅    | Hack font with [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) ligature, built by Gap | [Download](https://github.com/gaplo917/Ligatured-Hack/releases) |
 | [Hack FC Ligatured](https://github.com/gaplo917/Ligatured-Hack)  | VSCode   |    ✅    | Hack font with [FIRA Code](https://github.com/tonsky/FiraCode) ligature, built by Gap              | [Download](https://github.com/gaplo917/Ligatured-Hack/releases) |
 | [Hack](https://github.com/source-foundry/Hack)                   | VSCode   |    ❌    | Standard Hack font                                                                                 |   [Download](https://github.com/source-foundry/Hack/releases)   |
+
+1. Install the recommended font into your system (i.e. Hack JBM Ligatured CCG)
+1. Command + Shift + P
+1. Search `settings.json` & Open
+1. Paste the follow config
+
+VSCode Editor Config (Full config)
+
+```
+{
+    "workbench.colorTheme": "GapStyle VS"
+    "editor.fontFamily": "'Hack JBM Ligatured CCG', 'Hack', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.tokenColorCustomizations": {
+        "semanticHighlighting": true
+    }
+}
+```
 
 ## Explore GapStyle On IntelliJ IDE
 
