@@ -19,11 +19,11 @@ syntax highlighting experience.
 
 ## Actively Maintain Language
 
-| IDE      | Supported Language                                                                                                                                             |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| VSCode   | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS, GraphQL, YAML, TOML, SQL, Protobuf, Properties, Shell |
-| IntelliJ | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, Android Logcat, Android, PHP, HTML, XML, JSX, CSS/SCSS/SASS                               |
-| XCode    | Swift, Objective C                                                                                                                                             |
+| IDE      | Supported Language                                                                                                                                                                     |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| VSCode   | Javascript, Typescript, C++, Go, Rust, Python, PHP, Kotlin, Java, Swift, Scala, GraphQL, HTML, XML, JSX, CSS/SCSS/SASS, YAML, TOML, SQL, Protobuf, Properties, Shell                   |
+| IntelliJ | Kotlin, Java, Swift, Scala, Javascript, Typescript, GraphQL, Android Logcat, Gradle, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS, YAML, TOML, SQL, Protobuf, Properties, Shell |
+| XCode    | Swift, Objective C                                                                                                                                                                     |
 
 ## Enable Semantic Highlighting
 
