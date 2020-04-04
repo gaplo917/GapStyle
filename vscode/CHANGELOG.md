@@ -2,6 +2,10 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.3.1] - 2020-04-04
+
+- Enhance `.css`, `.scss`, `.sass`, `.graphql`
+
 ## [1.3.0] - 2020-04-04
 
 - Add `Dockerfile`, `.conf`, `.gradle`, `.pl`, `.properties`, `.sh`, `.sql` support
@@ -13,7 +17,7 @@ All notable changes to the "gapstylevs" extension will be documented in this fil
 
 ## [1.2.0] - 2020-04-03
 
-- Enhance `.md`, `.yaml`, `.toml`, '.xml'
+- Enhance `.md`, `.yaml`, `.toml`, `.xml`
 - Add Protobuf support
 
 ## [1.1.0] - 2020-04-03
