@@ -1,12 +1,12 @@
 <idea-plugin>
   <id>color.scheme.GapStyle</id>
   <name>GapStyle Color Scheme</name>
-  <version>2.4</version>
+  <version>3.0</version>
   <vendor email="gaplotech@gmail.com" url="https://github.com/gaplo917/GapStyle">Gary Lo</vendor>
 
   <description><![CDATA[
-    <p>GapStyle is designed base on key theme color of 'Darcula' and 'Monokai'.</p>
     <p>GapStyle is a productivity-oriented color scheme with a list of supported languages.</p>
+    <p>GapStyle is designed base on key theme color of 'Darcula' and 'Monokai'.</p>
     <p>Each supported language is tailor made and carefully tuned with rationale.</p>
     <ul>
     <li><b>Objective 1:</b> Optimize languages' color schemes to boost productivity on reading/writing code (Especially the language your are not familiar)</li>
@@ -16,6 +16,16 @@
   ]]></description>
 
   <change-notes><![CDATA[
+      <h1>3.0</h1>
+      <ul>
+        <li>Rework on a more relax color on Markdown</li>
+        <li>Rethink about config based coloring (YAML, TOML, properties...etc)</li>
+        <li>Rework on all lanuages of Type Parameter color</li>
+        <li>Rework on CSS / SCSS / SASS / LESS of Hex color</li>
+        <li>Rework on Go lange</li>
+        <li>Completely review on all supported languages and fix inconsistent coloring</li>
+        <li><a href=&quot;https://marketplace.visualstudio.com/items?itemName=gaplo917.gapstylevs&quot;>GapStyle VS</a> (VS Code support is available!)</li>
+      </ul>
       <h1>2.4</h1>
       <ul>
         <li>Add Support for Kotlin `package-level function call` syntax highlight (newly added in 2019.3+)</li>
@@ -55,7 +65,7 @@
     ]]>
   </change-notes>
 
-  <idea-version since-build="173.0"/>
+  <idea-version since-build="191.0"/>
 
   <depends>com.intellij.modules.lang</depends>
 
