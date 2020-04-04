@@ -1732,6 +1732,14 @@ tokenColors:
     - entity.other.attribute-name.table.array.toml
     settings:
       foreground: *FUNCTION
+
+  - name: TOML Keyword
+    scope:
+    - constant.other.boolean.toml
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+      
 # =============================================================================
 # Java Properties / .ini
 # =============================================================================
@@ -1841,3 +1849,66 @@ tokenColors:
     - string.quoted.double.groovy source.groovy.embedded.source
     settings:
       foreground: *STRING_INTERPOLATION
+# =============================================================================
+# Rust
+# =============================================================================
+  - name: Rust Docuemntation
+    scope:
+    - comment.line.documentation.rust
+    settings:
+      foreground: *DOC
+
+  - name: Rust Keyword
+    scope:
+    - variable.language.rust
+    - storage.modifier.mut.rust
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Rust Callable Core
+    scope:
+    - support.constant.core.rust
+    settings:
+      foreground: *FUNCTION
+      fontStyle: regular italic
+
+  - name: Rust Attribute
+    scope:
+    - meta.attribute.rust
+    settings:
+      foreground: *DECORATOR
+
+  - name: Rust Type Params
+    scope:
+    - meta.type_params.rust
+    settings:
+      foreground: *DEFAULT
+
+  - name: Rust Trait
+    scope:
+    - support.type.core.rust
+    settings:
+      foreground: *INTERFACE
+
+  - name: Rust Primitive
+    scope:
+    - storage.type.core.rust
+    settings:
+      foreground: *CLASS
+      fontStyle: italic
+
+  - name: Rust Class / Enum
+    scope:
+    - entity.name.type.rust
+    - storage.class.std.rust
+    settings:
+      foreground: *CLASS
+
+  - name: Rust Lifetime
+    scope:
+    - entity.name.lifetime.rust
+    - storage.modifier.lifetime.rust
+    settings:
+      foreground: *TYPE_PARAM
+      fontStyle: bold italic
