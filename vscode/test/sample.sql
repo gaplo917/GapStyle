@@ -1,4 +1,20 @@
 
+-- DDL section
+create table crm.product (
+  id numeric primary key,
+  title varchar(255) character set utf8
+);
+-- DML section
+insert into product
+  values (1, 'Product1');
+
+select count(*) from crm.product;
+select id as ProductID, title as ProductName
+  from crm.product where id = :id;
+
+\set content `cat data.txt`
+
+
 --# Mysql
 --eval CREATE TABLE t1 (a VARCHAR(200), b TEXT, FULLTEXT fts_idx(a,b), c INT PRIMARY KEY) $CREATE_TABLE_PARAMS
 --source suite/innodb/include/show_i_s_tables.inc

@@ -16,6 +16,8 @@ h1.mystyle:lang(en) {
 div > p, p ~ ul, input [type="radio"] {
   color: green;
   width: 80%;
+  width: 80px;
+  width: 80rem;
 }
 
 #header:after {

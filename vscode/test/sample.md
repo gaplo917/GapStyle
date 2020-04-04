@@ -4,132 +4,150 @@ author: gaplo917
 tags: ['testing', 'sample', 'markdown']
 ---
 
-# h1 Heading 8-)
+# Test Markdown document
 
-## h2 Heading
+## Text
 
-### h3 Heading
+Here is a paragraph with bold text. **This is some bold text.** Here is a paragraph with
+bold text. **This is also some bold text.**
 
-#### h4 Heading
+Here is another one with italic text. _This is some italic text._ Here is another one with
+italic text. _This is some italic text._
 
-##### h5 Heading
-
-###### h6 Heading
-
-## Horizontal Rules
-
----
-
-## Emphasis
-
-**This is bold text**
-
-**This is bold text**
-
-_This is italic text_
-
-_This is italic text_
-
-~~Strikethrough~~
-
-## Blockquotes
-
-> Blockquotes can also be nested...
->
-> > ...by using additional greater-than signs right next to each other...
-> >
-> > > ...or with spaces between arrows.
-
-## Lists
-
-Unordered
-
-- Create a list by starting a line with `+`, `-`, or `*`
-- Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
-    * Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-- Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-1) You can use sequential numbers...
-1) ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-Block code "fences"
-
-```
-var foo = function (bar) {
-  return bar++
-}
-
-console.log(foo(5))
-```
-
-Syntax highlighting
-
-```js
-var foo = function (bar) {
-  return bar++
-}
-
-console.log(foo(5))
-```
-
-## Tables
-
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
-
-Right aligned columns
-
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
+Here is another one with struckout text. ~~This is some struckout text.~~
 
 ## Links
 
-[link text](http://dev.nodeca.com)
+Autolink: <http://example.com>
 
-[link with title](http://nodeca.github.io/pica/demo/ 'title text!')
+Link: [Example](http://example.com)
 
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+Reference style [link][1].
+
+[1]: http://example.com 'Example'
 
 ## Images
 
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg 'The Stormtroopocat')
+Image: ![My image](http://www.foo.bar/image.png)
 
-Like links, Images also have a footnote style syntax
+## Headers
 
-![Alt text][id]
+# First level title
 
-With a reference later in the document defining the URL location:
+## Second level title
 
-[id]: https://octodex.github.com/images/dojocat.jpg 'The Dojocat'
+### Third level title
+
+#### Fourth level title
+
+##### Fifth level title
+
+###### Sixth level title
+
+### Title with [link](http://localhost)
+
+### Title with ![image](http://localhost)
+
+## Code
+
+```
+This
+  is
+    code
+      fence
+```
+
+Inline `code span in a` paragraph.
+
+This is a code block:
+
+    /**
+     * Sorts the specified array into ascending numerical order.
+     *
+     * <p>Implementation note: The sorting algorithm is a Dual-Pivot Quicksort
+     * by Vladimir Yaroslavskiy, Jon Bentley, and Joshua Bloch. This algorithm
+     * offers O(n log(n)) performance on many data sets that cause other
+     * quicksorts to degrade to quadratic performance, and is typically
+     * faster than traditional (one-pivot) Quicksort implementations.
+     *
+     * @param a the array to be sorted
+     */
+    public static void sort(byte[] a) {
+        DualPivotQuicksort.sort(a);
+    }
+
+## Quotes
+
+> This is the first level of quoting.
+>
+> > This is nested blockquote.
+>
+> Back to the first level.
+
+> A list within a blockquote:
+>
+> - asterisk 1
+> - asterisk 2
+> - asterisk 3
+
+> Formatting within a blockquote:
+>
+> ### header
+>
+> Link: [Example](http://example.com)
+
+## Html
+
+This is inline <span>html</html>. And this is an html block.
+
+<table>
+  <tr>
+    <th>Column 1</th>
+    <th>Column 2</th>
+  </tr>
+  <tr>
+    <td>Row 1 Cell 1</td>
+    <td>Row 1 Cell 2</td>
+  </tr>
+  <tr>
+    <td>Row 2 Cell 1</td>
+    <td>Row 2 Cell 2</td>
+  </tr>
+</table>
+
+## Horizontal rules
+
+---
+
+---
+
+---
+
+## Lists
+
+Unordered list:
+
+- asterisk 1
+- asterisk 2
+- asterisk 3
+
+Ordered list:
+
+1. First
+2. Second
+3. Third
+
+Mixed:
+
+1. First
+2. Second:
+   - Fee
+   - Fie
+   - Foe
+3. Third
+
+Tables:
+
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Data 1   | Data 2   |
