@@ -200,103 +200,6 @@ tokenColors:
     - invalid.illegal.unrecognized-string-escape
     settings:
       foreground: *STRING_INVALID_ESCAPE
-# =============================================================================
-# Markdown
-# =============================================================================
-  - name: Puncuation
-    scope:
-    - punctuation.definition.bold.markdown
-    - punctuation.definition.italic.markdown
-    - punctuation.definition.italic.markdown
-    - punctuation.definition.list.begin.markdown
-    - punctuation.definition.list.end.markdown
-    - punctuation.definition.heading.markdown
-    - punctuation.definition.markdown
-    - punctuation.definition.quote.begin.markdown
-    - punctuation.definition.quote.end.markdown
-    - punctuation.definition.string.begin.markdown
-    - punctuation.definition.string.end.markdown
-    - constant.other.reference.link.markdown
-    - punctuation.definition.string.markdown
-    - entity.name.section.markdown
-    settings:
-      foreground: *RELAX_MD_KEYWORD
-      fontStyle: regular
-
-  - name: Inline code (prose)
-    scope:
-    - markup.inline.raw
-    - markup.raw.restructuredtext
-    - punctuation.definition.raw.markdown
-    - markup.fenced_code.block.markdown punctuation.definition.markdown
-    - fenced_code.block.language.markdown
-    - markup.fenced_code.block.markdown
-    settings:
-      foreground: *COMMENT
-
-  - name: Links (prose)
-    scope:
-    - markup.underline.link
-    - markup.underline.link.image
-    settings:
-      foreground: *PREDEFINED
-
-  - name: Link text, image alt text (prose)
-    scope:
-    - meta.link.reference.def.restructuredtext
-    - punctuation.definition.directive.restructuredtext
-    - string.other.link.description
-    - string.other.link.title
-    settings:
-      foreground: *RELAX_MD_STRING
-
-  - name: Blockquotes (prose)
-    scope:
-    - entity.name.directive.restructuredtext
-    - markup.quote
-    settings:
-      foreground: *RELAX_MD_STRING
-      fontStyle: italic
-
-  - name: Horizontal rule (prose)
-    scope:
-    - meta.separator.markdown
-    settings:
-      foreground: *COMMENT
-
-  - name: Code blocks
-    scope:
-    - fenced_code.block.language
-    - markup.raw.inner.restructuredtext
-    settings:
-      foreground: *DEFAULT
-
-  - name: Prose constants
-    scope:
-    - punctuation.definition.constant.restructuredtext
-    settings:
-      foreground: *DEFAULT
-
-  - name: Braces in markdown headings
-    scope:
-    - markup.heading.markdown punctuation.definition.string.begin
-    - markup.heading.markdown punctuation.definition.string.end
-    settings:
-      foreground: *DEFAULT
-
-  - name: Braces in markdown paragraphs
-    scope:
-    - meta.paragraph.markdown punctuation.definition.string.begin
-    - meta.paragraph.markdown punctuation.definition.string.end
-    settings:
-      foreground: *DEFAULT
-
-  - name: Braces in markdown blockquotes
-    scope:
-    - markup.quote.markdown meta.paragraph.markdown punctuation.definition.string.begin
-    - markup.quote.markdown meta.paragraph.markdown punctuation.definition.string.end
-    settings:
-      foreground: *STRING
 
 # =============================================================================
 # Classes
@@ -415,19 +318,19 @@ tokenColors:
 # Entities
 # =============================================================================
 
-  - name: HTML tags
+  - name: Default tags
     scope:
     - entity.name.tag
     settings:
       foreground: *KEYWORD
 
-  - name: CSS attribute parent selectors ('&')
+  - name: Default attribute parent selectors ('&')
     scope:
     - entity.other.attribute-name.parent-selector
     settings:
       foreground: *KEYWORD
 
-  - name: HTML/CSS attribute names
+  - name: Default attribute names
     scope:
     - entity.other.attribute-name
     settings:
@@ -447,7 +350,6 @@ tokenColors:
     - meta.function-call.object
     - meta.function-call.php
     - meta.function-call.static
-    - meta.method-call.java meta.method
     - meta.method.groovy
     - support.function.any-method.lua
     - keyword.operator.function.infix
@@ -521,7 +423,6 @@ tokenColors:
 
   - name: Language specific Keywords
     scope:
-    - constant.language.java
     - punctuation.section.embedded.begin.php
     - punctuation.section.embedded.end.php
     settings:
@@ -566,28 +467,21 @@ tokenColors:
     - entity.other.attribute-name.placeholder punctuation # Sass placeholder `%` symbols
     - entity.other.attribute-name.pseudo-class punctuation
     - entity.other.attribute-name.pseudo-element punctuation
-    - meta.group.double.toml
-    - meta.group.toml
     - meta.object-binding-pattern-variable punctuation.destructuring
     - punctuation.definition.parameters
     - meta.block punctuation.definition.block
     - punctuation.colon.graphql
-    - punctuation.definition.block.scalar.folded.yaml
-    - punctuation.definition.block.scalar.literal.yaml
-    - punctuation.definition.block.sequence.item.yaml
     - punctuation.definition.entity.other.inherited-class
     - punctuation.function.swift
     - punctuation.separator.dictionary.key-value
     - punctuation.separator.hash
     - punctuation.separator.inheritance
     - punctuation.separator.key-value
-    - punctuation.separator.key-value.mapping.yaml
     - punctuation.separator.namespace
     - punctuation.separator.pointer-access
     - punctuation.separator.slice
     - punctuation.terminator.statement
     - string.unquoted.heredoc punctuation.definition.string
-    - support.other.chomping-indicator.yaml
     - punctuation.separator.annotation
     - meta.object-binding-pattern-variable
     - punctuation.separator.comma
@@ -595,8 +489,6 @@ tokenColors:
     - meta.type.parameters punctuation.definition.typeparameters.begin
     - meta.type.parameters punctuation.definition.typeparameters.end
     - meta.class punctuation.definition.block
-    - punctuation.section.block.begin.bracket.curly.java
-    - punctuation.section.block.end.bracket.curly.java
     - punctuation
     - storage.type.function.arrow
     - keyword.operator.spread
@@ -626,7 +518,6 @@ tokenColors:
     - punctuation.definition.type.end
     - punctuation.section.scope.begin
     - punctuation.section.scope.end
-    - storage.type.generic.java
     - string.template meta.brace
     - string.template punctuation.accessor
     settings:
@@ -654,13 +545,8 @@ tokenColors:
   - name: Keys (serializable languages)
     scope:
     - entity.name.function.target.makefile
-    - entity.name.section.toml
-    - entity.name.tag.yaml
-    - variable.other.key.toml
-    - entity.name.tag.toml
     settings:
-      foreground: *KEYWORD
-      fontStyle: bold
+      foreground: *MEMBER_VAR
 
   - name: Dates / timestamps (serializable languages)
     scope:
@@ -669,34 +555,6 @@ tokenColors:
     settings:
       foreground: *PREDEFINED
 
-  - name: YAML Anchor
-    scope:
-    - punctuation.definition.anchor.yaml
-    - entity.name.type.anchor.yaml
-    settings:
-      foreground: *FUNCTION_PARAM
-
-  - name: YAML Aliases
-    scope:
-    - variable.other.alias.yaml
-    - punctuation.definition.alias.yaml
-    settings:
-      fontStyle: italic
-      foreground: *MEMBER_VAR
-
-  - name: TOML Table / Array
-    scope:
-    - entity.other.attribute-name.table.toml
-    - entity.other.attribute-name.table.array.toml
-    settings:
-      foreground: *PREDEFINED
-  
-  - name: Config Default
-    scope:
-    - source.yaml string.unquoted
-    - text.html.markdown string.unquoted
-    settings:
-      foreground: *DEFAULT
 
 # =============================================================================
 # Storage
@@ -720,7 +578,6 @@ tokenColors:
     - meta.return-type.objc
     - source.go storage.type
     - source.groovy storage.type
-    - source.java storage.type
     - source.powershell entity.other.attribute-name
     - storage.class.std.rust
     - storage.type.attribute.swift
@@ -744,8 +601,6 @@ tokenColors:
     - entity.name.type.alias
     - meta.indexer.mappedtype.declaration entity.name.type # Mapped type declarations
     - meta.type.parameters entity.name.type                # Generic type declarations
-    - storage.type.generic.java
-    - meta.definition.variable.java
     settings:
       foreground: *TYPE_PARAM
 
@@ -917,6 +772,109 @@ tokenColors:
 
 
 # Language Specific Extension
+# =============================================================================
+# Markdown
+# =============================================================================
+  - name: Markdown Default
+    scope:
+    - text.html.markdown string.unquoted
+    settings:
+      foreground: *DEFAULT
+
+  - name: Puncuation
+    scope:
+    - punctuation.definition.bold.markdown
+    - punctuation.definition.italic.markdown
+    - punctuation.definition.italic.markdown
+    - punctuation.definition.list.begin.markdown
+    - punctuation.definition.list.end.markdown
+    - punctuation.definition.heading.markdown
+    - punctuation.definition.markdown
+    - punctuation.definition.quote.begin.markdown
+    - punctuation.definition.quote.end.markdown
+    - punctuation.definition.string.begin.markdown
+    - punctuation.definition.string.end.markdown
+    - constant.other.reference.link.markdown
+    - punctuation.definition.string.markdown
+    - entity.name.section.markdown
+    settings:
+      foreground: *RELAX_MD_KEYWORD
+      fontStyle: regular
+
+  - name: Inline code (prose)
+    scope:
+    - markup.inline.raw
+    - markup.raw.restructuredtext
+    - punctuation.definition.raw.markdown
+    - markup.fenced_code.block.markdown punctuation.definition.markdown
+    - fenced_code.block.language.markdown
+    - markup.fenced_code.block.markdown
+    settings:
+      foreground: *COMMENT
+
+  - name: Links (prose)
+    scope:
+    - markup.underline.link
+    - markup.underline.link.image
+    settings:
+      foreground: *PREDEFINED
+
+  - name: Link text, image alt text (prose)
+    scope:
+    - meta.link.reference.def.restructuredtext
+    - punctuation.definition.directive.restructuredtext
+    - string.other.link.description
+    - string.other.link.title
+    settings:
+      foreground: *RELAX_MD_STRING
+
+  - name: Blockquotes (prose)
+    scope:
+    - entity.name.directive.restructuredtext
+    - markup.quote
+    settings:
+      foreground: *RELAX_MD_STRING
+      fontStyle: italic
+
+  - name: Horizontal rule (prose)
+    scope:
+    - meta.separator.markdown
+    settings:
+      foreground: *COMMENT
+
+  - name: Code blocks
+    scope:
+    - fenced_code.block.language
+    - markup.raw.inner.restructuredtext
+    settings:
+      foreground: *DEFAULT
+
+  - name: Prose constants
+    scope:
+    - punctuation.definition.constant.restructuredtext
+    settings:
+      foreground: *DEFAULT
+
+  - name: Braces in markdown headings
+    scope:
+    - markup.heading.markdown punctuation.definition.string.begin
+    - markup.heading.markdown punctuation.definition.string.end
+    settings:
+      foreground: *DEFAULT
+
+  - name: Braces in markdown paragraphs
+    scope:
+    - meta.paragraph.markdown punctuation.definition.string.begin
+    - meta.paragraph.markdown punctuation.definition.string.end
+    settings:
+      foreground: *DEFAULT
+
+  - name: Braces in markdown blockquotes
+    scope:
+    - markup.quote.markdown meta.paragraph.markdown punctuation.definition.string.begin
+    - markup.quote.markdown meta.paragraph.markdown punctuation.definition.string.end
+    settings:
+      foreground: *STRING
 
 # =============================================================================
 # HTML
@@ -934,6 +892,7 @@ tokenColors:
     - text.html meta.tag entity.name.tag
     - text.html meta.tag entity.name.tag
     - entity.name.tag.block.any.html
+    - entity.name.tag.script.html
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1076,13 +1035,6 @@ tokenColors:
     settings:
       foreground: *SASS_VAR
 
-  # - name: SASS Keyword
-  #   scope:
-  #   - meta.property-list.scss support.constant.mathematical-symbols.scss
-  #   settings:
-  #     foreground: *KEYWORD
-  #     fontStyle: bold
-
   - name: SASS Interpolation
     scope:
     - support.function.interpolation.sass
@@ -1112,6 +1064,34 @@ tokenColors:
 # =============================================================================
 # Java
 # =============================================================================
+  - name: Java Keyword
+    scope:
+    - constant.language.java
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Java Puncutation / Default
+    scope:
+    - punctuation.section.block.begin.bracket.curly.java
+    - punctuation.section.block.end.bracket.curly.java
+    - storage.type.generic.java
+    settings:
+      foreground: *DEFAULT
+
+  - name: Java Function
+    scope:
+    - meta.method-call.java meta.method
+    settings:
+      foreground: *FUNCTION
+
+  - name: Java Constant Type
+    scope:
+    - source.java storage.type
+    settings:
+      foreground: *PREDEFINED
+      fontStyle: italic
+
   - name: JavaDoc
     scope:
     - comment.block.javadoc.java
@@ -1160,6 +1140,15 @@ tokenColors:
     settings:
       foreground: *LOCAL_VAR
       fontStyle: regular
+
+  - name: Java Generic
+    scope:
+    - storage.type.generic.java
+    - meta.definition.variable.java
+    settings:
+      foreground: *TYPE_PARAM
+      fontStyle: regular
+
 # =============================================================================
 # Kotlin
 # =============================================================================
@@ -1488,6 +1477,15 @@ tokenColors:
     settings:
       foreground: *DEFAULT
       fontStyle: regular
+
+  - name: Python Keyword
+    scope:
+    - variable.language.special.self.python
+    - variable.parameter.function.language.special.self.python
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
 # =============================================================================
 # Swift
 # =============================================================================
@@ -1637,3 +1635,178 @@ tokenColors:
     settings:
       foreground: *KEYWORD
       fontStyle: bold
+# =============================================================================
+# YAML
+# =============================================================================
+  - name: YAML Separators
+    scope:
+    - punctuation.definition.block.scalar.folded.yaml
+    - punctuation.definition.block.scalar.literal.yaml
+    - punctuation.definition.block.sequence.item.yaml
+    - punctuation.separator.key-value.mapping.yaml
+    - support.other.chomping-indicator.yaml
+    settings:
+      foreground: *DEFAULT
+      fontStyle: regular
+
+  - name: YAML Keys
+    scope:
+    - entity.name.tag.yaml
+    settings:
+      foreground: *MEMBER_VAR
+
+  - name: YAML Anchor
+    scope:
+    - punctuation.definition.anchor.yaml
+    - entity.name.type.anchor.yaml
+    settings:
+      foreground: *XML_TAG
+
+  - name: YAML Aliases
+    scope:
+    - variable.other.alias.yaml
+    - punctuation.definition.alias.yaml
+    settings:
+      fontStyle: italic
+      foreground: *XML_TAG
+
+  - name: Config Default
+    scope:
+    - source.yaml string.unquoted
+    settings:
+      foreground: *DEFAULT
+# =============================================================================
+# TOML
+# =============================================================================
+  - name: TOML Separators
+    scope:
+    - meta.group.double.toml
+    - meta.group.toml
+    settings:
+      foreground: *DEFAULT
+      fontStyle: regular
+
+  - name: TOML Keys
+    scope:
+    - entity.name.function.target.makefile
+    - entity.name.section.toml
+    - variable.other.key.toml
+    - entity.name.tag.toml
+    settings:
+      foreground: *MEMBER_VAR
+
+  - name: TOML Table / Array
+    scope:
+    - entity.other.attribute-name.table.toml
+    - entity.other.attribute-name.table.array.toml
+    settings:
+      foreground: *FUNCTION
+# =============================================================================
+# Java Properties / .ini
+# =============================================================================
+  - name: ini Default
+    scope:
+    - source.ini
+    settings:
+      foreground: *STRING
+      fontStyle: regular
+
+  - name: ini Properties Keys
+    scope:
+    - keyword.other.definition.ini
+    settings:
+      foreground: *MEMBER_VAR
+      fontStyle: regular
+# =============================================================================
+# HOCON (.conf)
+# =============================================================================
+  - name: HOCON Default
+    scope:
+    - source.hocon
+    settings:
+      foreground: *DEFAULT
+      fontStyle: regular
+
+  - name: HOCON Constant
+    scope:
+    - constant.language.hocon
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: HOCON Storage Type
+    scope:
+    - storage.type.source.hocon
+    settings:
+      foreground: *STRING_INTERPOLATION
+# =============================================================================
+# Shell
+# =============================================================================
+  - name: Shell Operators
+    scope:
+    - keyword.operator
+    settings:
+      foreground: *DEFAULT
+      fontStyle: regular
+
+  - name: Shell String Interpolation
+    scope:
+    - string.quoted.double.shell variable.other.bracket.shell punctuation.definition.variable.shell
+    - string.quoted.double.shell string.interpolated.dollar.shell punctuation.definition.string.begin.shell
+    - string.quoted.double.shell string.interpolated.dollar.shell punctuation.definition.string.end.shell
+    - meta.scope.subshell.shell string.interpolated.dollar.shell punctuation.definition.string.begin.shell
+    - meta.scope.subshell.shell string.interpolated.dollar.shell punctuation.definition.string.end.shell
+    settings:
+      foreground: *STRING_INTERPOLATION
+
+  - name: Shell Variable
+    scope:
+    - string.quoted.double.shell variable.other
+    settings:
+      foreground: *DEFAULT
+      fontStyle: bold
+
+# =============================================================================
+# Perl
+# =============================================================================
+  - name: Perl Bareword
+    scope:
+    - constant.other.bareword.perl
+    settings:
+      foreground: *FUNCTION_PARAM
+
+# =============================================================================
+# SQL
+# =============================================================================
+  - name: SQL Database Name
+    scope:
+    - constant.other.database-name.sql
+    settings:
+      foreground: *FUNCTION_PARAM
+      
+  - name: SQL Table Name
+    scope:
+    - constant.other.table-name.sql
+    settings:
+      foreground: *MEMBER_VAR
+# =============================================================================
+# Groovy / Gradle
+# =============================================================================
+  - name: Groovy Primitive
+    scope:
+    - constant.language.groovy
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Groovy Key
+    scope:
+    - constant.other.key.groovy
+    settings:
+      foreground: *MEMBER_VAR
+
+  - name: Groovy Interpolation
+    scope:
+    - string.quoted.double.groovy source.groovy.embedded.source
+    settings:
+      foreground: *STRING_INTERPOLATION

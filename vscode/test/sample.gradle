@@ -1,0 +1,122 @@
+apply plugin: 'com.github.ben-manes.versions'
+
+buildscript {
+  ext.versions = [
+      'minSdk': 14,
+      'compileSdk': 28,
+
+      'androidTools': '26.2.0',
+      'kotlin': '1.2.71',
+      'incap' : '0.2',
+
+      'release': '8.8.1',
+  ]
+
+  ext.deps = [
+      android: [
+          'runtime': 'com.google.android:android:4.1.1.4',
+          'gradlePlugin': "com.android.tools.build:gradle:3.3.0",
+      ],
+      'androidx': [
+          'core': "androidx.core:core:1.0.0",
+          'viewpager': "androidx.viewpager:viewpager:1.0.0",
+          'annotations': "androidx.annotation:annotation:1.0.0",
+          'test': [
+              'runner': 'androidx.test:runner:1.1.0',
+              'rules': 'androidx.test:rules:1.1.0',
+          ],
+      ],
+      'lint': [
+          'core': "com.android.tools.lint:lint:${versions.androidTools}",
+          'api': "com.android.tools.lint:lint-api:${versions.androidTools}",
+          'checks': "com.android.tools.lint:lint-checks:${versions.androidTools}",
+          'tests': "com.android.tools.lint:lint-tests:${versions.androidTools}",
+      ],
+      javapoet: 'com.squareup:javapoet:1.10.0',
+      junit: 'junit:junit:4.12',
+      truth: 'com.google.truth:truth:0.42',
+      compiletesting: 'com.google.testing.compile:compile-testing:0.15',
+      'auto': [
+          'service': 'com.google.auto.service:auto-service:1.0-rc4',
+          'common': 'com.google.auto:auto-common:0.10',
+      ],
+      'guava': 'com.google.guava:guava:24.0-jre',
+      'release': [
+          'runtime': "com.jakewharton:butterknife:${versions.release}",
+          'compiler': "com.jakewharton:butterknife-compiler:${versions.release}"
+      ],
+      'kotlin': [
+          'stdLibJdk8': "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin}",
+      ],
+      'incap': [
+          'runtime': "net.ltgt.gradle.incap:incap:${versions.incap}",
+          'processor': "net.ltgt.gradle.incap:incap-processor:${versions.incap}",
+      ]
+  ]
+
+  repositories {
+    mavenCentral()
+    google()
+    jcenter()
+    gradlePluginPortal()
+  }
+
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.2.0'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+    classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
+    classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.16'
+  }
+}
+
+subprojects { project ->
+  group = GROUP
+  version = VERSION_NAME
+
+  repositories {
+    mavenCentral()
+    google()
+    jcenter()
+  }
+
+  apply plugin: 'net.ltgt.errorprone'
+
+  dependencies {
+    errorprone 'com.google.errorprone:error_prone_core:2.3.1'
+  }
+
+  // TODO figure out why this causes codegen to fail in android tests.
+  //def nullaway = dependencies.create('com.uber.nullaway:nullaway:0.5.5')
+  //configurations.all { Configuration configuration ->
+  //  if (configuration.name.endsWith('nnotationProcessor')) {
+  //    configuration.dependencies.add(nullaway)
+  //  }
+  //}
+  //
+  //tasks.withType(JavaCompile) {
+  //  options.compilerArgs += [
+  //      '-Xep:NullAway:ERROR',
+  //      '-XepOpt:NullAway:AnnotatedPackages=butterknife',
+  //  ]
+  //}
+
+  if (!project.name.equals('butterknife-gradle-plugin')) {
+    apply plugin: 'checkstyle'
+
+    task checkstyle(type: Checkstyle) {
+      configFile rootProject.file('checkstyle.xml')
+      source 'src/main/java'
+      ignoreFailures false
+      showViolations true
+      include '**/*.java'
+
+      classpath = files()
+    }
+
+    afterEvaluate {
+      if (project.tasks.findByName('check')) {
+        check.dependsOn('checkstyle')
+      }
+    }
+  }
+}

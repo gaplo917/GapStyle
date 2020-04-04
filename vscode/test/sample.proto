@@ -1,26 +1,65 @@
 syntax = "proto3";
+package io.github.gaplotech.pb;
 
-package tutorial;
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/struct.proto";
+import "google/protobuf/wrappers.proto";
 
-message Person {
-  string name = 1;
-  int32 id = 2;
-  string email = 3;
+enum MyEnumV3 {
+    UNKNOWN = 0;
+    V1 = 1;
+    V2 = 2;
+};
 
-  enum PhoneType {
-    MOBILE = 0;
-    HOME = 1;
-    WORK = 2;
-  }
+message MyTestV3 {
+    string hello = 1;
+    int32 foobar = 2;
+    int64 bazinga = 3;
+    repeated string primitive_sequence = 4;
+    repeated MyTestV3 rep_message = 5;
+    MyTestV3 opt_message = 6;
 
-  message PhoneNumber {
-    string number = 1;
-    PhoneType type = 2;
-  }
+    map<string, int32> string_to_int32 = 7;
+    map<int32, MyTestV3> int_to_mytest = 8;
+    repeated MyEnumV3 rep_enum = 9;
+    MyEnumV3 opt_enum = 10;
+    map<int32, MyEnumV3> int_to_enum = 11;
+    map<bool, string> bool_to_string = 12;
+    map<string, bool> string_to_bool = 13;
+    bytes opt_bs = 14;
+    bool opt_bool = 15;
 
-  repeated PhoneNumber phones = 4;
+    oneof trick_or_treat {
+        int32 trick = 16;
+        MyTestV3 treat = 17;
+    }
+
+    map<fixed64, bytes> fixed64_to_bytes = 18;
+    double opt_double = 20;
+    float opt_float = 21;
+};
+
+message MyTestSpecial {
+    google.protobuf.Empty empty_val = 1;
+    google.protobuf.Any any = 2;
+    google.protobuf.Timestamp timestamp = 3;
+    google.protobuf.Duration duration = 4;
+    google.protobuf.Struct struct = 5;
+
+    google.protobuf.DoubleValue double_val = 6;
+    google.protobuf.FloatValue float_val = 7;
+    google.protobuf.Int64Value int64_val = 8;
+    google.protobuf.UInt64Value uint64_val = 9;
+    google.protobuf.Int32Value int32_val = 10;
+    google.protobuf.UInt32Value uint32_val = 11;
+    google.protobuf.BoolValue bool_val = 12;
+    google.protobuf.StringValue string_val = 13;
+    google.protobuf.BytesValue bytes_val = 14;
 }
 
-message AddressBook {
-  repeated Person people = 1;
+message CamelCase {
+    string camelCase = 1;
 }
