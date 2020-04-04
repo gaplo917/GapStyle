@@ -4,11 +4,11 @@
 
 GapStyle is a **_productivity-oriented_** designed color scheme with a
 [list of supported languages](#actively-maintain-language). Each supported language is
-tailor made and carefully tuned with [rationale](#gapstyle-specification).
+tailor made and carefully tuned with
+[rationale](https://github.com/gaplo917/gapstyle#gapstyle-specification).
 
-You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
-
-\* Enable `semanticHighlighting` for best experience
+GapStyle VS is designed with `semanticHighlighting` from draft, please enable it for best
+syntax highlighting experience.
 
 ## Objectives
 
@@ -19,11 +19,11 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 
 ## Actively Maintain Language
 
-| IDE      | Supported Language                                                                                                               |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| IntelliJ | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, Android Logcat, Android, PHP, HTML, XML, JSX, CSS/SCSS/SASS |
-| VSCode   | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS                          |
-| XCode    | Swift, Objective C                                                                                                               |
+| IDE      | Supported Language                                                                                                                                             |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| VSCode   | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS, GraphQL, YAML, TOML, SQL, Protobuf, Properties, Shell |
+| IntelliJ | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, Android Logcat, Android, PHP, HTML, XML, JSX, CSS/SCSS/SASS                               |
+| XCode    | Swift, Objective C                                                                                                                                             |
 
 ## Enable Semantic Highlighting
 

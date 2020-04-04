@@ -2,6 +2,11 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.3.0] - 2020-04-04
+
+- Add `Dockerfile`, `.conf`, `.gradle`, `.pl`, `.properties`, `.sh`, `.sql` support
+- Enhance `.yaml`, `toml` key-value based files coloring
+
 ## [1.2.2] - 2020-04-03
 
 - Add documentation of installing recommended font procedures
