@@ -415,7 +415,7 @@ tokenColors:
     settings:
       fontStyle: bold
 
-  - name: Generic selectors (CSS/SCSS/Less/Stylus)
+  - name: Generic selectors
     scope:
     - meta.selector
     settings:
@@ -990,13 +990,21 @@ tokenColors:
       foreground: *ATTR_NAME
       fontStyle: bold
 
-  - name: Css URL / Css Color
+  - name: Css HEX Color
+    scope:
+    - constant.other.color.rgb-value.hex.css
+    - constant.other.color.rgb-value.hex.css punctuation.definition.constant.css
+    settings:
+      foreground: *FUNCTION_PARAM
+      fontStyle: regular
+
+  - name: Css URL / Color / Unit
     scope:
     - support.constant.color.w3c-standard-color-name.css
     - variable.parameter.url.css
-    - constant.other.color.rgb-value.hex.css
-    - constant.other.color.rgb-value.hex.css punctuation.definition.constant.css
+
     - constant.language.color.rgb-value.css
+    - source.css keyword.other.unit
     settings:
       foreground: *STRING
       fontStyle: regular
@@ -1017,7 +1025,6 @@ tokenColors:
     - constant.other.unicode-range.css
     - punctuation.definition.constant.css
     - support.constant.language-range.css
-    - meta.property-value.css
     - entity.other.attribute-name.class.css
     - entity.other.attribute-name.pseudo-class.css
     - support.type.property-name.css
@@ -1565,11 +1572,35 @@ tokenColors:
 # =============================================================================
 # GraphQL (Prisma)
 # =============================================================================
-  - name: GraphQL Function 
+  - name: GraphQL Function / Fragment
     scope:
       - entity.name.function.graphql
     settings:
       foreground: *DEFAULT
+
+  - name: GraphQL Fragment
+    scope:
+      - entity.name.fragment.graphql
+    settings:
+      foreground: *FUNCTION
+
+  - name: GraphQL Directive
+    scope:
+      - entity.name.function.directive.graphql
+    settings:
+      foreground: *DECORATOR
+
+  - name: GraphQL Alias
+    scope:
+      - string.unquoted.alias.graphql
+    settings:
+      foreground: *MEMBER_VAR
+
+  - name: GraphQL Function Parameter
+    scope:
+      - variable.parameter.graphql
+    settings:
+      foreground: *FUNCTION_PARAM
 
   - name: GraphQL Interface
     scope:
@@ -1782,13 +1813,13 @@ tokenColors:
     scope:
     - constant.other.database-name.sql
     settings:
-      foreground: *FUNCTION_PARAM
+      foreground: *ABSTRACT_CLASS
       
   - name: SQL Table Name
     scope:
     - constant.other.table-name.sql
     settings:
-      foreground: *MEMBER_VAR
+      foreground: *CLASS
 # =============================================================================
 # Groovy / Gradle
 # =============================================================================
