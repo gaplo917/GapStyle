@@ -2,7 +2,7 @@
     "name": "gapstylevs",
     "displayName": "GapStyle VS",
     "description": "A productivity-oriented dark theme for VSCode, IntelliJ, XCode. Each supported language is tailor made and carefully tuned with rationale",
-    "version": "1.2.2",
+    "version": "1.3.0",
     "publisher": "gaplo917",
     "repository": {
         "type": "git",
