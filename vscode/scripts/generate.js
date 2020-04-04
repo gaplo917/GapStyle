@@ -31,7 +31,7 @@ const withAlphaType = new Type('!alpha', {
 const schema = Schema.create([withAlphaType])
 
 /**
- * Soft variant transform.
+ * Soft variant transform. i.e. transform rgb(0,255,0,0.5) to hex string
  * @type {ThemeTransform}
  */
 const transformSoft = (yamlContent, yamlObj) => {
@@ -62,6 +62,6 @@ module.exports = async () => {
 
   return {
     base,
-    soft: transformSoft(yamlFile, base),
+    soft: transformSoft(yamlFile, base), // not yet used
   }
 }
