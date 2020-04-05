@@ -2,9 +2,9 @@
 
 # GapStyle Theme For IntelliJ & VSCode & XCode
 
-GapStyle is a **_productivity-oriented_** designed color scheme with a
-[list of supported languages](#actively-maintain-language). Each supported language is
-tailor made and carefully tuned with [rationale](#gapstyle-specification).
+GapStyle is a **_productivity-oriented_** and **_semantic-driven_** designed color scheme
+with a [list of supported languages](#actively-maintain-language). Each supported language
+is tailor made and carefully tuned with [rationale](#gapstyle-specification).
 
 You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 

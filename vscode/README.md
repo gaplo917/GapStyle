@@ -2,13 +2,14 @@
 
 ![screenshots](https://raw.githubusercontent.com/gaplo917/GapStyle/master/vscode/screenshots/sample.ts.png)
 
-GapStyle is a **_productivity-oriented_** designed color scheme with a
-[list of supported languages](#actively-maintain-language). Each supported language is
-tailor made and carefully tuned with
+GapStyle is a **_productivity-oriented_** and **_semantic-driven_** designed color scheme
+with a [list of supported languages](#actively-maintain-language). Each supported language
+is tailor made and carefully tuned with
 [rationale](https://github.com/gaplo917/gapstyle#gapstyle-specification).
 
-GapStyle VS is designed with `semanticHighlighting` from draft, please enable it for best
-syntax highlighting experience.
+GapStyle VS is designed with `semanticHighlighting` from draft, please
+[enable semanticHighlighting](#enable-semantic-highlighting) for best syntax highlighting
+experience.
 
 ## Objectives
 
