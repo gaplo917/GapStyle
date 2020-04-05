@@ -51,5 +51,38 @@ include (dirname(__FILE__) . "inc.php");
 goto Label;
 
 Label:
-№
+
+$db['default']['pconnect'] = TRUE;
+$db['default']['db_debug'] = TRUE;
+$db['default']['cache_on'] = FALSE;
+$db['default']['cachedir'] = '';
+$db['default']['char_set'] = 'utf8';
+$db['default']['dbcollat'] = 'utf8mb4_general_ci';
+
+if (empty($this->instagram->getAccessToken())) {
+
+
+   if (empty($accessToken)) {
+      // receive OAuth token object
+      if (!empty($_GET['code']))
+         $instagramReturn = $this->instagram->getOAuthToken($_GET['code']);
+
+      if (isset($instagramReturn)) {
+         // store user access token
+         if (isset($instagramReturn->access_token)) {
+            $this->instagram->setAccessToken($instagramReturn);
+         } elseif ($instagramReturn->code !== 400) {
+            if (isset($_GET['error'])) {
+               echo 'An error occurred: ' . $_GET['error_description'];
+            }
+
+         }
+
+      }
+   } else {
+      $this->instagram->setAccessToken($accessToken);
+   }
+
+
+}
 ?>
