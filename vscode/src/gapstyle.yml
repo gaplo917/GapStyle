@@ -404,15 +404,10 @@ tokenColors:
     scope:
     - keyword
     - punctuation.definition.keyword
-    settings:
-      foreground: *KEYWORD
-      fontStyle: bold
-
-  - name: Keyword "new"
-    scope:
     - keyword.control.new
     - keyword.operator.new
     settings:
+      foreground: *KEYWORD
       fontStyle: bold
 
   - name: Generic selectors
