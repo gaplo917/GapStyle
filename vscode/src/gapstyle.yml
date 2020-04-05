@@ -348,7 +348,6 @@ tokenColors:
     - meta.function-call
     - meta.function-call.generic
     - meta.function-call.object
-    - meta.function-call.php
     - meta.function-call.static
     - meta.method.groovy
     - support.function.any-method.lua
@@ -414,14 +413,6 @@ tokenColors:
     scope:
     - meta.selector
     settings:
-      foreground: *KEYWORD
-
-  - name: Language specific Keywords
-    scope:
-    - punctuation.section.embedded.begin.php
-    - punctuation.section.embedded.end.php
-    settings:
-      fontStyle: bold
       foreground: *KEYWORD
 
 
@@ -581,7 +572,6 @@ tokenColors:
     - storage.type.cs
     - storage.type.groovy
     - storage.type.objc
-    - storage.type.php
     - storage.type.haskell
     - storage.type.ocaml
     settings:
@@ -1017,6 +1007,7 @@ tokenColors:
     - entity.other.attribute-name.id.css
     - entity.other.attribute-name.pseudo-element.css
     - entity.name.tag.css
+    - entity.name.tag.custom.css
     - constant.other.unicode-range.css
     - punctuation.definition.constant.css
     - support.constant.language-range.css
@@ -1626,6 +1617,19 @@ tokenColors:
 # =============================================================================
 # PHP
 # =============================================================================
+
+  - name: PHP Keywords
+    scope:
+    - punctuation.section.embedded.begin.php
+    - punctuation.section.embedded.end.php
+    - punctuation.section.embedded.end.php source.php
+    - variable.language.this.php
+    - constant.language.php
+    - storage.type.php
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
   - name: PHP Class Fields
     scope:
       - meta.class.body.php variable.other.php
@@ -1633,18 +1637,18 @@ tokenColors:
     settings:
       foreground: *MEMBER_VAR
 
+  - name: PHP Magic Function
+    scope:
+      - support.function.magic.php
+    settings:
+      foreground: *FUNCTION
+      fontStyle: bold italic
+
   - name: PHP Function parameter
     scope:
       - meta.function.parameters.php variable.other.php
     settings:
       foreground: *FUNCTION_PARAM
-
-  - name: PHP Keyword
-    scope:
-      - variable.language.this.php
-    settings:
-      foreground: *KEYWORD
-      fontStyle: bold
 
   - name: PHP Typehints
     scope:
@@ -1652,6 +1656,22 @@ tokenColors:
       - meta.function.parameter.typehinted.php storage.type.php
     settings:
       foreground: *TYPE_PARAM
+
+  - name: PHP Variable
+    scope:
+      - variable.other.php
+      - variable.other.class.php
+    settings:
+      foreground: *LOCAL_VAR
+
+  - name: PHP Global
+    scope:
+      - variable.other.global.php
+      - variable.other.global.php punctuation.definition.variable.php
+    settings:
+      foreground: *PREDEFINED
+      fontStyle: italic
+
 # =============================================================================
 # Protobuf
 # =============================================================================
