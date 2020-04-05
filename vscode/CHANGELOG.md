@@ -2,6 +2,10 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.4.1] - 2020-04-05
+
+- Fix `new` Keyword color
+
 ## [1.4.0] - 2020-04-04
 
 - Add Rust support
