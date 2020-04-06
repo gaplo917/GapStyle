@@ -2,6 +2,10 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.4.4] - 2020-04-06
+
+- Fix Python colouring
+
 ## [1.4.3] - 2020-04-05
 
 - Enhance PHP & CSS colouring
