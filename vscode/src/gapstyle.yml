@@ -290,9 +290,6 @@ tokenColors:
   - name: Docstrings
     scope:
     - string.quoted.docstring.multi
-    - string.quoted.docstring.multi.python punctuation.definition.string.begin
-    - string.quoted.docstring.multi.python punctuation.definition.string.end
-    - string.quoted.docstring.multi.python constant.character.escape
     settings:
       foreground: *DOC
 
@@ -1455,13 +1452,29 @@ tokenColors:
       foreground: *DECORATOR
       fontStyle: regular
 
+  - name: Python Function Call
+    scope:
+      - meta.function-call.python support.type.python
+    settings:
+      foreground: *FUNCTION
+
   - name: Python String Interpolation
     scope:
     - constant.character.format.placeholder.other.python
     - storage.type.format.python
-    - storage.type.string.python
+    - storage.type.string.python  # String formatting
     settings:
       foreground: *STRING_INTERPOLATION
+      fontStyle: regular
+
+  - name: Python Doc String
+    scope:
+      - string.quoted.docstring.multi.python punctuation.definition.string.begin
+      - string.quoted.docstring.multi.python punctuation.definition.string.end
+      - string.quoted.docstring.multi.python constant.character.escape
+      - string.quoted.docstring.multi.python
+    settings:
+      foreground: *STRING
       fontStyle: regular
 
   - name: Python Property
@@ -1473,11 +1486,32 @@ tokenColors:
 
   - name: Python Keyword
     scope:
+    - constant.language.python
     - variable.language.special.self.python
     - variable.parameter.function.language.special.self.python
+    - keyword.operator.logical
     settings:
       foreground: *KEYWORD
       fontStyle: bold
+
+  - name: Python Arguments
+    scope:
+      - meta.function-call.arguments.python
+    settings:
+      foreground: *DEFAULT
+
+  - name: Python Exception
+    scope:
+      - support.type.exception.python
+    settings:
+      foreground: *CLASS
+
+  - name: Python Magic Function
+    scope:
+      - support.function.magic.python
+    settings:
+      foreground: *FUNCTION
+      fontStyle: bold italic
 
 # =============================================================================
 # Swift
