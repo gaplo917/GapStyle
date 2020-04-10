@@ -1,5 +1,6 @@
 name: "GapStyle VS"
 type: dark
+semanticHighlighting: true
 variables: 
   - &DEFAULT '#A9B7C6'
   - &STRING '#E6DB75'
@@ -232,6 +233,21 @@ tokenColors:
       foreground: *ABSTRACT_CLASS
 
 # =============================================================================
+# Enum
+# =============================================================================
+  - name: General Enum
+    scope:
+    - entity.name.type.enum
+    settings:
+      foreground: *CLASS
+
+  - name: General Enum Member
+    scope:
+    - variable.other.enummember
+    settings:
+      foreground: *PREDEFINED
+
+# =============================================================================
 # Comments
 # =============================================================================
 
@@ -382,15 +398,9 @@ tokenColors:
     scope:
     - meta.decorator variable.other.readwrite
     - meta.decorator variable.other.property
-    - meta.decorator meta.function-call entity.name.function
     settings:
       foreground: *DECORATOR
 
-  - name: Decorator Objects
-    scope:
-      - meta.decorator variable.other.object
-    settings:
-      foreground: *FUNCTION
 
 # =============================================================================
 # Keywords
@@ -1172,10 +1182,24 @@ tokenColors:
     scope:
     - variable.language.this.ts
     - variable.language.this.js
+    - variable.language.this.tsx
+    - variable.language.this.jsx
     - constant.language.null.ts
     - constant.language.null.js
+    - constant.language.null.tsx
+    - constant.language.null.jsx
     - constant.language.undefined.ts
     - constant.language.undefined.js
+    - constant.language.undefined.tsx
+    - constant.language.undefined.jsx
+    - source.ts keyword.operator.expression
+    - source.js keyword.operator.expression
+    - source.tsx keyword.operator.expression
+    - source.jsx keyword.operator.expression
+    - support.type.builtin.ts
+    - support.type.builtin.js
+    - support.type.builtin.tsx
+    - support.type.builtin.jsx
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1225,13 +1249,24 @@ tokenColors:
 
   - name: Typescript / Javascript Predefined
     scope:
+    - support.constant.json.ts
     - support.constant.json.js
+    - support.constant.json.tsx
+    - support.constant.json.jsx
+    - variable.other.constant.property.ts
+    - variable.other.constant.property.js
+    - variable.other.constant.property.tsx
+    - variable.other.constant.property.jsx
+    - support.constant.math.ts
+    - support.constant.math.js
+    - support.constant.math.tsx
+    - support.constant.math.jsx
     settings:
       foreground: *PREDEFINED
 
   - name: Typescript / Javascript Decorator
     scope:
-    - meta.decorator.ts variable.other.readwrite.ts # typescript
+    - meta.decorator.ts # typescript
     settings:
       foreground: *DECORATOR
 
@@ -1489,7 +1524,7 @@ tokenColors:
     - constant.language.python
     - variable.language.special.self.python
     - variable.parameter.function.language.special.self.python
-    - keyword.operator.logical
+    - keyword.operator.logical.python
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1961,3 +1996,24 @@ tokenColors:
     settings:
       foreground: *TYPE_PARAM
       fontStyle: bold italic
+
+# =============================================================================
+# Angular Template
+# =============================================================================
+  - name: Angular Binding
+    scope:
+    - entity.other.ng-binding-name
+    settings:
+      foreground: *MEMBER_VAR
+      fontStyle: regular
+
+# =============================================================================
+# Vue Template
+# =============================================================================
+  - name: Vue Binding
+    scope:
+    - meta.directive.vue
+    - meta.directive.vue entity.other.attribute-name.html
+    settings:
+      foreground: *MEMBER_VAR
+      fontStyle: regular
