@@ -39,6 +39,11 @@ module ModuleValidator {
     return a + b + c + value
   }
 
+  function arrowFunctionTest() {
+    const array = [{aaa: 1, bbb: '2'}]
+    return array.reduce((acc, {aaa ,bbb}) => acc + aaa + Number(bbb), 0)
+  }
+
   declare var declareUrl
   var varUrl = declareUrl.replace(/^\s*(.*)/, '$1').concat('\u1111z\n foo')
   var hello = () => console.log('hello')
@@ -57,6 +62,7 @@ module ModuleValidator {
   globalFunction<FooBarAlias>('123')
   hello()
   acceptsUnion('123')
+  arrowFunctionTest()
 
   new Components.SomeComponent()
 }
