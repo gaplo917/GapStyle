@@ -2,6 +2,13 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.5.0] - 2020-04-10
+
+- Enable semantic highlighting in the theme settings
+- Add generic color handling for Enum and Enum member for semantic highlighting
+- Fix js/ts syntax highlighting issue
+- Enhance Angular/Vue template of Binding color
+
 ## [1.4.4] - 2020-04-06
 
 - Fix Python colouring
