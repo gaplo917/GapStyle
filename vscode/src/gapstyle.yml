@@ -2005,7 +2005,6 @@ tokenColors:
     - entity.other.ng-binding-name
     settings:
       foreground: *MEMBER_VAR
-      fontStyle: regular
 
 # =============================================================================
 # Vue Template
@@ -2016,4 +2015,3 @@ tokenColors:
     - meta.directive.vue entity.other.attribute-name.html
     settings:
       foreground: *MEMBER_VAR
-      fontStyle: regular
