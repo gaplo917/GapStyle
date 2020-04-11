@@ -1,0 +1,25 @@
+<app-loader></app-loader>
+<app-alert-popup></app-alert-popup>
+<div
+  class="container"
+  [ngClass]="{ fullpage: fullpage }"
+  *ngIf="isAuth$ | async as isAuth"
+  #container
+>
+  <app-menu [canShow]="isAuth && !fullpage"></app-menu>
+  <div class="vcontainer">
+    <div class="scrollable-container" #scrollContainer cdkScrollable>
+      <div class="content" [ngClass]="{ fullpage: fullpage }">
+        <router-outlet
+          *ngIf="isWindowReady"
+          (activate)="onActivate($event, scrollContainer)"
+        ></router-outlet>
+      </div>
+    </div>
+    <a
+      class="backToTop icon60 icon-back-to-top"
+      *ngIf="scrollToTopObservable | async"
+      (click)="backToTop()"
+    ></a>
+  </div>
+</div>
