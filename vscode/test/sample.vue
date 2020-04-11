@@ -1,7 +1,17 @@
 <template>
     <div id="app">
-        <router-view name="login"></router-view>
-        <router-view name="main"></router-view>
+        <div id="a" v-if="(1 + '1' === 2) === true"></div>
+        <div id="b" v-else-if="(1 + '1' === 2) === true"></div>
+        <div id="c" v-else></div>
+        <div id="d" v-show="true"></div>
+        <ul id="f">
+            <li v-for="item in items" :key="item.message">
+                {{ item.message }}
+            </li>
+        </ul>
+        <a class="menu-toggle-btn ripple" @click="toggle()">
+            <slot name="icon"></slot>
+        </a>
     </div>
 </template>
 
@@ -56,10 +66,16 @@
         },
 
         data() {
-            return {}
+            return {
+                items: [1 ,2, 3],
+            }
         },
 
-        methods: {},
+        methods: {
+            toggle() {
+                this.item.push(this.item.length + 1)
+            }
+        },
     }
 </script>
 
