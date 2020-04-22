@@ -17,4 +17,5 @@ static_sidebar:
     - &params 
         auto_run: true
         reload: true
+        abc: null
     - *params

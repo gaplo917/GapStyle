@@ -29,6 +29,9 @@ function AjaxRequest(url) {
   a += 1
   a -= 1
   a != 1
+
+  throw new Error({ foo: 'bar' })
+
 }
 
 function testing() {
@@ -38,4 +41,6 @@ function testing() {
 @decorator()
 class NameClass {
 }
+
+console.log(await new Promise((resolve) => resolve(new NameClass())))
 

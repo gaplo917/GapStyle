@@ -40,8 +40,8 @@ module ModuleValidator {
   }
 
   function arrowFunctionTest() {
-    const array = [{aaa: 1, bbb: '2'}]
-    return array.reduce((acc, {aaa ,bbb}) => acc + aaa + Number(bbb), 0)
+    const array = [{ aaa: 1, bbb: '2' }]
+    return array.reduce((acc, { aaa, bbb }) => acc + aaa + Number(bbb), 0)
   }
 
   declare var declareUrl
@@ -52,6 +52,7 @@ module ModuleValidator {
     if (typeof s === 'string') {
       s
     }
+    throw new Error('testing')
   }
   new RegExp(/^[\w\.-]+@([\w\-]+|\.)+[A-Z0-9]{2,4}(?x)/)
   new RegExp(/\x0g\#\p{Alpha}\1/)
@@ -59,11 +60,11 @@ module ModuleValidator {
 
   new SomeComponent()
 
+  globalFunction<SomeComponent>('123')
   globalFunction<FooBarAlias>('123')
   hello()
   acceptsUnion('123')
   arrowFunctionTest()
-
   new Components.SomeComponent()
 }
 
@@ -72,4 +73,13 @@ class ABC {}
 
 new ABC()
 
+enum EnumTest {
+  ENUM_1,
+  ENUM_2,
+}
+
 ModuleValidator
+
+const p = new Promise(resolve => {
+  resolve(EnumTest.ENUM_1)
+})
