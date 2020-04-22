@@ -140,6 +140,89 @@ colors:
     titleBar.activeForeground: "#9da5b4"
     titleBar.inactiveBackground: "#21252b"
     titleBar.inactiveForeground: "#6b717d"
+semanticTokenColors:
+    namespace:
+      fontStyle: ''
+      foreground: *DEFAULT
+
+    struct:
+      foreground: *CLASS
+
+    type:
+      foreground: *TYPE_PARAM
+
+    type.defaultLibrary:
+      foreground: *TYPE_PARAM
+
+    typeParameter:
+      foreground: &TYPE_PARAM
+
+    class:
+      foreground: *CLASS
+
+    class.defaultLibrary:
+      fontStyle: italic
+      foreground: *PREDEFINED
+
+    interface:
+      foreground: *INTERFACE
+
+    enum:
+      foreground: *CLASS
+
+    function:
+      foreground: *FUNCTION
+
+    function.defaultLibrary:
+      fontStyle: italic
+      foreground: *FUNCTION
+
+    function.readonly:
+      fontStyle: ''
+      foreground: *FUNCTION
+
+    member:
+      foreground: *FUNCTION
+
+    member.static:
+      fontStyle: italic
+
+    macro:
+      foreground: *DECORATOR
+
+    variable:
+      foreground: *LOCAL_VAR
+
+    variable.local:
+      fontStyle: ''
+      foreground: *LOCAL_VAR
+
+    variable.readonly:
+      fontStyle: ''
+      foreground: *LOCAL_VAR
+
+    variable.defaultLibrary:
+      fontStyle: italic
+      foreground: *PREDEFINED
+
+    parameter:
+      foreground: *FUNCTION_PARAM
+
+    property:
+      foreground: *MEMBER_VAR
+
+    property.static:
+      fontStyle: italic
+
+    property.readonly:
+      foreground: *MEMBER_VAR
+
+    enumMember:
+      foreground: *PREDEFINED
+
+    event:
+      foreground: *DEFAULT
+
 tokenColors: 
 # =============================================================================
 # General
@@ -213,7 +296,7 @@ tokenColors:
     - meta.class entity.name.type
     settings:
       foreground: *CLASS
-      fontStyle: regular
+      fontStyle: ''
 
   - name: this, super, self, etc.
     scope:
@@ -392,7 +475,7 @@ tokenColors:
     - meta.decorator punctuation.decorator
     settings:
       foreground: *DECORATOR
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Decorators
     scope:
@@ -448,7 +531,7 @@ tokenColors:
     scope:
     - support.type.property-name
     settings:
-      fontStyle: regular
+      fontStyle: ''
 
 # =============================================================================
 # Punctuation / Operators
@@ -493,7 +576,7 @@ tokenColors:
     - keyword.operator.key
     settings:
       foreground: *DEFAULT
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Brackets, braces, parens, etc.
     scope:
@@ -607,7 +690,7 @@ tokenColors:
     - storage.modifier.import
     settings:
       foreground: *DEFAULT
-      fontStyle: regular
+      fontStyle: ''
 
 # =============================================================================
 # RegExp
@@ -710,7 +793,7 @@ tokenColors:
     - meta.export variable.other.readwrite.alias                             # Module import aliasing (alias name)
     - meta.variable.assignment.destructured.object.coffee variable variable  # Object destructuring variable (coffeescript)
     settings:
-      fontStyle: regular
+      fontStyle: ''
       foreground: *DEFAULT
 
   - name: Object Properties
@@ -791,7 +874,7 @@ tokenColors:
     - entity.name.section.markdown
     settings:
       foreground: *RELAX_MD_KEYWORD
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Inline code (prose)
     scope:
@@ -988,7 +1071,7 @@ tokenColors:
     - constant.other.color.rgb-value.hex.css punctuation.definition.constant.css
     settings:
       foreground: *FUNCTION_PARAM
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Css URL / Color / Unit
     scope:
@@ -999,7 +1082,7 @@ tokenColors:
     - source.css keyword.other.unit
     settings:
       foreground: *STRING
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Css Function
     scope:
@@ -1059,8 +1142,16 @@ tokenColors:
     - keyword.operator.scss
     - support.constant.mathematical-symbols.scss
     settings:
+      fontStyle: ''
       foreground: *STRING
-      
+
+  - name: SASS Selector
+    scope:
+    - entity.name.tag.custom.scss
+    settings:
+      fontStyle: bold
+      foreground: *KEYWORD 
+  
 # =============================================================================
 # Java
 # =============================================================================
@@ -1111,7 +1202,7 @@ tokenColors:
     - entity.name.type.enum.java
     settings:
       foreground: *CLASS
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Java Enum Constant
     scope:
@@ -1125,7 +1216,7 @@ tokenColors:
     - storage.type.java
     settings:
       foreground: *CLASS
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Java Class Fields
     scope:
@@ -1139,7 +1230,7 @@ tokenColors:
     - meta.method.body.java meta.definition.variable variable.other.definition
     settings:
       foreground: *LOCAL_VAR
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Java Generic
     scope:
@@ -1147,7 +1238,7 @@ tokenColors:
     - meta.definition.variable.java
     settings:
       foreground: *TYPE_PARAM
-      fontStyle: regular
+      fontStyle: ''
 
 # =============================================================================
 # Kotlin
@@ -1155,6 +1246,7 @@ tokenColors:
   - name: Kotlin Keyword
     scope:
     - constant.language.kotlin
+    - variable.language.kotlin
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1231,7 +1323,7 @@ tokenColors:
     - source.jsx meta.brace
     settings:
       foreground: *DEFAULT
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Typescript / Javascript Destructuring Value
     scope:
@@ -1395,7 +1487,7 @@ tokenColors:
     - punctuation.definition.directive.cpp
     settings:
       foreground: *DECORATOR
-      fontStyle: regular
+      fontStyle: ''
 
   - name: C++ Global Variable
     scope:
@@ -1409,7 +1501,7 @@ tokenColors:
     - entity.name.function.preprocessor.cpp
     settings:
       foreground: *MACRO
-      fontStyle: regular
+      fontStyle: ''
 
   - name: C++ Keywords
     scope:
@@ -1431,7 +1523,7 @@ tokenColors:
     - entity.name.type.enum.cpp
     settings:
       foreground: *CLASS
-      fontStyle: regular
+      fontStyle: ''
 
   - name: C++ Member variable
     scope:
@@ -1439,7 +1531,7 @@ tokenColors:
     - meta.preprocessor.macro.cpp
     settings:
       foreground: *MEMBER_VAR
-      fontStyle: regular
+      fontStyle: ''
 
   - name: C++ Constant
     scope:
@@ -1455,7 +1547,7 @@ tokenColors:
     - entity.name.type.template.cpp
     settings:
       foreground: *TYPE_PARAM
-      fontStyle: regular
+      fontStyle: ''
 
   - name: C++ Interpolation
     scope:
@@ -1463,7 +1555,7 @@ tokenColors:
     - string.quoted.double.raw.cpp punctuation.definition.string.end.cpp
     settings:
       foreground: *STRING_INTERPOLATION
-      fontStyle: regular
+      fontStyle: ''
 
   - name: C++ Operators
     scope:
@@ -1485,7 +1577,7 @@ tokenColors:
     - punctuation.definition.decorator.python
     settings:
       foreground: *DECORATOR
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Python Function Call
     scope:
@@ -1500,7 +1592,7 @@ tokenColors:
     - storage.type.string.python  # String formatting
     settings:
       foreground: *STRING_INTERPOLATION
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Python Doc String
     scope:
@@ -1510,14 +1602,14 @@ tokenColors:
       - string.quoted.docstring.multi.python
     settings:
       foreground: *STRING
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Python Property
     scope:
     - meta.item-access.python
     settings:
       foreground: *DEFAULT
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Python Keyword
     scope:
@@ -1557,7 +1649,7 @@ tokenColors:
     - entity.name.type.enum.swift
     settings:
       foreground: *CLASS
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Swift protocol
     scope:
@@ -1565,7 +1657,7 @@ tokenColors:
     - meta.inheritance-clause.swift
     settings:
       foreground: *INTERFACE
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Swift Type parameter
     scope:
@@ -1574,12 +1666,14 @@ tokenColors:
     - meta.generic-parameter-clause.swift
     settings:
       foreground: *TYPE_PARAM
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Swift Keyword
     scope:
     - punctuation.definition.attribute.swift
     - storage.modifier.attribute.swift
+    - constant.language.nil.swift
+    - variable.language.swift
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1590,7 +1684,7 @@ tokenColors:
     - keyword.control.preprocessor.conditional.swift
     settings:
       foreground: *DECORATOR
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Swift Function Parameters
     scope:
@@ -1598,7 +1692,7 @@ tokenColors:
     - meta.parameter-clause.swift entity.name.function.swift
     settings:
       foreground: *FUNCTION_PARAM
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Swift Default # Because no sematic highlight
     scope:
@@ -1607,14 +1701,14 @@ tokenColors:
     - meta.function-call.swift
     settings:
       foreground: *DEFAULT
-      fontStyle: regular
+      fontStyle: ''
 
-  - name: Swift Constant 
+  - name: Swift Property 
     scope:
     - variable.other.swift
     settings:
-      foreground: *PREDEFINED
-      fontStyle: regular
+      foreground: *MEMBER_VAR
+      fontStyle: ''
 # =============================================================================
 # Go
 # =============================================================================
@@ -1695,6 +1789,7 @@ tokenColors:
     - variable.language.this.php
     - constant.language.php
     - storage.type.php
+    - keyword.operator.heredoc.php
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1741,6 +1836,12 @@ tokenColors:
       foreground: *PREDEFINED
       fontStyle: italic
 
+  - name: PHP Class
+    scope:
+      - support.class.php
+    settings:
+      foreground: *CLASS
+
 # =============================================================================
 # Protobuf
 # =============================================================================
@@ -1753,6 +1854,13 @@ tokenColors:
 # =============================================================================
 # YAML
 # =============================================================================
+  - name: YAML Keyword
+    scope:
+    - source.yaml constant
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
   - name: YAML Separators
     scope:
     - punctuation.definition.block.scalar.folded.yaml
@@ -1762,7 +1870,7 @@ tokenColors:
     - support.other.chomping-indicator.yaml
     settings:
       foreground: *DEFAULT
-      fontStyle: regular
+      fontStyle: ''
 
   - name: YAML Keys
     scope:
@@ -1799,7 +1907,7 @@ tokenColors:
     - meta.group.toml
     settings:
       foreground: *DEFAULT
-      fontStyle: regular
+      fontStyle: ''
 
   - name: TOML Keys
     scope:
@@ -1832,14 +1940,14 @@ tokenColors:
     - source.ini
     settings:
       foreground: *STRING
-      fontStyle: regular
+      fontStyle: ''
 
   - name: ini Properties Keys
     scope:
     - keyword.other.definition.ini
     settings:
       foreground: *MEMBER_VAR
-      fontStyle: regular
+      fontStyle: ''
 # =============================================================================
 # HOCON (.conf)
 # =============================================================================
@@ -1848,7 +1956,7 @@ tokenColors:
     - source.hocon
     settings:
       foreground: *DEFAULT
-      fontStyle: regular
+      fontStyle: ''
 
   - name: HOCON Constant
     scope:
@@ -1870,7 +1978,7 @@ tokenColors:
     - keyword.operator
     settings:
       foreground: *DEFAULT
-      fontStyle: regular
+      fontStyle: ''
 
   - name: Shell String Interpolation
     scope:
@@ -1952,10 +2060,10 @@ tokenColors:
 
   - name: Rust Callable Core
     scope:
-    - support.constant.core.rust
+    - support.function.core.rust
     settings:
       foreground: *FUNCTION
-      fontStyle: regular italic
+      fontStyle: italic
 
   - name: Rust Attribute
     scope:
@@ -1988,6 +2096,13 @@ tokenColors:
     - storage.class.std.rust
     settings:
       foreground: *CLASS
+
+  - name: Rust Constant
+    scope:
+    - support.constant.core.rust
+    settings:
+      fontStyle: bold
+      foreground: *PREDEFINED
 
   - name: Rust Lifetime
     scope:
