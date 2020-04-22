@@ -2,6 +2,13 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.6.0] - 2020-04-22
+
+- Add core `semanticTokenColors` implementation
+- Generally improve the color and fontStyle if the language support semantic highlighting
+- Fix cannot override bold fontStyle issue
+- Enhance php, kotlin, yaml and rust language
+
 ## [1.5.0] - 2020-04-10
 
 - Enable semantic highlighting in the theme settings
