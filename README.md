@@ -2,9 +2,10 @@
 
 # GapStyle Theme For IntelliJ & VSCode & XCode
 
-GapStyle is a **_productivity-oriented_** and **_semantic-driven_** designed color scheme
-with a [list of supported languages](#actively-maintain-language). Each supported language
-is tailor made and carefully tuned with [rationale](#gapstyle-specification).
+GapStyle is a **_productivity-oriented_** and **_semantic-highlighting-driven_** designed
+color scheme with a [list of supported languages](#actively-maintain-language). Each
+supported language is tailor made and carefully tuned with
+[rationale](#gapstyle-specification).
 
 You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 
@@ -32,6 +33,7 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 # Learn More About GapStyle
 
 - [GapStyle Specification](#gapstyle-specification)
+  - [Semantic Highlighting Optimized](#semantic-highlighting-optimized)
   - [Recommended Font](#recommended-font)
   - [Color Palette](#color-palette)
   - [Special Styling](#special-styling)
@@ -41,9 +43,10 @@ You should feel comfortable if you use 'Darcular' or 'Monokai' theme previously.
 
 GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
 
-GapStyle is a **_productivity-oriented_** and **_experience-driven_** designed color
-scheme with a [list of supported languages](#actively-maintain-language). Each supported
-language is tailor made and carefully tuned with [rationale](#gapstyle-specification).
+GapStyle is a **_productivity-oriented_** and **_semantic-highlight-optimized_** designed
+color scheme with a [list of supported languages](#actively-maintain-language). Each
+supported language is tailor made and carefully tuned with
+[rationale](#gapstyle-specification).
 
 The first draft of GapStyle was created on 2014 in PhpStorm 8. After that, Gap have spent
 10,000+ hours of using GapStyle scheme and at least 500+ hours of A/B testing, tuning and
@@ -53,6 +56,44 @@ So, GapStyle is a unique and opinionated color scheme that has converged
 [Gap's 5+ years of software development experience](https://github.com/gaplotech/bio)
 (learning, reading and writing on various programming languages) into
 productivity-oriented syntax hightlight GapStyle specification.
+
+### Semantic Highlighting Optimized
+
+#### Why we need highlighting?
+
+When trying to understand what the code does, we usually first try to recognize its coarse
+structure. For that, we need a fast overview of the code. With that overview, we can
+decide where we want to continue concentrating on. Now the problem is, while building this
+overview, really many words have to be scanned. Actually reading all of them would take a
+long time, and would be very annoying. **Highlighting specific words in deterministic
+colors helps us to reduce that load**, by giving us familiar orientation points and
+patterns that our eyes can “hook” on, and allows us finding the specific position we’re
+searching faster.
+
+So syntax highlighting helps us to keep an overview or finding the place we’re searching
+for. However, it cannot help us actually understanding the code, because by the pure
+definition of “syntax”, it can only highlight by what the code looks like, not by what the
+code means, since that requires wider knowledge.
+
+#### Semantic Highlighting
+
+Semantic Highlighting to overcome that limitation, deeper knowledge of the code is
+required. Semantic highlighting is an extension of syntax highlighting.
+
+Different language has different richness of the semantic highlight implementation. Thus,
+general designed theme without dedicate tuning for each language don't utilize semantic
+highlighting well.
+
+In contrast, GapStyle is giving different semantic a unique distinct colors and font
+style. Here is the result :
+
+![semnatic-highlight-information-intellij](preview/semnatic-highlight-information-intellij.gif)
+
+From my experience, GapStyle helps to improve my reading and writing code speed by:
+
+- 30% when working on my own project
+
+- 50% when studying other's source code and new languages
 
 ### Recommended Font
 
