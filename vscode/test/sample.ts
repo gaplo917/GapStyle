@@ -78,8 +78,36 @@ enum EnumTest {
   ENUM_2,
 }
 
-ModuleValidator
+const module = ModuleValidator
 
 const p = new Promise(resolve => {
   resolve(EnumTest.ENUM_1)
 })
+
+console.log(p, module)
+
+function testFnExport() {}
+const testVariableExport1 = 1
+const testVariableExport2 = true
+const testVariableExport3 = `${testVariableExport2}`
+class TestClassExport {}
+abstract class TestAbstractExport {}
+enum TestEnumExport {
+  ENUM_1,
+  ENUM_2,
+}
+
+interface TestInterface {}
+type TestType = {}
+
+export {
+  testFnExport,
+  testVariableExport1,
+  testVariableExport2,
+  testVariableExport3,
+  TestClassExport,
+  TestAbstractExport,
+  TestEnumExport,
+  TestInterface,
+  TestType,
+}

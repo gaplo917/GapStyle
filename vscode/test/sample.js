@@ -34,13 +34,14 @@ function AjaxRequest(url) {
 
 }
 
-function testing() {
-
+function arrowFunctionTest() {
+  const array = [{ aaa: 1, bbb: '2' }]
+  return array.reduce((acc, { aaa, bbb }) => acc + aaa + Number(bbb), 0)
 }
 
 @decorator()
-class NameClass {
-}
+class NameClass {}
 
+arrowFunctionTest()
 console.log(await new Promise((resolve) => resolve(new NameClass())))
 
