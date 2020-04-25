@@ -2,6 +2,12 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.6.1] - 2020-04-25
+
+- Enhance ts/js rapid typing default color
+- Fix js inconsistent variable property color
+- Improve SASS/SCSS coloring
+
 ## [1.6.0] - 2020-04-22
 
 - Add core `semanticTokenColors` implementation
