@@ -14,6 +14,6 @@ Update `README.md`
 
 1. Run `npm run build`
 1. Run `npm run package`
-1. Run `npm run vsce-publish`
+1. Run `npm run publish`
 
 (May need to `npx vsce login gaplo917`)
