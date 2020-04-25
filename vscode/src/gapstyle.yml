@@ -777,7 +777,6 @@ tokenColors:
     scope:
     - variable.other.object
     - constant.other.key.perl     # Perl edge case
-    - support.variable.property   # Object properties
     - variable punctuation.definition.variable.php # Fixes php $ sign and variables
     settings:
       foreground: *LOCAL_VAR
@@ -804,6 +803,7 @@ tokenColors:
     scope:
     - variable.object.property
     - variable.other.property
+    - support.variable.property
     - variable.other.object.property
     - meta.definition.property
     - meta.field.declaration
@@ -1081,9 +1081,9 @@ tokenColors:
     scope:
     - support.constant.color.w3c-standard-color-name.css
     - variable.parameter.url.css
-
     - constant.language.color.rgb-value.css
     - source.css keyword.other.unit
+    - support.constant.property-value.css
     settings:
       foreground: *STRING
       fontStyle: ''
@@ -1108,7 +1108,6 @@ tokenColors:
     - entity.other.attribute-name.class.css
     - entity.other.attribute-name.pseudo-class.css
     - support.type.property-name.css
-    - support.constant.property-value.css
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1128,6 +1127,12 @@ tokenColors:
     settings:
       foreground: *STRING_INTERPOLATION
 
+  - name: SASS Hex Color
+    scope:
+      - source.sass constant.language.color.rgb-value.css
+    settings:
+      foreground: *MEMBER_VAR
+
   - name: SASS Attribute
     scope:
     - support.type.property-name.css.sass.prop.name
@@ -1136,15 +1141,23 @@ tokenColors:
       foreground: *ATTR_NAME
       fontStyle: bold
 
+  - name: SASS Symbol
+    scope:
+      - support.constant.mathematical-symbols.scss
+      - keyword.operator.sass
+      - keyword.operator.scss
+    settings:
+      fontStyle: ''
+      foreground: *DEFAULT
+
   - name: SASS Default
     scope:
     - comment.punctuation.comma.sass
     - comment.punctuation.comma.scss
-    - support.constant.property-value.css.sass
     - meta.property-value.scss
-    - keyword.operator.sass
-    - keyword.operator.scss
-    - support.constant.mathematical-symbols.scss
+    - source.sass keyword.control.unit
+    - source.scss keyword.control.unit
+    - support.constant.property-value.css.sass
     settings:
       fontStyle: ''
       foreground: *STRING
@@ -1152,6 +1165,7 @@ tokenColors:
   - name: SASS Selector
     scope:
     - entity.name.tag.custom.scss
+    - constant.other.scss
     settings:
       fontStyle: bold
       foreground: *KEYWORD 
