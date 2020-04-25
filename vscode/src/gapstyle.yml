@@ -182,6 +182,7 @@ semanticTokenColors:
       foreground: *FUNCTION
 
     member:
+      fontStyle: ''
       foreground: *FUNCTION
 
     member.static:
@@ -191,6 +192,7 @@ semanticTokenColors:
       foreground: *DECORATOR
 
     variable:
+      fontStyle: 'italic'
       foreground: *LOCAL_VAR
 
     variable.local:
@@ -198,7 +200,7 @@ semanticTokenColors:
       foreground: *LOCAL_VAR
 
     variable.readonly:
-      fontStyle: ''
+
       foreground: *LOCAL_VAR
 
     variable.defaultLibrary:
@@ -206,9 +208,11 @@ semanticTokenColors:
       foreground: *PREDEFINED
 
     parameter:
+      fontStyle: ''
       foreground: *FUNCTION_PARAM
 
     property:
+      fontStyle: ''
       foreground: *MEMBER_VAR
 
     property.static:
@@ -1302,12 +1306,15 @@ tokenColors:
     - variable.other.constant.ts  # Fixes incorrect highlighting of pseudo-constants in ts
     - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
     - variable.other.constant.jsx # Fixes incorrect highlighting of pseudo-constants in tsx
-    - variable.other.readwrite.js
-    - variable.other.readwrite.ts
-    - variable.other.readwrite.tsx
-    - variable.other.readwrite.jsx
     settings:
       foreground: *LOCAL_VAR
+
+  - name: Typescript / Javascript Variable
+    scope:
+    - variable.other.constant.js  # Fix incorrect highlighting of pseudo-constants in js, jsx
+    - variable.other.constant.ts  # Fixes incorrect highlighting of pseudo-constants in ts
+    - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
+    - variable.other.constant.jsx # Fixes incorrect highlighting of pseudo-constants in tsx
 
   - name: Typescript / Javascript Default
     scope:
@@ -1321,6 +1328,10 @@ tokenColors:
     - source.tsx meta.brace
     - source.js meta.brace
     - source.jsx meta.brace
+    - variable.other.readwrite.js
+    - variable.other.readwrite.ts
+    - variable.other.readwrite.tsx
+    - variable.other.readwrite.jsx
     settings:
       foreground: *DEFAULT
       fontStyle: ''
