@@ -775,11 +775,9 @@ tokenColors:
 
   - name: Variables and object properties
     scope:
-    - variable.other.object
-    - constant.other.key.perl     # Perl edge case
-    - variable punctuation.definition.variable.php # Fixes php $ sign and variables
+      - variable.other.object
     settings:
-      foreground: *LOCAL_VAR
+      foreground: *DEFAULT # Using default color is good for language that not support semantic highlighting
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:
@@ -1850,6 +1848,7 @@ tokenColors:
     scope:
       - variable.other.php
       - variable.other.class.php
+      - variable punctuation.definition.variable.php # Fixes php $ sign and variables
     settings:
       foreground: *LOCAL_VAR
 
@@ -2025,6 +2024,12 @@ tokenColors:
 # =============================================================================
 # Perl
 # =============================================================================
+  - name: Perl Constant Key
+    scope:
+      - constant.other.key.perl  # Perl edge case
+    settings:
+      foreground: *LOCAL_VAR
+
   - name: Perl Bareword
     scope:
     - constant.other.bareword.perl
