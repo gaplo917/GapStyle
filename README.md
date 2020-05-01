@@ -1,5 +1,3 @@
-![GapStyle](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/gap-style-github-og-image-v2.png)
-
 # GapStyle Theme For IntelliJ & VSCode & XCode
 
 GapStyle is a **_productivity-oriented_** and **_semantic-highlighting-driven_** designed
