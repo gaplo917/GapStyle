@@ -1741,6 +1741,24 @@ tokenColors:
     settings:
       foreground: *KEYWORD
       fontStyle: bold
+
+# =============================================================================
+# GraphQL (GraphQL for VSCode)
+# =============================================================================
+  - name: GraphQL Doc
+    scope:
+      - string.block.description.graphql.DOCSTRING
+      - string.block.description.graphql.DOCSTRING punctuation.definition.string.graphql
+    settings:
+      foreground: *DOC
+
+  - name: GraphQL Comment Like
+    scope:
+      - graphql.description.SINGLELINE string.description.graphql
+      - graphql.description.SINGLELINE punctuation.definition.string.graphql
+    settings:
+      foreground: *COMMENT
+
 # =============================================================================
 # GraphQL (Prisma)
 # =============================================================================
