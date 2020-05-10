@@ -2,6 +2,10 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [1.6.3] - 2020-05-10
+
+- Support GraphQL for VSCode Plugin
+
 ## [1.6.2] - 2020-04-25
 
 - Enhance basic syntax highligting if language don't support semantic highlighting
