@@ -58,7 +58,7 @@ VSCode Editor Config (Full config)
 
 ```
 {
-    "workbench.colorTheme": "GapStyle VS"
+    "workbench.colorTheme": "GapStyle VS",
     "editor.fontFamily": "'Hack JBM Ligatured CCG', 'Hack', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.tokenColorCustomizations": {
