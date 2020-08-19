@@ -16,7 +16,7 @@ module ModuleValidator {
 
     /**
      * Constructor for <code>HasValidator</code> class
-     * @param value for <i>validation</i>
+     * @param valueParameter
      */
     constructor(valueParameter: String) {
       this.myValue = valueParameter
