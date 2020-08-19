@@ -46,7 +46,7 @@ highlighting well.
 In contrast, GapStyle is giving different semantic a unique distinct colors and font
 style. Here is the result :
 
-![semnatic-highlight-information-intellij](preview/semnatic-highlight-information-intellij.gif)
+![semnatic-highlight-information-intellij](../preview/semnatic-highlight-information-intellij.gif)
 
 From my experience, GapStyle helps to improve my reading and writing code speed by:
 

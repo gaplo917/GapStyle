@@ -46,6 +46,10 @@ You should feel comfortable if you use 'Monokai' or 'Darcular' theme previously.
 
 # Learn More About GapStyle
 
+### How GapStyle improves productivity?
+
+![semnatic-highlight-information-intellij](preview/semnatic-highlight-information-intellij.gif)
+
 - [GapStyle Specification](spec/README.md#gapstyle-specification)
   - [Semantic Highlighting Optimized](spec/README.md#semantic-highlighting-optimized)
   - [Recommended Font](spec/README.md#recommended-font)
