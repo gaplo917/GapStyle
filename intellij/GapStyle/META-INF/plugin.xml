@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>color.scheme.GapStyle</id>
   <name>GapStyle Color Scheme</name>
-  <version>3.0</version>
+  <version>3.1</version>
   <vendor email="gaplotech@gmail.com" url="https://github.com/gaplo917/GapStyle">Gary Lo</vendor>
 
   <description><![CDATA[
@@ -16,6 +16,14 @@
   ]]></description>
 
   <change-notes><![CDATA[
+      <h1>3.1</h1>
+      <ul>
+        <li>Add C#, ASP.NET, and Rider Support</li>
+        <li>Enhance Kotlin mutable var style</li>
+        <li>Enhance JSP</li>
+        <li>Sync Property key color to match Yaml and JSON style/li>
+        <li><a href=&quot;https://marketplace.visualstudio.com/items?itemName=gaplo917.gapstylevs&quot;>GapStyle VS</a> (VS Code support is available!)</li>
+      </ul>
       <h1>3.0</h1>
       <ul>
         <li>Rework on a more relax color on Markdown</li>

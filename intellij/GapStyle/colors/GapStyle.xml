@@ -1,9 +1,9 @@
-<scheme name="GapStyle 3.0" version="142" parent_scheme="Darcula">
+<scheme name="GapStyle 3.1" version="142" parent_scheme="Darcula">
     <metaInfo>
         <property name="created">2018-10-15T04:33:26</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2019.3.0.0</property>
-        <property name="modified">2019-11-30T18:05:37</property>
+        <property name="ideVersion">2020.3.2.0.0</property>
+        <property name="modified">2021-01-01T02:43:09</property>
     </metaInfo>
     <option name="LINE_SPACING" value="1.2" />
     <colors>
@@ -1654,6 +1654,24 @@
                 <option name="FOREGROUND" value="cc7833" />
             </value>
         </option>
+        <option name="JSP_ATTRIBUTE_NAME">
+            <value>
+                <option name="FOREGROUND" value="cc7832" />
+                <option name="FONT_TYPE" value="1" />
+            </value>
+        </option>
+        <option name="JSP_DIRECTIVE_BACKGROUND">
+            <value>
+                <option name="FOREGROUND" value="e8bf6a" />
+                <option name="EFFECT_TYPE" value="5" />
+            </value>
+        </option>
+        <option name="JSP_SCRIPTING_BACKGROUND">
+            <value>
+                <option name="FOREGROUND" value="e8bf6a" />
+                <option name="EFFECT_TYPE" value="5" />
+            </value>
+        </option>
         <option name="KDOC_LINK">
             <value>
                 <option name="FOREGROUND" value="8a653c" />
@@ -1722,6 +1740,7 @@
         </option>
         <option name="KOTLIN_MUTABLE_VARIABLE">
             <value>
+                <option name="EFFECT_COLOR" value="707d95" />
                 <option name="EFFECT_TYPE" value="1" />
             </value>
         </option>
@@ -2388,8 +2407,7 @@
         </option>
         <option name="PROPERTIES.KEY">
             <value>
-                <option name="FOREGROUND" value="f92672" />
-                <option name="FONT_TYPE" value="1" />
+                <option name="FOREGROUND" value="cf8823" />
                 <option name="EFFECT_TYPE" value="1" />
             </value>
         </option>
@@ -2839,6 +2857,120 @@
             <value>
                 <option name="FOREGROUND" value="e6db7e" />
                 <option name="FONT_TYPE" value="1" />
+            </value>
+        </option>
+        <option name="ReSharper.ASP_NET_RAZOR_TAG_HELPER_ATTRIBUTE">
+            <value>
+                <option name="FOREGROUND" value="cf8822" />
+                <option name="FONT_TYPE" value="1" />
+                <option name="EFFECT_TYPE" value="1" />
+            </value>
+        </option>
+        <option name="ReSharper.ASP_NET_RAZOR_TAG_HELPER_ELEMENT">
+            <value>
+                <option name="FOREGROUND" value="cf8822" />
+                <option name="FONT_TYPE" value="1" />
+                <option name="EFFECT_TYPE" value="1" />
+            </value>
+        </option>
+        <option name="ReSharper.CSHARP_ACCESSOR_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="f92672" />
+            </value>
+        </option>
+        <option name="ReSharper.CSHARP_DELEGATE_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="ed38c" />
+            </value>
+        </option>
+        <option name="ReSharper.CSHARP_EVENT_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="a9b7c6" />
+                <option name="FONT_TYPE" value="1" />
+            </value>
+        </option>
+        <option name="ReSharper.CSHARP_EXTENSION_METHOD_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="a6e22e" />
+                <option name="FONT_TYPE" value="2" />
+            </value>
+        </option>
+        <option name="ReSharper.CSHARP_STATIC_CLASS_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="66d9ef" />
+                <option name="FONT_TYPE" value="2" />
+            </value>
+        </option>
+        <option name="ReSharper.CSHARP_STATIC_METHOD_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="a6e22e" />
+                <option name="FONT_TYPE" value="2" />
+            </value>
+        </option>
+        <option name="ReSharper.CSHARP_STATIC_PROPERTY_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="cf8822" />
+                <option name="FONT_TYPE" value="2" />
+            </value>
+        </option>
+        <option name="ReSharper.DELEGATE_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="ed38c" />
+            </value>
+        </option>
+        <option name="ReSharper.FORMAT_STRING_ITEM">
+            <value>
+                <option name="FOREGROUND" value="fd971f" />
+            </value>
+        </option>
+        <option name="ReSharper.FORMAT_STRING_ITEM_2">
+            <value>
+                <option name="FOREGROUND" value="fd971f" />
+            </value>
+        </option>
+        <option name="ReSharper.FSHARP_FUNCTION_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="a6e22e" />
+            </value>
+        </option>
+        <option name="ReSharper.FSHARP_METHOD_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="a6e22e" />
+            </value>
+        </option>
+        <option name="ReSharper.FSHARP_MODULE_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="a9b7c6" />
+            </value>
+        </option>
+        <option name="ReSharper.FSHARP_MUTABLE_FUNCTION_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="a6e22e" />
+                <option name="EFFECT_COLOR" value="707d95" />
+                <option name="EFFECT_TYPE" value="1" />
+            </value>
+        </option>
+        <option name="ReSharper.FSHARP_STATIC_CLASS_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="66d9ef" />
+                <option name="FONT_TYPE" value="2" />
+            </value>
+        </option>
+        <option name="ReSharper.HINT">
+            <value>
+                <option name="EFFECT_COLOR" value="a6e22e" />
+                <option name="EFFECT_TYPE" value="5" />
+            </value>
+        </option>
+        <option name="ReSharper.PREPROCESSOR_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="bbb528" />
+                <option name="EFFECT_TYPE" value="1" />
+            </value>
+        </option>
+        <option name="ReSharper.TYPE_PARAMETER_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="20999d" />
             </value>
         </option>
         <option name="SASS_MIXIN">
