@@ -20,14 +20,20 @@ productivity-oriented syntax hightlight GapStyle specification.
 
 #### Why we need highlighting?
 
-When trying to understand what the code does, we usually first try to recognize its coarse
-structure. For that, we need a fast overview of the code. With that overview, we can
-decide where we want to continue concentrating on. Now the problem is, while building this
-overview, really many words have to be scanned. Actually reading all of them would take a
-long time, and would be very annoying. **Highlighting specific words in deterministic
-colors helps us to reduce that load**, by giving us familiar orientation points and
-patterns that our eyes can “hook” on, and allows us finding the specific position we’re
-searching faster.
+When trying to understand what the code does,
+
+1. we usually first try to recognize its coarse structure.
+2. For that, we need a fast overview of the code.
+3. With that overview, we can decide where we want to continue concentrating on.
+
+Now the problem is, while building this overview, really many words have to be scanned.
+Actually reading all of them would take a long time, and would be very annoying.
+
+> Highlighting specific words in deterministic colors helps us to reduce that load
+
+A productivity-oriented syntax highlighting scheme gives us familiar orientation points
+and patterns that our eyes can “hook” on, and allows us finding the specific position
+faster.
 
 So syntax highlighting helps us to keep an overview or finding the place we’re searching
 for. However, it cannot help us actually understanding the code, because by the pure
@@ -48,7 +54,7 @@ style. Here is the result :
 
 ![semnatic-highlight-information-intellij](../preview/semnatic-highlight-information-intellij.gif)
 
-From my experience, GapStyle helps to improve my reading and writing code speed by:
+From my experience, GapStyle helps to improve my reading and writing code speed at least:
 
 - 30% when working on my own project
 
