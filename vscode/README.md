@@ -35,8 +35,8 @@ experience.
 ```
 {
     "workbench.colorTheme": "GapStyle VS",
-    "editor.tokenColorCustomizations": {
-        "semanticHighlighting": true
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true
     }
 }
 ```
@@ -61,8 +61,8 @@ VSCode Editor Config (Full config)
     "workbench.colorTheme": "GapStyle VS",
     "editor.fontFamily": "'Hack JBM Ligatured CCG', 'Hack', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
-    "editor.tokenColorCustomizations": {
-        "semanticHighlighting": true
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true
     }
 }
 ```
