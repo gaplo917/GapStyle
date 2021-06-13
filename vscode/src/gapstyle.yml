@@ -2102,6 +2102,10 @@ tokenColors:
     scope:
     - variable.language.rust
     - storage.modifier.mut.rust
+    - entity.name.type.option.rust
+    - variable.language.self.rust
+    - entity.name.type.numeric.rust
+    - constant.language.bool.rust
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -2116,14 +2120,22 @@ tokenColors:
   - name: Rust Attribute
     scope:
     - meta.attribute.rust
+    - punctuation.definition.attribute.rust
     settings:
       foreground: *DECORATOR
+
+  - name: Rust String
+    scope:
+    - punctuation.definition.string.rust
+    settings:
+      foreground: *STRING
 
   - name: Rust Type Params
     scope:
     - meta.type_params.rust
+    - meta.function.definition.rust entity.name.type.rust
     settings:
-      foreground: *DEFAULT
+      foreground: *TYPE_PARAM
 
   - name: Rust Trait
     scope:
@@ -2138,9 +2150,10 @@ tokenColors:
       foreground: *CLASS
       fontStyle: italic
 
-  - name: Rust Class / Enum
+  - name: Rust Class / Enum / Struct
     scope:
     - entity.name.type.rust
+    - entity.name.type.struct.rust
     - storage.class.std.rust
     settings:
       foreground: *CLASS
@@ -2154,12 +2167,25 @@ tokenColors:
 
   - name: Rust Lifetime
     scope:
-    - entity.name.lifetime.rust
+    - entity.name.type.lifetime.rust
+    - punctuation.definition.lifetime.rust
     - storage.modifier.lifetime.rust
     settings:
       foreground: *TYPE_PARAM
       fontStyle: bold italic
 
+  - name: Rust Variable / Parameter
+    scope:
+    - variable.other.rust
+    settings:
+      foreground: *FUNCTION_PARAM
+
+  - name: Rust Marco Function Call
+    scope:
+    - entity.name.function.macro.rust
+    settings:
+      foreground: *FUNCTION
+      fontStyle: italic
 # =============================================================================
 # Angular Template
 # =============================================================================

@@ -3516,4 +3516,17 @@ mod test_map {
             }
         }
     }
+
+    unsafe fn a_function<T: 'lifetime>(count: &mut i64) -> ! {
+        count += 1;
+        'label: loop {
+            println!("Hello\x20W\u{f3}rld!\u{abcdef}");
+        }
+    }
+    
+    fn test() {
+        unsafe {
+            a_function(1);
+        }
+    }
 }
