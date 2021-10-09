@@ -1,20 +1,19 @@
 ## GapStyle Specification
 
-GapStyle is designed base on some key color of 'Darcula' and 'Monokai' theme.
+GapStyle is designed based on some key colors of the 'Darcula' and 'Monokai' colorschemes.
 
-GapStyle is a **_productivity-oriented_** and **_semantic-highlight-optimized_** designed
-color scheme with a [list of supported languages](#actively-maintain-language). Each
-supported language is tailor made and carefully tuned with
-[rationale](#gapstyle-specification).
+GapStyle is a **_productivity-oriented_** and **_semantic-highlight-optimized_** color
+scheme with a [list of supported languages](#actively-maintain-language). Each supported
+language is tailored and carefully tuned with [its rationale](#gapstyle-specification).
 
-The first draft of GapStyle was created on 2014 in PhpStorm 8. After that, Gap have spent
-10,000+ hours of using GapStyle scheme and at least 500+ hours of A/B testing, tuning and
-stablizing throughout the years.
+The first draft of GapStyle was created in 2014 in PhpStorm 8. After that, Gap has spent
+10,000+ hours using the GapStyle colorscheme and at least 500+ hours of A/B testing,
+tuning and stablizing throughout the years.
 
-So, GapStyle is a unique and opinionated color scheme that has converged
+GapStyle is a unique and opinionated color scheme that has converged
 [Gap's 5+ years of software development experience](https://github.com/gaplotech/bio)
 (learning, reading and writing on various programming languages) into
-productivity-oriented syntax hightlight GapStyle specification.
+productivity-oriented syntax highlighting based on GapStyle's specifications.
 
 ### Semantic Highlighting Optimized
 
@@ -32,13 +31,13 @@ Actually reading all of them would take a long time, and would be very annoying.
 > Highlighting specific words in deterministic colors helps us to reduce that load
 
 A productivity-oriented syntax highlighting scheme gives us familiar orientation points
-and patterns that our eyes can “hook” on, and allows us finding the specific position
-faster.
+and patterns that our eyes can “hook” onto, and allows us to find the specific position
+more quickly.
 
-So syntax highlighting helps us to keep an overview or finding the place we’re searching
-for. However, it cannot help us actually understanding the code, because by the pure
-definition of “syntax”, it can only highlight by what the code looks like, not by what the
-code means, since that requires wider knowledge.
+Therefore, syntax highlighting helps us to keep an overview of or find the place we’re
+searching for. However, it cannot help us actually understand the code. By the pure
+definition of “syntax”, it can only highlight the tokens in the code, not by what the code
+means, since that requires wider knowledge.
 
 #### Semantic Highlighting
 
@@ -49,12 +48,13 @@ Different language has different richness of the semantic highlight implementati
 general designed theme without dedicate tuning for each language don't utilize semantic
 highlighting well.
 
-In contrast, GapStyle is giving different semantic a unique distinct colors and font
-style. Here is the result :
+In contrast, GapStyle gives different semantics unique distinct colors and font styles.
+Here is the result:
 
 ![semnatic-highlight-information-intellij](../preview/semnatic-highlight-information-intellij.gif)
 
-From my experience, GapStyle helps to improve my reading and writing code speed at least:
+From my experience, GapStyle helps to improve my code-reading and writing speed by at
+least:
 
 - 30% when working on my own project
 
@@ -78,8 +78,8 @@ From my experience, GapStyle helps to improve my reading and writing code speed 
 | String                  | Monokai                         | ![](https://via.placeholder.com/15/E6DB74/000000?text=+) |                                                                                                                                                                                                                            |
 | Number                  | Monokai                         | ![](https://via.placeholder.com/15/AE81FF/000000?text=+) |                                                                                                                                                                                                                            |
 | Class, Struct           | Monokai                         | ![](https://via.placeholder.com/15/66D9EF/000000?text=+) |                                                                                                                                                                                                                            |
-| Abstract Class          | Derived from **Class**          | ![](https://via.placeholder.com/15/66D9EF/000000?text=+) | always affinitive to **Class**. Should be distinguished from **Class** but not too eye-catching. To remain overall harmony, just add slightly green on ![](https://via.placeholder.com/15/66D9EF/000000?text=+)            |
-| Interface, Protocol     | Derived from **Abstract Class** | ![](https://via.placeholder.com/15/0ED38C/000000?text=+) | should be distinguished easily from **Class/Abstract Class** but also should keep 'claim' with them. Add more green on ![](https://via.placeholder.com/15/66D9EF/000000?text=+)                                            |
+| Abstract Class          | Derived from **Class**          | ![](https://via.placeholder.com/15/66D9EF/000000?text=+) | Always affinitive to **Class**. Should be distinguished from **Class** but not too eye-catching. To maintain overall harmony, just added slightly more green on ![](https://via.placeholder.com/15/66D9EF/000000?text=+)   |
+| Interface, Protocol     | Derived from **Abstract Class** | ![](https://via.placeholder.com/15/0ED38C/000000?text=+) | Should be distinguished easily from **Class/Abstract Class** but also should keep 'claim' with them. Add more green on ![](https://via.placeholder.com/15/66D9EF/000000?text=+)                                            |
 | Method                  | Monokai                         | ![](https://via.placeholder.com/15/A6E22E/000000?text=+) |                                                                                                                                                                                                                            |
 | Parameter               | Darcula                         | ![](https://via.placeholder.com/15/FD971F/000000?text=+) |                                                                                                                                                                                                                            |
 | Local variable          | Derived from **Parameter**      | ![](https://via.placeholder.com/15/CBAD96/000000?text=+) | always affinitive to **Parameter**. Should be distinguished from **Parameter** but not too eye-catching. To remain overall harmony, just substract some orange on ![](https://via.placeholder.com/15/FD971F/000000?text=+) |
@@ -91,18 +91,18 @@ From my experience, GapStyle helps to improve my reading and writing code speed 
 
 ### Special Styling
 
-| Syntax                 | Style                                                                       | Philosophy                                                                                            |
-| ---------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Keyword                | **Bold**                                                                    | Bold to standout and outweight the importance                                                         |
-| Singleton              | **Bold**                                                                    | preserve same color but also should be distinguished easily from non-singleton object                 |
-| Global/Static variable | **_Italic + Bold_**                                                         | preserve same color but also should be distinguished easily from **Parameter** and **Local variable** |
-| Smart cast             | ![](https://via.placeholder.com/15/2F4830/000000?text=+) (background color) | should be distinguishable easily                                                                      |
-| Invalid Expression     | ![](https://via.placeholder.com/15/FF0000/000000?text=+) (underwaved line)  | Inherited from Darcula                                                                                |
-| Reassigned Variable    | underscored                                                                 | Inherited from Darcula                                                                                |
+| Syntax                 | Style                                                                       | Philosophy                                                                                                   |
+| ---------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Keyword                | **Bold**                                                                    | Bold to stand out and emphasise its importance                                                               |
+| Singleton              | **Bold**                                                                    | Preserves the same color but should also be distinguished easily from non-singleton objects                  |
+| Global/Static variable | **_Italic + Bold_**                                                         | preserve same color but also should be distinguished easily from **Parameter** and **Local variable** tokens |
+| Smart cast             | ![](https://via.placeholder.com/15/2F4830/000000?text=+) (Background color) | Should be distinguishable easily                                                                             |
+| Invalid Expression     | ![](https://via.placeholder.com/15/FF0000/000000?text=+) (Undercurled line) | Inherited from Darcula                                                                                       |
+| Reassigned Variable    | Underlined                                                                  | Inherited from Darcula                                                                                       |
 
 ### Special File Type
 
-| File | Theme                       | Philosophy                                                                                                                                                                                            |
-| ---- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| XML  | Darcula                     | NOT to use HTML-like highlighting because IntelliJ use XML color scheme to highlight JSX's tags internally. Using Darcula original color can prevent from having too much Monokai's **Keyword** color |
-| JSON | Derived from **JavaScript** | **Property Key** color should align with **JavaScript** Object                                                                                                                                        |
+| File | Theme                       | Philosophy                                                                                                                                                                             |
+| ---- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| XML  | Darcula                     | NOT to use HTML-like highlighting because IntelliJ uses XML color scheme to highlight JSX's tags internally. Using Darcula's original color can overpower Monokai's **Keyword** color. |
+| JSON | Derived from **JavaScript** | **Property Key** color should align with **JavaScript** Object                                                                                                                         |
