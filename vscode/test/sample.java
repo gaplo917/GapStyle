@@ -27,7 +27,7 @@ public class SomeClass<T extends Runnable> { // some comment
    * @param param3
    */
   public SomeClass(AnInterface param1, int[] reassignedParam,
-                  int param2
+                  int param2,
                   int param3) {
     int reassignedValue = this.staticField + param2 + param3;
     long localVar1, localVar2, localVar3, localVar4;

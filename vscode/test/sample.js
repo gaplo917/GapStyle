@@ -30,7 +30,9 @@ function AjaxRequest(url) {
   a -= 1
   a != 1
 
-  throw new Error({ foo: 'bar' })
+  const b = true
+
+  throw new Error({ foo: 'bar', b })
 
 }
 

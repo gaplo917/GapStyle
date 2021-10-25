@@ -1,7 +1,7 @@
 {
     "name": "gapstylevs",
     "displayName": "GapStyle VS",
-    "description": "A productivity-oriented dark theme for VSCode, IntelliJ, XCode. Each supported language is tailor made and carefully tuned with rationale",
+    "description": "A world-first* productivity-oriented designed color scheme.",
     "version": "2.0.0",
     "publisher": "gaplo917",
     "repository": {
@@ -16,13 +16,13 @@
         "Themes"
     ],
     "keywords": [
-        "productivity",
-        "semantic-highlighting",
-        "monokai",
-        "dark",
+        "gapstyle",
         "theme",
-        "color-theme",
-        "gapstyle"
+        "color theme",
+        "monokai",
+        "one dark pro",
+        "semantic highlighting",
+        "productivity"
     ],
     "icon": "icon.png",
     "galleryBanner": {

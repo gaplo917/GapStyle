@@ -2,6 +2,13 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [2.0.0] - 2021-10-31
+
+- Add Dart, Ruby, Erlang, Elixir support
+- Support C++, Python, Java semantic highlighting
+- Huge rework on all markup language including CSS, Less, SASS, SCSS, YAML, TOML
+- Huge rework on all template language including HTML, XML, JSX, Angular Template, Vue Template, JSP, Velocity, JADE
+
 ## [1.6.3] - 2020-05-10
 
 - Support GraphQL for VSCode Plugin

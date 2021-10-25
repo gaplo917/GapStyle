@@ -3529,4 +3529,36 @@ mod test_map {
             a_function(1);
         }
     }
+
+    #[actix_rt::test]
+    async fn test_data() {
+        let srv = init_service(
+            App::new()
+                .data(1.0f64)
+                .data(1usize)
+                .app_data(web::Data::new('-'))
+                .service(
+                    web::resource("/test")
+                        .data(10usize)
+                        .app_data(web::Data::new('*'))
+                        .guard(guard::Get())
+                        .to(
+                            |data1: web::Data<usize>,
+                             data2: web::Data<char>,
+                             data3: web::Data<f64>| {
+                                assert_eq!(**data1, 10);
+                                assert_eq!(**data2, '*');
+                                let error = std::f64::EPSILON;
+                                assert!((**data3 - 1.0).abs() < error);
+                                HttpResponse::Ok()
+                            },
+                        ),
+                ),
+        )
+        .await;
+
+        let req = TestRequest::get().uri("/test").to_request();
+        let resp = call_service(&srv, req).await;
+        assert_eq!(resp.status(), StatusCode::OK);
+    }
 }

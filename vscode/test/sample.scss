@@ -42,6 +42,10 @@ $padding: 1% !default;
   }
 }
 
+:nth-child(4n) {
+  color: lime;
+}
+
 @font-face {
   font-family: DroidSans;
   src: url(DroidSans.ttf);
