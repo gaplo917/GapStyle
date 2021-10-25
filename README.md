@@ -1,22 +1,30 @@
-# GapStyle Theme For IntelliJ, VSCode and XCode
+# GapStyle - Being Productive Beyond Your Status Quo.
+
+The world-first\* productivity-oriented color scheme for intelliJ, VSCode to fill the gap
+between programming languages and human.
 
 <p align="center">
   <img align="center" src="gap-style-github-og-image-v4.png"/>
 </p>
 
-GapStyle is a **_productivity-oriented_** and **_semantic-highlighting-driven_** designed
-color scheme with a [list of supported languages](#actively-maintain-language). Each
-supported language is tailor made and carefully tuned with
-[rationale](#gapstyle-specification).
+GapStyle is a **_world-first_\*** **_productivity-oriented_** and
+**_semantic-highlighting-driven_** designed color scheme that
+**_[each supported language](#actively-maintain-language)_** is tailored with
+**_[rich colors while maintaining a comfortable contrast](#gapstyle-specification)_** to
+help developers boost reading and writing speed in different programming languages.
 
-You should feel comfortable if you use 'Monokai' or 'Darcular' theme previously.
+<small><i>\* The world-first color scheme uses color affinity design to boost developers'
+productivity by representing semantically similar syntax, i.e. class, abstract class, and
+interface in Kotlin, Java, Scala, etc. See
+[GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
+</i></small>
 
 ## Objectives
 
-- Optimize languages' color schemes to boost productivity on reading/writing code
-  (Especially the language your are not familiar)
+- Optimize languages' color schemes to boost reading and writing speed on different
+  languages. (Especially the language you are not familiar)
 - Quickly learn similar syntax with a universal designed color across different languages
-- Spot syntax error before IDE inspection
+- Spot errors before program execution
 
 ## Screenshots
 
@@ -38,15 +46,15 @@ You should feel comfortable if you use 'Monokai' or 'Darcular' theme previously.
 
 ## Actively Maintain Language
 
-| IDE                                                                   | Supported Language                                                                                                               |
-| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [IntelliJ](https://github.com/gaplo917/GapStyle/tree/master/intellij) | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, Android Logcat, Android, PHP, HTML, XML, JSX, CSS/SCSS/SASS |
-| [VSCode](https://github.com/gaplo917/GapStyle/tree/master/vscode)     | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS                          |
-| [XCode](https://github.com/gaplo917/GapStyle/tree/master/xcode)       | Swift, Objective C                                                                                                               |
+| IDE                                                                   | Supported Language                                                                                                                                                              |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [IntelliJ](https://github.com/gaplo917/GapStyle/tree/master/intellij) | Kotlin, Java, Swift, Dart, Rust, Scala, Javascript, Typescript, Go, Python, R, Android Logcat, Android Native (C / C++), Objective-C, SQL, HTML, CSS, PHP, Ruby, Erlang, Elixir |
+| [VSCode](https://github.com/gaplo917/GapStyle/tree/master/vscode)     | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS                                                                         |
+| [XCode](https://github.com/gaplo917/GapStyle/tree/master/xcode)       | Swift, Objective C                                                                                                                                                              |
 
 # Learn More About GapStyle
 
-### How GapStyle improves productivity?
+### How can GapStyle boost productivity?
 
 ![semnatic-highlight-information-intellij](preview/semnatic-highlight-information-intellij.gif)
 

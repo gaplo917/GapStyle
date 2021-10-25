@@ -1,21 +1,39 @@
 <idea-plugin>
   <id>color.scheme.GapStyle</id>
   <name>GapStyle Color Scheme</name>
-  <version>3.1</version>
+  <version>4.0</version>
   <vendor email="gaplotech@gmail.com" url="https://github.com/gaplo917/GapStyle">Gary Lo</vendor>
-
   <description><![CDATA[
-    <p>GapStyle is a productivity-oriented color scheme with a list of supported languages.</p>
-    <p>GapStyle is designed base on key theme color of 'Darcula' and 'Monokai'.</p>
-    <p>Each supported language is tailor made and carefully tuned with rationale.</p>
+    <h2><b>Being Productive Beyond Your Status Quo.</b></h2>
+    <p>The world-first* productivity-oriented color scheme for intelliJ, VSCode to fill the gap between programming languages and human.</p>
+    <br/>
+    <p><b>Uniqueness</b></p>
+    <p>GapStyle is a <b>world-first* productivity-oriented</b> color scheme that each supported language is tailored with <b>rich colors while maintaining a comfortable contrast</b> to help developers boost reading and writing speed in different programming languages.</p>
+    <p>GapStyle is designed based on some key colors of the 'Darcula' and 'Monokai' color schemes.</p>
+    <p>Each supported language is tailored and carefully tuned with its rationale.</p>
     <ul>
     <li><b>Objective 1:</b> Optimize languages' color schemes to boost productivity on reading/writing code (Especially the language your are not familiar)</li>
     <li><b>Objective 2:</b> Quickly learn similar syntax with a universal designed color across different languages. </li>
-    <li><b>Supported Languages:</b> Kotlin, Java, Swift, Dart, Scala, Javascript, Go, Python, Android Logcat, Android Native (C / C++), Objective-C, SQL, HTML, CSS, PHP</li>
+    <li><b>Supported Languages:</b> Kotlin, Java, Swift, Dart, Rust, Scala, Javascript, Typescript, Go, Python, R, Android Logcat, Android Native (C / C++), Objective-C, SQL, HTML, CSS, PHP, Ruby, Erlang, Elixir</li>
     </ul>
+    <p>* 'world-first' color scheme uses <a href=&quot;https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette&quot;>color affinity concept to boost developers' productivity by representing semantically similar syntax</a>, i.e. class, abstract class, and interface in Java.</p>
   ]]></description>
 
   <change-notes><![CDATA[
+      <h1>4.0</h1>
+      <p>Being Productive Beyond Your Status Quo. Bring your productive experience further from GapStyle 3.1.</p>
+      <ul>
+        <li>Add Rust, Ruby, R, Erlang, Elixir Support</li>
+        <li>Huge rework on all template language including HTML, XML, JSX, Angular Template, Vue Template, JSP, Velocity, JADE</li>
+        <li>Huge rework on all markup language including CSS, Less, SASS, SCSS, Gherkin, GraphQL, SQL, YAML, TOML</li>
+        <li>Enhance <a href=&quot;https://github.com/gaplo917/GapStyle/issues/29&quot;>#29 Identifier under caret</a> style. Thanks to @Appyx.</li>
+        <li>Enhance <a href=&quot;https://github.com/gaplo917/GapStyle/issues/30&quot;>#30 Unknown symbol</a> style. Thanks to @marcwittke.</li>
+        <li>[Kotlin] Add bold font to alert mutable variable</li>
+        <li>[Bash] Enhance Bash script styles</li>
+        <li>[Swift] Enhance Swift styles</li>
+        <li>[C++] Enhance C++ styles</li>
+        <li><a href=&quot;https://marketplace.visualstudio.com/items?itemName=gaplo917.gapstylevs&quot;>GapStyle VS</a> (VS Code support is available!)</li>
+      </ul>
       <h1>3.1</h1>
       <ul>
         <li>Add C#, ASP.NET, and Rider Support</li>
