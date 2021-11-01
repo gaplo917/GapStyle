@@ -24,4 +24,6 @@ div > p, p ~ ul, input [type="radio"] {
   color: red;
 }
 
-&!
+:nth-child(4n) {
+  color: lime;
+}

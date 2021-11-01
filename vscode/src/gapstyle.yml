@@ -28,13 +28,14 @@ variables:
   - &INTERFACE '#0ED38B'
   - &DECORATOR '#BBB529'
   - &XML_TAG '#E8BF6A'
-  - &XML_ATTR '#BABABA'
-  - &XML_STRING '#A5C261'
+  - &XML_ATTR '#CECECE'
+  - &XML_STRING '#6FD27C'
   - &JSON_PROPERTY '#CF8823'
   - &SASS_VAR '#6D9CBE'
   - &MACRO '#328F54'
   - &RELAX_MD_KEYWORD '#F96B9D'
   - &RELAX_MD_STRING '#E6DB85'
+  - &HIGHLIGHT_BG '#383A3C'
 colors:
     # From my faviourite One Dark Pro Theme
     activityBar.background: "#282c34"
@@ -155,10 +156,21 @@ semanticTokenColors:
       foreground: *TYPE_PARAM
 
     typeParameter:
-      foreground: &TYPE_PARAM
+      foreground: *TYPE_PARAM
 
     class:
       foreground: *CLASS
+
+    class.typeArgument:
+      foreground: *TYPE_PARAM
+
+    class.typeHint:
+      foreground: *TYPE_PARAM
+      fontStyle: ''
+
+    class.builtin:
+      foreground: *KEYWORD
+      fontStyle: bold
 
     class.defaultLibrary:
       fontStyle: italic
@@ -173,6 +185,9 @@ semanticTokenColors:
     function:
       foreground: *FUNCTION
 
+    function.builtin:
+      fontStyle: italic
+
     function.defaultLibrary:
       fontStyle: italic
       foreground: *FUNCTION
@@ -180,6 +195,13 @@ semanticTokenColors:
     function.readonly:
       fontStyle: ''
       foreground: *FUNCTION
+
+    method:
+      foreground: *FUNCTION
+
+    method.static:
+      foreground: *FUNCTION
+      fontStyle: italic
 
     member:
       fontStyle: ''
@@ -195,12 +217,15 @@ semanticTokenColors:
       fontStyle: 'italic'
       foreground: *LOCAL_VAR
 
+    variable.global:
+      fontStyle: 'italic'
+      foreground: *PREDEFINED
+
     variable.local:
       fontStyle: ''
       foreground: *LOCAL_VAR
 
     variable.readonly:
-
       foreground: *LOCAL_VAR
 
     variable.defaultLibrary:
@@ -226,6 +251,34 @@ semanticTokenColors:
 
     event:
       foreground: *DEFAULT
+
+    templateType:
+      foreground: *CLASS
+
+    templateFunction:
+      foreground: *FUNCTION
+    
+    genericType:
+      foreground: *TYPE_PARAM
+
+    label:
+      foreground: *DECORATOR
+
+    newOperator:
+      foreground: *KEYWORD
+    
+    operatorOverload:
+      foreground: *FUNCTION
+
+    memberOperatorOverload:
+      foreground: *FUNCTION
+
+    referenceType:
+      fontStyle: italic
+
+    selfParameter:
+      foreground: *KEYWORD
+      fontStyle: bold
 
 tokenColors: 
 # =============================================================================
@@ -263,6 +316,10 @@ tokenColors:
   - name: Strings
     scope:
     - string
+    - constant.other.symbol.double-quoted
+    - constant.other.symbol.double-quoted punctuation.definition.constant
+    - constant.other.symbol.single-quoted
+    - constant.other.symbol.single-quoted punctuation.definition.constant
     settings:
       foreground: *STRING
 
@@ -422,7 +479,8 @@ tokenColors:
     scope:
     - entity.name.tag
     settings:
-      foreground: *KEYWORD
+      foreground: *XML_TAG
+      fontStyle: bold
 
   - name: Default attribute parent selectors ('&')
     scope:
@@ -517,6 +575,7 @@ tokenColors:
   - name: Language Built-ins
     scope:
     - support
+    - source
     settings:
       foreground: *DEFAULT
 
@@ -966,35 +1025,50 @@ tokenColors:
 
   - name: HTML Tag
     scope:
-    - text.html meta.tag entity.name.tag
-    - text.html meta.tag entity.name.tag
+    - meta.tag entity.name.tag.html
+    - meta.tag entity.name.tag.html
     - entity.name.tag.block.any.html
     - entity.name.tag.script.html
+    - entity.name.tag.style.html
     settings:
-      foreground: *KEYWORD
+      foreground: *XML_TAG
       fontStyle: bold
+
+  - name: HTML Tag Punctuation
+    scope:
+    - punctuation.definition.tag.begin.html
+    - punctuation.definition.tag.end.html
+    settings:
+      foreground: *DEFAULT
 
   - name: HTML Attribute
     scope:
-    - text.html entity.other.attribute-name
+    - entity.other.attribute-name.html
+    - entity.other.attribute-name.id.html
     settings:
-      foreground: *ATTR_NAME
-      fontStyle: bold
+      foreground: *XML_ATTR
+
+  - name: HTML Arrtibute Value
+    scope:
+    - punctuation.definition.string.begin.html
+    - punctuation.definition.string.end.html
+    - string.quoted.double.html
+    settings:
+      foreground: *XML_STRING
 
   - name: HTML Speical character
     scope:
     - constant.character.entity.numeric.hexadecimal.html
     - punctuation.definition.entity.html
-    - text.html constant.character.entity.named
+    - constant.character.entity.named.html
     settings:
-      foreground: *NUMBER
+      foreground: *SASS_VAR
 
 # =============================================================================
 # XML
 # =============================================================================
   - name: XML TAG
     scope:
-    - meta.tag.xml
     - meta.tag.xml entity.name.tag.localname.xml
     - meta.tag.xml entity.name.tag.namespace.xml
     - meta.tag.xml entity.other.attribute-name.namespace.xml
@@ -1002,9 +1076,13 @@ tokenColors:
     - meta.tag.preprocessor.xml entity.name.tag.xml
     - meta.tag.sgml.doctype.xml keyword.other.doctype.xml
     - meta.tag.sgml.doctype.xml variable.language.documentroot.xml
-    - punctuation.definition.tag.xml
     settings:
       foreground: *XML_TAG
+  - name: XML TAG Punctuation
+    scope:
+    - punctuation.definition.tag.xml
+    settings:
+      foreground: *DEFAULT
   - name: XML Attribute
     scope:
     - meta.tag.xml entity.other.attribute-name.localname.xml
@@ -1063,9 +1141,10 @@ tokenColors:
     scope:
     - meta.property-name support.type.property-name.css
     - support.type.vendored.property-name.css
+    - entity.other.attribute-name.css
     settings:
-      foreground: *ATTR_NAME
-      fontStyle: bold
+      foreground: *XML_ATTR
+      fontStyle: italic
 
   - name: Css HEX Color
     scope:
@@ -1082,33 +1161,53 @@ tokenColors:
     - constant.language.color.rgb-value.css
     - source.css keyword.other.unit
     - support.constant.property-value.css
+    - support.constant.color.w3c-standard-color-name.css
+    - constant.numeric.css keyword.other.unit
+    - meta.attribute-selector.css string.quoted.double.css 
+    - meta.attribute-selector.css string.quoted.double.css punctuation.definition.string.begin.css
+    - meta.attribute-selector.css string.quoted.double.css punctuation.definition.string.end.css
     settings:
-      foreground: *STRING
+      foreground: *XML_STRING
       fontStyle: ''
 
   - name: Css Function
     scope:
     - meta.function.color.css support.function.misc.css
     - support.constant.font-name.css
+    - source.css support.function
     settings:
-      foreground: *KEYWORD
-      fontStyle: bold
+      foreground: *XML_STRING
+      fontStyle: italic
 
-  - name: Css Keywords
+  - name: Css Selectors
     scope:
     - entity.other.attribute-name.id.css
     - entity.other.attribute-name.pseudo-element.css
     - entity.name.tag.css
     - entity.name.tag.custom.css
-    - constant.other.unicode-range.css
     - punctuation.definition.constant.css
     - support.constant.language-range.css
     - entity.other.attribute-name.class.css
     - entity.other.attribute-name.pseudo-class.css
     - support.type.property-name.css
     settings:
-      foreground: *KEYWORD
+      foreground: *XML_TAG
       fontStyle: bold
+
+  - name: Css Unicode
+    scope:
+    - constant.other.unicode-range.css
+    - punctuation.separator.dash.unicode-range.css
+    settings:
+      foreground: *SASS_VAR
+  
+  - name: Css Import
+    scope:
+    - meta.at-rule.import.css string.quoted.double.css
+    settings:
+      foreground: *STRING
+      fontStyle: ''
+
 # =============================================================================
 # SASS / SCSS
 # =============================================================================
@@ -1116,8 +1215,41 @@ tokenColors:
     scope:
     - variable.scss
     - source.sass variable
+    - meta.property-list.css.scss.prop meta.property-value.css.scss support.constant.property-value.css.scss
+    - meta.property-list.css.scss.prop constant.character.module constant.character.module.name
+    - meta.property-list.css.sass.prop meta.property-value.css.sass support.constant.property-value.css.sass
+    - meta.property-list.css.sass.prop constant.character.module constant.character.module.name
     settings:
       foreground: *SASS_VAR
+
+  - name: SASS/SCSS Modules
+    scope:
+    - meta.property-list.css.scss.prop meta.property-value.css.scss support.constant.property-value.css.scss
+    - meta.property-list.css.scss.prop constant.character.module constant.character.module.name
+    - meta.property-list.css.scss.prop constant.character.module constant.numeric.module.dot
+    - meta.property-list.css.sass.prop meta.property-value.css.sass support.constant.property-value.css.sass
+    - meta.property-list.css.sass.prop constant.character.module constant.character.module.name
+    - meta.property-list.css.sass.prop constant.character.module constant.numeric.module.dot
+    settings:
+      foreground: *SASS_VAR
+      fontStyle: underline
+
+  - name: SASS/SCSS Keyword
+    scope:
+    - constant.other.scss
+    - support.type.property-name.css.sass
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: SASS property function 
+    scope:
+    - source.sass meta.property-list.css.sass.prop entity.name.function
+    - source.css.scss support.function.misc.scss
+    - source.css.scss meta.at-rule.include.scss entity.name.function.scss
+    settings:
+      foreground: *XML_TAG
+      fontStyle: italic
 
   - name: SASS Interpolation
     scope:
@@ -1135,9 +1267,10 @@ tokenColors:
     scope:
     - support.type.property-name.css.sass.prop.name
     - entity.other.attribute-name.pseudo-class.css.sass
+    - entity.other.attribute-name.attribute.scss
     settings:
-      foreground: *ATTR_NAME
-      fontStyle: bold
+      foreground: *XML_ATTR
+      fontStyle: ''
 
   - name: SASS Symbol
     scope:
@@ -1152,7 +1285,6 @@ tokenColors:
     scope:
     - comment.punctuation.comma.sass
     - comment.punctuation.comma.scss
-    - meta.property-value.scss
     - source.sass keyword.control.unit
     - source.scss keyword.control.unit
     - support.constant.property-value.css.sass
@@ -1163,17 +1295,48 @@ tokenColors:
   - name: SASS Selector
     scope:
     - entity.name.tag.custom.scss
-    - constant.other.scss
     settings:
+      foreground: *XML_TAG 
       fontStyle: bold
-      foreground: *KEYWORD 
-  
+
+  - name: SASS Attribute Selector
+    scope:
+    - meta.attribute-selector.scss
+    - string.quoted.double.attribute-value.scss punctuation.definition.string.begin.scss
+    - string.quoted.double.attribute-value.scss punctuation.definition.string.end.scss
+    - string.quoted.single.attribute-value.scss punctuation.definition.string.begin.scss
+    - string.quoted.single.attribute-value.scss punctuation.definition.string.end.scss
+    - string.quoted.double.css.sass
+    - string.quoted.single.css.sass
+    - support.constant.property-value.css.sass
+    - keyword.control.unit.css.sass
+    settings:
+      foreground: *XML_STRING 
+      fontStyle: ''
+
+  - name: SASS/SCSSS Mixin Function
+    scope:
+    - support.function.name.sass entity.name.function
+    - support.function.name.sass.library
+    - meta.property-list.css.sass.prop entity.name.function
+    - source.css.scss meta.at-rule.mixin.scss entity.name.function.scss
+    settings:
+      foreground: *XML_TAG
+      fontStyle: italic
+
+  - name: SASS Function In Property
+    scope:
+    - meta.property-list.css.sass.prop entity.name.function
+    settings:
+      foreground: *XML_TAG
+      fontStyle: italic
 # =============================================================================
 # Java
 # =============================================================================
   - name: Java Keyword
     scope:
     - constant.language.java
+    - variable.language.this.java
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1382,6 +1545,8 @@ tokenColors:
   - name: Typescript / Javascript Decorator
     scope:
     - meta.decorator.ts # typescript
+    - source.ts meta.decorator.ts variable.other.readwrite.ts
+    - source.js meta.decorator entity.name.function
     settings:
       foreground: *DECORATOR
 
@@ -1424,6 +1589,29 @@ tokenColors:
     - meta.tag.without-attributes.js punctuation.definition.tag.end
     settings:
       foreground: *XML_TAG
+      fontStyle: bold
+
+  - name: JSX Component Punctuation
+    scope:
+    - meta.tag.tsx punctuation.definition.tag.begin
+    - meta.tag.jsx punctuation.definition.tag.begin
+    - meta.tag.ts punctuation.definition.tag.begin
+    - meta.tag.js punctuation.definition.tag.begin
+    - meta.tag.tsx punctuation.definition.tag.end
+    - meta.tag.jsx punctuation.definition.tag.end
+    - meta.tag.ts punctuation.definition.tag.end
+    - meta.tag.js punctuation.definition.tag.end
+    - meta.tag.without-attributes.tsx punctuation.definition.tag.begin
+    - meta.tag.without-attributes.jsx punctuation.definition.tag.begin
+    - meta.tag.without-attributes.ts punctuation.definition.tag.begin
+    - meta.tag.without-attributes.js punctuation.definition.tag.begin
+    - meta.tag.without-attributes.tsx punctuation.definition.tag.end
+    - meta.tag.without-attributes.jsx punctuation.definition.tag.end
+    - meta.tag.without-attributes.ts punctuation.definition.tag.end
+    - meta.tag.without-attributes.js punctuation.definition.tag.end
+    settings:
+      foreground: *DEFAULT
+      fontStyle: ''
 
   - name: JSX Attribute
     scope:
@@ -1529,6 +1717,7 @@ tokenColors:
   - name: C++ Keywords
     scope:
     - meta.body.namespace.cpp
+    - variable.language.this.cpp
     settings:
       foreground: *KEYWORD
 
@@ -1741,7 +1930,12 @@ tokenColors:
     settings:
       foreground: *KEYWORD
       fontStyle: bold
-
+  - name: Go System Type
+    scope:
+      - source.go storage.type
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
 # =============================================================================
 # GraphQL (GraphQL for VSCode)
 # =============================================================================
@@ -1890,6 +2084,7 @@ tokenColors:
   - name: Protobuf Keyword
     scope:
       - constant.language.proto
+      - keyword.operator.proto
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -1919,6 +2114,7 @@ tokenColors:
     - entity.name.tag.yaml
     settings:
       foreground: *MEMBER_VAR
+      fontStyle: ''
 
   - name: YAML Anchor
     scope:
@@ -1957,15 +2153,17 @@ tokenColors:
     - entity.name.section.toml
     - variable.other.key.toml
     - entity.name.tag.toml
+    - keyword.key.toml
     settings:
       foreground: *MEMBER_VAR
+      fontStyle: ''
 
   - name: TOML Table / Array
     scope:
     - entity.other.attribute-name.table.toml
     - entity.other.attribute-name.table.array.toml
     settings:
-      foreground: *FUNCTION
+      foreground: *DEFAULT
 
   - name: TOML Keyword
     scope:
@@ -1973,6 +2171,12 @@ tokenColors:
     settings:
       foreground: *KEYWORD
       fontStyle: bold
+
+  - name: TOML Keys Keyword
+    scope:
+    - meta.tag.table.toml entity.other.attribute-name.table.toml
+    settings:
+      foreground: *RELAX_MD_KEYWORD
       
 # =============================================================================
 # Java Properties / .ini
@@ -1981,7 +2185,7 @@ tokenColors:
     scope:
     - source.ini
     settings:
-      foreground: *STRING
+      foreground: *DEFAULT
       fontStyle: ''
 
   - name: ini Properties Keys
@@ -2102,6 +2306,10 @@ tokenColors:
     scope:
     - variable.language.rust
     - storage.modifier.mut.rust
+    - entity.name.type.option.rust
+    - variable.language.self.rust
+    - entity.name.type.numeric.rust
+    - constant.language.bool.rust
     settings:
       foreground: *KEYWORD
       fontStyle: bold
@@ -2116,14 +2324,22 @@ tokenColors:
   - name: Rust Attribute
     scope:
     - meta.attribute.rust
+    - punctuation.definition.attribute.rust
     settings:
       foreground: *DECORATOR
+
+  - name: Rust String
+    scope:
+    - punctuation.definition.string.rust
+    settings:
+      foreground: *STRING
 
   - name: Rust Type Params
     scope:
     - meta.type_params.rust
+    - meta.function.definition.rust entity.name.type.rust
     settings:
-      foreground: *DEFAULT
+      foreground: *TYPE_PARAM
 
   - name: Rust Trait
     scope:
@@ -2138,9 +2354,10 @@ tokenColors:
       foreground: *CLASS
       fontStyle: italic
 
-  - name: Rust Class / Enum
+  - name: Rust Class / Enum / Struct
     scope:
     - entity.name.type.rust
+    - entity.name.type.struct.rust
     - storage.class.std.rust
     settings:
       foreground: *CLASS
@@ -2154,12 +2371,25 @@ tokenColors:
 
   - name: Rust Lifetime
     scope:
-    - entity.name.lifetime.rust
+    - entity.name.type.lifetime.rust
+    - punctuation.definition.lifetime.rust
     - storage.modifier.lifetime.rust
     settings:
       foreground: *TYPE_PARAM
       fontStyle: bold italic
 
+  - name: Rust Variable / Parameter
+    scope:
+    - variable.other.rust
+    settings:
+      foreground: *FUNCTION_PARAM
+
+  - name: Rust Marco Function Call
+    scope:
+    - entity.name.function.macro.rust
+    settings:
+      foreground: *FUNCTION
+      fontStyle: italic
 # =============================================================================
 # Angular Template
 # =============================================================================
@@ -2167,8 +2397,13 @@ tokenColors:
     scope:
     - entity.other.ng-binding-name
     settings:
-      foreground: *MEMBER_VAR
-
+      foreground: *FUNCTION_PARAM
+  - name: Angular Binding Punctuation
+    scope:
+    - meta.ng-binding punctuation.definition.string.begin.html
+    - meta.ng-binding punctuation.definition.string.end.html
+    settings:
+      foreground: *DEFAULT
 # =============================================================================
 # Vue Template
 # =============================================================================
@@ -2177,4 +2412,146 @@ tokenColors:
     - meta.directive.vue
     - meta.directive.vue entity.other.attribute-name.html
     settings:
+      foreground: *FUNCTION_PARAM
+  - name: Vue Binding Punctuation
+    scope:
+    - meta.directive.vue
+    - meta.directive.vue source.directive.vue punctuation.definition.string.begin.html
+    - meta.directive.vue source.directive.vue punctuation.definition.string.end.html
+    settings:
+      foreground: *DEFAULT
+# =============================================================================
+# Dart
+# =============================================================================
+  - name: Dart Keyword
+    scope:
+    - constant.language.dart
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+  - name: Dart Class
+    scope:
+    - support.class.dart
+    settings:
+      foreground: *CLASS
+      fontStyle: ''
+  - name: Dart Declaration
+    scope:
+    - meta.declaration.dart
+    settings:
+      foreground: *DEFAULT
+      fontStyle: ''
+      
+# =============================================================================
+# Dart
+# =============================================================================
+  - name: Ruby symbol Hashkey
+    scope:
+    - constant.language.symbol.hashkey.ruby
+    settings:
       foreground: *MEMBER_VAR
+      fontStyle: ''
+
+  - name: Ruby variable
+    scope:
+    - variable.other.readwrite.instance.ruby
+    settings:
+      foreground: *FUNCTION_PARAM
+      fontStyle: ''
+
+  - name: Ruby Global variable
+    scope:
+    - variable.other.readwrite.global.ruby
+    - variable.other.readwrite.global.ruby punctuation.definition.variable.ruby
+    - variable.other.readwrite.global.pre-defined.ruby
+    - variable.other.readwrite.global.pre-defined.ruby punctuation.definition.variable.ruby
+    settings:
+      foreground: *PREDEFINED
+      fontStyle: italic
+
+  - name: Ruby Constant
+    scope:
+    - variable.other.constant.ruby
+    settings:
+      foreground: *PREDEFINED
+      fontStyle: ''
+
+  - name: Ruby Special Method
+    scope:
+    - keyword.other.special-method.ruby
+    settings:
+      foreground: *FUNCTION
+      fontStyle: ''
+  
+  - name: Ruby Heredoc
+    scope:
+    - string.unquoted.heredoc.ruby punctuation.definition.string.begin.ruby
+    - string.unquoted.heredoc.ruby punctuation.definition.string.end.ruby
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Ruby Class
+    scope:
+    - variable.other.readwrite.class.ruby
+    - variable.other.readwrite.class.ruby punctuation.definition.variable.ruby
+    settings:
+      foreground: *CLASS
+
+  - name: Ruby Interpolate String
+    scope:
+    - string.quoted.other.interpolated.ruby punctuation.section.array.begin.ruby
+    - string.quoted.other.interpolated.ruby punctuation.section.array.end.ruby
+    settings:
+      foreground: *STRING_INTERPOLATION
+# =============================================================================
+# Erlang
+# =============================================================================
+  - name: Elixir Atom
+    scope:
+    - variable.other.erlang
+    - source.erlang constant.other.symbol
+    settings:
+      foreground: *MEMBER_VAR
+
+# =============================================================================
+# Elixir
+# =============================================================================
+  - name: Elixir Keywords
+    scope:
+    - constant.language.elixir
+    settings:
+      foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Elixir Atom
+    scope:
+    - constant.other.symbol.elixir
+    settings:
+      foreground: *MEMBER_VAR
+
+  - name: Elixir Language Variable
+    scope:
+    - variable.language.elixir
+    settings:
+      foreground: *PREDEFINED
+
+  - name: Elixir Module
+    scope:
+    - variable.other.readwrite.module.elixir
+    - variable.other.readwrite.module.elixir punctuation.definition.variable.elixir
+    settings:
+      foreground: *DECORATOR
+
+  - name: Elixir Variable
+    scope:
+    - source.elixir variable
+    settings:
+      foreground: *FUNCTION_PARAM
+
+  - name: Elixir Embedded Source
+    scope:
+    - source.elixir.embedded.source
+    - punctuation.section.embedded.elixir
+    settings:
+      foreground: *STRING_INTERPOLATION

@@ -1,30 +1,34 @@
-# GapStyle VS Theme
+# GapStyle VS - Being Productive Beyond Your Status Quo.
+
+The world-first\* productivity-oriented color scheme for intelliJ, VSCode to fill the gap between programming languages
+and human.
 
 ![screenshots](https://raw.githubusercontent.com/gaplo917/GapStyle/master/vscode/screenshots/sample.ts.png)
 
-GapStyle is a **_productivity-oriented_** and **_semantic-driven_** designed color scheme
-with a [list of supported languages](#actively-maintain-language). Each supported language
-is tailor made and carefully tuned with
-[rationale](https://github.com/gaplo917/gapstyle#gapstyle-specification).
+GapStyle is a **_world-first_\*** **_productivity-oriented_** and **_semantic-highlighting-driven_** designed color
+scheme that **_[each supported language](#actively-maintain-language)_** is tailored with
+**_[rich colors while maintaining a comfortable contrast](#gapstyle-specification)_** to help developers boost reading
+and writing speed in different programming languages.
 
-GapStyle VS is designed with `semanticHighlighting` from draft, please
-[enable semanticHighlighting](#enable-semantic-highlighting) for best syntax highlighting
-experience.
+\* world-first color scheme uses [https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette](color affinity
+design to boost developers' productivity by representing semantically similar syntax), i.e. class, abstract class, and
+interface in Kotlin, Java, Scala, etc. See
+[GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
 
 ## Objectives
 
-- Optimize languages' color schemes to boost productivity on reading/writing code
-  (Especially the language your are not familiar)
+- Optimize languages' color schemes to boost reading and writing speed on different languages. (Especially the language
+  you are not familiar)
 - Quickly learn similar syntax with a universal designed color across different languages
-- Spot syntax error before IDE inspection
+- Spot errors before program execution
 
 ## Actively Maintain Language
 
-| IDE      | Supported Language                                                                                                                                                                     |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| VSCode   | Javascript, Typescript, C++, Go, Rust, Python, PHP, Kotlin, Java, Swift, Scala, GraphQL, HTML, XML, JSX, CSS/SCSS/SASS, YAML, TOML, SQL, Protobuf, Properties, Shell                   |
-| IntelliJ | Kotlin, Java, Swift, Scala, Javascript, Typescript, GraphQL, Android Logcat, Gradle, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS, YAML, TOML, SQL, Protobuf, Properties, Shell |
-| XCode    | Swift, Objective C                                                                                                                                                                     |
+| IDE                                | Supported Language                                                                                                                                                              |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| VSCode (Semantic Highlight)        | Javascript, Typescript, C/C++, Java, Python                                                                                                                                     |
+| VSCode (Standard Syntax Highlight) | Rust, Ruby, Dart, Go, PHP, Kotlin, Swift, Scala, Erlang, Elixir,GraphQL, HTML, XML, JSX, CSS/SCSS/SASS, YAML, TOML, SQL, Protobuf, Properties, Shell, Angular, Vue.js           |
+| IntelliJ                           | Kotlin, Java, Swift, Dart, Rust, Scala, Javascript, Typescript, Go, Python, R, Android Logcat, Android Native (C / C++), Objective-C, SQL, HTML, CSS, PHP, Ruby, Erlang, Elixir |
 
 ## Enable Semantic Highlighting
 
@@ -35,9 +39,7 @@ experience.
 ```
 {
     "workbench.colorTheme": "GapStyle VS",
-    "editor.semanticTokenColorCustomizations": {
-        "enabled": true
-    }
+    "editor.semanticTokenColorCustomizations.enabled": true,
 }
 ```
 
@@ -50,20 +52,18 @@ experience.
 | [Hack](https://github.com/source-foundry/Hack)                   | VSCode   |    ❌    | Standard Hack font                                                                                 |   [Download](https://github.com/source-foundry/Hack/releases)   |
 
 1. Install the recommended font into your system (i.e. Hack JBM Ligatured CCG)
-1. Command + Shift + P
-1. Search `settings.json` & Open
-1. Paste the follow config
+2. Command + Shift + P
+3. Search `settings.json` & Open
+4. Paste the follow config
 
 VSCode Editor Config (Full config)
 
 ```
 {
     "workbench.colorTheme": "GapStyle VS",
+    "editor.semanticTokenColorCustomizations.enabled": true,
     "editor.fontFamily": "'Hack JBM Ligatured CCG', 'Hack', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
-    "editor.semanticTokenColorCustomizations": {
-        "enabled": true
-    }
 }
 ```
 

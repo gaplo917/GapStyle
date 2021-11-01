@@ -1,6 +1,8 @@
 /*
  * Go highlight sample 
  */
+//go:build (linux || windows) && arm
+// +build linux,arm windows,arm
 
 // Package main
 package main
@@ -39,6 +41,10 @@ type (
     }
 
     demoInt int
+
+    type T<pes/> struct {
+        FirstName  string `json:"first_name" arbitrary text`
+    }
 )
 
 const (
@@ -51,11 +57,13 @@ var (
     privateVar = 2
 )
 
+// PublicFunc does the thing
 func PublicFunc() int {
     localVar := PublicVar
     return localVar
 }
 
+// privateFunc does the thing
 func privateFunc() (int, int) {
     LocalVar := privateVar
     return LocalVar, PublicVar

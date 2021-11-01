@@ -1,3 +1,5 @@
+from typing import List
+
 @decorator(param=1)
 def f(x):
     """ Syntax Highlighting Demo
