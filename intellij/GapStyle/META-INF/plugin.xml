@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>color.scheme.GapStyle</id>
   <name>GapStyle Color Scheme</name>
-  <version>4.0</version>
+  <version>4.1</version>
   <vendor email="gaplotech@gmail.com" url="https://github.com/gaplo917/GapStyle">Gary Lo</vendor>
   <description><![CDATA[
     <h2><b>Being Productive Beyond Your Status Quo.</b></h2>
@@ -16,10 +16,20 @@
     <li><b>Objective 2:</b> Quickly learn similar syntax with a universal designed color across different languages. </li>
     <li><b>Supported Languages:</b> Kotlin, Java, Swift, Dart, Rust, Scala, Javascript, Typescript, Go, Python, R, Android Logcat, Android Native (C / C++), Objective-C, SQL, HTML, CSS, PHP, Ruby, Erlang, Elixir</li>
     </ul>
-    <p>* 'world-first' color scheme uses <a href=&quot;https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette&quot;>color affinity concept to boost developers' productivity by representing semantically similar syntax</a>, i.e. class, abstract class, and interface in Java.</p>
+    <p>* 'world-first' color scheme uses <a href=&quot;https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette&quot;>affinitive color platte design to boost developers' productivity by using similar colors to represent semantically similar syntax</a>, i.e. class, abstract class, and interface in Java.</p>
   ]]></description>
 
   <change-notes><![CDATA[
+      <h1>4.1</h1>
+      <p>Being Productive Beyond Your Status Quo. Bring your productive experience further from GapStyle 3.1.</p>
+      <ul>
+        <li>[All] Enhance reassign variables style to</li>
+        <li>[Elixir] Enhance Elixir styles</li>
+        <li>[C++] Enhance Elixir styles</li>
+        <li>[Python] Fix Python build-in variables color (regression)</li>
+        <li>Add new plugin icon for branding</li>
+        <li><a href=&quot;https://marketplace.visualstudio.com/items?itemName=gaplo917.gapstylevs&quot;>GapStyle VS 2.0</a> (VS Code support is available!)</li>
+      </ul>
       <h1>4.0</h1>
       <p>Being Productive Beyond Your Status Quo. Bring your productive experience further from GapStyle 3.1.</p>
       <ul>
