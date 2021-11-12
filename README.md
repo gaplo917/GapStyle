@@ -1,28 +1,26 @@
 # GapStyle - Being Productive Beyond Your Status Quo.
 
-The world-first\* productivity-oriented color scheme for intelliJ, VSCode to fill the gap
-between programming languages and human.
+The world-first\* productivity-oriented color scheme for intelliJ, VSCode to fill the gap between programming languages
+and human.
 
 <p align="center">
   <img align="center" src="gap-style-github-og-image-v4.png"/>
 </p>
 
-GapStyle is a **_world-first_\*** **_productivity-oriented_** and
-**_semantic-highlighting-driven_** designed color scheme that
-**_[each supported language](#actively-maintain-language)_** is tailored with
-**_[rich colors while maintaining a comfortable contrast](#gapstyle-specification)_** to
-help developers boost reading and writing speed in different programming languages.
+GapStyle is a **_world-first_\*** **_productivity-oriented_** and **_semantic-highlighting-driven_** designed color
+scheme that **_[each supported language](#actively-maintain-language)_** is tailored with
+**_[rich colors while maintaining a comfortable contrast](#gapstyle-specification)_** to help developers boost reading
+and writing speed in different programming languages.
 
-<small><i>\* The world-first color scheme uses color affinity design to boost developers'
-productivity by representing semantically similar syntax, i.e. class, abstract class, and
-interface in Kotlin, Java, Scala, etc. See
-[GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
+<small><i>\* The world-first color scheme uses affinitive color platte design to boost developers' productivity by using
+similar colors to represent semantically similar syntax, i.e. class, abstract class, and interface in Kotlin, Java,
+Scala, etc. See [GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
 </i></small>
 
 ## Objectives
 
-- Optimize languages' color schemes to boost reading and writing speed on different
-  languages. (Especially the language you are not familiar)
+- Optimize languages' color schemes to boost reading and writing speed on different languages. (Especially the language
+  you are not familiar)
 - Quickly learn similar syntax with a universal designed color across different languages
 - Spot errors before program execution
 
