@@ -15,15 +15,20 @@ object Monokai: ColorScheme
 object Darcula: ColorScheme
 
 /**
- * Building a color schema which is designed with productivity-oriented and
- * semantic-highlighting-driven approach.
+ * Building the world-first* productivity-oriented color scheme
+ * for intelliJ, VSCode to fill the gap between programming languages and human.
+ *
+ * Each supported language is tailored with rich colors while maintaining
+ * a comfortable contrast to help developers boost reading and writing speed
+ * in different programming languages.
  *
  * ### Supported Languages
- * Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, Android Logcat,
- * Android, PHP, HTML, XML, JSX, CSS/SCSS/SASS
+ * Kotlin, Java, Swift, Dart, Rust, Scala, Javascript, Typescript, Go, Python, R,
+ * Android Logcat, Android Native (C / C++), Objective-C, SQL, HTML, CSS, PHP,
+ * Ruby, Erlang, Elixir
  *
  * ### Supported IDE
- * IntelliJ IDEA, VSCode, Xcode
+ * IntelliJ IDEA, VSCode
  *
  * @param experience Software Engineering Experience
  */

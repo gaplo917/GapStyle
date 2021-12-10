@@ -1,11 +1,11 @@
+<p align="center">
+  <img align="center" src="github-gapstyle-cover.png"/>
+</p>
+
 # GapStyle - Being Productive Beyond Your Status Quo.
 
 The world-first\* productivity-oriented color scheme for intelliJ, VSCode to fill the gap between programming languages
 and human.
-
-<p align="center">
-  <img align="center" src="gap-style-github-og-image-v4.png"/>
-</p>
 
 GapStyle is a **_world-first_\*** **_productivity-oriented_** and **_semantic-highlighting-driven_** designed color
 scheme that **_[each supported language](#actively-maintain-language)_** is tailored with
