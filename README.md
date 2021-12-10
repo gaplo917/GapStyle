@@ -1,5 +1,6 @@
 <p align="center">
-  <img align="center" src="github-gapstyle-cover.png"/>
+  <img align="center" src="github-gapstyle-cover-logo.png"/>
+  <img align="center" src="github-gapstyle-cover-content.png"/>
 </p>
 
 # GapStyle - Being Productive Beyond Your Status Quo.
