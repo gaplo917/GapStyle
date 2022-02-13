@@ -7,25 +7,23 @@
 
 # GapStyle - Being Productive Beyond Your Status Quo.
 
-The world-first\* productivity-oriented color scheme for intelliJ, VSCode to fill the gap between programming languages
-and human.
-
 GapStyle is a **_world-first_\*** **_productivity-oriented_** and **_semantic-highlighting-driven_** designed color
 scheme that **_[each supported language](#actively-maintain-language)_** is tailored with
 **_[rich colors while maintaining a comfortable contrast](#gapstyle-specification)_** to help developers boost reading
 and writing speed in different programming languages.
 
-<small><i>\* The world-first color scheme uses affinitive color platte design to boost developers' productivity by using
-similar colors to represent semantically similar syntax, i.e. class, abstract class, and interface in Kotlin, Java,
-Scala, etc. See [GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
-</i></small>
+GapStyle helps you to:
 
-## Objectives
-
-- Optimize languages' color schemes to boost reading and writing speed on different languages. (Especially the language
-  you are not familiar)
-- Quickly learn similar syntax with a universal designed color across different languages
+- Boost reading and writing speed by easily distinguishing syntax from colors and font styles. (Especially the language
+  you are not familiar with)
+- Quickly learn similar syntax across different languages with a universal designed color
 - Spot errors before program execution
+
+
+<small><i>\* world-first color scheme uses affinitive color plate design\*\* to boost developers' productivity.
+
+\*\* affinitive color plate design uses similar colors to represent sematic-similar syntax, i.e., "class and abstract class", "function parameters, local variables, instance variables". See GapStyle SpecificationSee [GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
+</i></small>
 
 ## Screenshots
 
