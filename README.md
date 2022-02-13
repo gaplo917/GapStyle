@@ -1,4 +1,4 @@
-<img alt="open collective badge" src="https://opencollective.com/gapstyle/tiers/badge.svg?label=Backer&color=brightgreen" />
+<a href="https://opencollective.com/gapstyle" target="_blank"><img alt="open collective badge" src="https://opencollective.com/gapstyle/tiers/badge.svg?label=Backer&color=brightgreen" /></a>
 
 <p align="center">
   <img align="center" src="github-gapstyle-cover-logo.png"/>
@@ -67,4 +67,4 @@ Scala, etc. See [GapStyle Specification](https://github.com/gaplo917/GapStyle/tr
   - [Special File Type](spec/README.md#special-file-type)
 
 # Sponsor
-<img alt="open collective badge" src="https://opencollective.com/gapstyle/tiers/backer.svg?avatarHeight=96" />
+<a href="https://opencollective.com/gapstyle/contribute/backer-37397/checkout" target="_blank"><img alt="open collective badge" src="https://opencollective.com/gapstyle/tiers/backer.svg?avatarHeight=96" /></a>
