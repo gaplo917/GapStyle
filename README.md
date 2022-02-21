@@ -7,7 +7,7 @@
 
 # GapStyle - Being Productive Beyond Your Status Quo.
 
-GapStyle is a **_world-first_\*** **_productivity-oriented_** and **_semantic-highlighting-driven_** designed color
+GapStyle is a **_world's first_\*** **_productivity-oriented_** and **_semantic-highlighting-driven_** designed color
 scheme that **_[each supported language](#actively-maintain-language)_** is tailored with
 **_[rich colors while maintaining a comfortable contrast](#gapstyle-specification)_** to help developers boost reading
 and writing speed in different programming languages.
@@ -20,9 +20,9 @@ GapStyle helps you to:
 - Spot errors before program execution
 
 
-<small><i>\* world-first color scheme uses affinitive color plate design\*\* to boost developers' productivity.
+<small><i>\* world's first color scheme uses affinitive color plate design\*\* to boost developers' productivity.
 
-\*\* affinitive color plate design uses similar colors to represent sematic-similar syntax, i.e., "class and abstract class", "function parameters, local variables, instance variables". See GapStyle SpecificationSee [GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
+\*\* affinitive color plate design uses similar colors to represent sematic-similar syntax, i.e., "class and abstract class", "function parameters, local variables, instance variables". See [GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
 </i></small>
 
 ## Screenshots
