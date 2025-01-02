@@ -1304,7 +1304,7 @@
         </option>
         <option name="GO_BUILTIN_TYPE_REFERENCE">
             <value>
-                <option name="FOREGROUND" value="20999d"/>
+                <option name="FOREGROUND" value="66d9ef"/>
             </value>
         </option>
         <option name="GO_BUILTIN_VARIABLE">
@@ -1387,7 +1387,7 @@
         </option>
         <option name="GO_PACKAGE">
             <value>
-                <option name="FOREGROUND" value="a9b7c6"/>
+                <option name="FOREGROUND" value="66d9ef"/>
             </value>
         </option>
         <option name="GO_PACKAGE_EXPORTED_VARIABLE">
