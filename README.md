@@ -50,6 +50,7 @@ GapStyle helps you to:
 | [IntelliJ](https://github.com/gaplo917/GapStyle/tree/master/intellij) | Kotlin, Java, Swift, Dart, Rust, Scala, Javascript, Typescript, Go, Python, R, Android Logcat, Android Native (C / C++), Objective-C, SQL, HTML, CSS, PHP, Ruby, Erlang, Elixir |
 | [VSCode](https://github.com/gaplo917/GapStyle/tree/master/vscode)     | Kotlin, Java, Swift, Scala, Javascript, Typescript, C++, Go, Python, PHP, HTML, XML, JSX, CSS/SCSS/SASS                                                                         |
 | [XCode](https://github.com/gaplo917/GapStyle/tree/master/xcode)       | Swift, Objective C                                                                                                                                                              |
+| [Zed](https://github.com/gaplo917/GapStyle/tree/master/zed)           | All languages supported by Zed Editor                                                                                                                                           |
 
 # Learn More About GapStyle
 

@@ -1,0 +1,138 @@
+{
+  "author": "Gap",
+  "name": "GapStyle",
+  "themes": [
+    {
+      "appearance": "dark",
+      "name": "GapStyle Dark",
+      "style": {
+        "background": "#282c34",
+        "border": "#181a1f",
+        "border.variant": "#3e4452",
+        "editor.background": "#282c34",
+        "editor.foreground": "#A9B7C6",
+        "editor.line_number": "#636d83",
+        "editor.active_line_number": "#abb2bf",
+        "editor.active_line.background": "#2c313c",
+        "editor.highlight_line.background": "#2c313c99",
+        "editor.indent_guide": "#3B4048",
+        "editor.indent_guide_active": "#c8c8c8",
+        "editor.selection.background": "#67769660",
+        "editor.gutter.background": "#282c34",
+        "text": "#A9B7C6",
+        "text.accent": "#F92672",
+        "text.muted": "#808080",
+        "status_bar.background": "#21252b",
+        "tab.active_background": "#282c34",
+        "tab.inactive_background": "#21252b",
+        "tab_bar.background": "#21252b",
+        "title_bar.background": "#21252b",
+        "panel.background": "#21252b",
+        "surface.background": "#282c34",
+        "element.background": "#2c313a",
+        "element.hover": "#373e47",
+        "element.active": "#4b5363",
+        "error": "#FF0000",
+        "warning": "#E6DB74",
+        "success": "#A6E22E",
+        "info": "#66D9EF",
+        "scrollbar.thumb.background": "#4b5363",
+        "scrollbar.thumb.hover_background": "#5a6377",
+        "terminal.foreground": "#A9B7C6",
+        "terminal.background": "#282c34",
+        "terminal.ansi.black": "#21252b",
+        "terminal.ansi.bright_black": "#5c6370",
+        "terminal.ansi.red": "#ff5153",
+        "terminal.ansi.bright_red": "#ff6b6b",
+        "terminal.ansi.green": "#98c379",
+        "terminal.ansi.bright_green": "#b5e890",
+        "terminal.ansi.yellow": "#E6DB74",
+        "terminal.ansi.bright_yellow": "#eaeea0",
+        "terminal.ansi.blue": "#61afef",
+        "terminal.ansi.bright_blue": "#82c1ff",
+        "terminal.ansi.magenta": "#c678dd",
+        "terminal.ansi.bright_magenta": "#e2a6ff",
+        "terminal.ansi.cyan": "#56b6c2",
+        "terminal.ansi.bright_cyan": "#70d7df",
+        "terminal.ansi.white": "#abb2bf",
+        "terminal.ansi.bright_white": "#f8fafd",
+        "syntax": {
+          "attribute": {
+            "color": "#BBB529"
+          },
+          "comment": {
+            "color": "#808080"
+          },
+          "comment.doc": {
+            "color": "#629755"
+          },
+          "constant": {
+            "color": "#4186F8",
+            "font_weight": 700
+          },
+          "constructor": {
+            "color": "#66D9EF"
+          },
+          "function": {
+            "color": "#A6E22E"
+          },
+          "keyword": {
+            "color": "#F92672",
+            "font_weight": 700
+          },
+          "namespace": {
+            "color": "#507874"
+          },
+          "number": {
+            "color": "#AE81FF"
+          },
+          "operator": {
+            "color": "#F92672"
+          },
+          "parameter": {
+            "color": "#FD971F"
+          },
+          "property": {
+            "color": "#FD971F"
+          },
+          "string": {
+            "color": "#E6DB74"
+          },
+          "type": {
+            "color": "#66D9EF"
+          },
+          "type.builtin": {
+            "color": "#66D9EF",
+            "font_style": "italic"
+          },
+          "variable": {
+            "color": "#CBAD96"
+          },
+          "variable.special": {
+            "color": "#FD971F",
+            "font_style": "italic",
+            "font_weight": 700
+          },
+          "tag": {
+            "color": "#F92672"
+          },
+          "punctuation": {
+            "color": "#A9B7C6"
+          },
+          "punctuation.bracket": {
+            "color": "#A9B7C6"
+          },
+          "punctuation.delimiter": {
+            "color": "#A9B7C6"
+          },
+          "punctuation.special": {
+            "color": "#F92672"
+          },
+          "invalid": {
+            "color": "#FF0000"
+          }
+        }
+      }
+    }
+  ]
+}
