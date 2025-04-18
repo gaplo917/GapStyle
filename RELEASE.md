@@ -3,7 +3,7 @@
 1. Modify GapStyle in intellij
 2. Export GapStyle in .icls format in build/ folder
 3. `diff` the newly exported .icls with
-   `intellij_androidstudio/GapStyle/colors/GapStyle.xml`
+   `intellij/GapStyle/colors/GapStyle.xml`
 4. Add necessary changes on the source
 
 # Update Version
