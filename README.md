@@ -7,9 +7,11 @@
 
 # GapStyle - Being Productive Beyond Your Status Quo.
 
-GapStyle is a **_world's first_\*** **_productivity-oriented_** and **_semantic-highlighting-driven_** designed color
-scheme that **_[each supported language](#actively-maintain-language)_** is tailored with
-**_[rich colors while maintaining a comfortable contrast](#gapstyle-specification)_** to help developers boost reading
+GapStyle is a world's first productivity-oriented and semantic-highlighting-driven designed color
+scheme.
+
+**_[Each supported language](#actively-maintain-language)_** is tailored with
+**_[affinitive colors while maintaining a comfortable contrast](#gapstyle-specification)_** to help developers boost reading
 and writing speed in different programming languages.
 
 GapStyle helps you to:
@@ -19,29 +21,11 @@ GapStyle helps you to:
 - Quickly learn similar syntax across different languages with a universal designed color
 - Spot errors before program execution
 
+## Compare with default theme
 
-<small><i>\* world's first color scheme uses affinitive color plate design\*\* to boost developers' productivity.
+![intellij](preview/GapStyle%20Intellij.png)
 
-\*\* affinitive color plate design uses similar colors to represent sematic-similar syntax, i.e., "class and abstract class", "function parameters, local variables, instance variables". See [GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
-</i></small>
-
-## Screenshots
-
-### IDE
-
-|                                                                                             |                                                                                         |
-| :-----------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
-| ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/ide-intellij.png) Intellij | ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/ide-vscode.png) VSCode |
-
-### Language Preview
-
-|                                                                                                                 |                                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-| ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/kotlin.png) Kotlin (Android Studio / Intellij) |  ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/java.png) Java (Android Studio / Intellij)  |
-|          ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/swift.png) Swift (App Code)           |         ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/scala.png) Scala (Intellij)          |
-|     ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/javascript.png) Javascript (Intellij)      |   ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/python.png) Python (PyCharm / Intellij)    |
-|         ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/go.png) Go (GoLand / Intellij)         | ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/php.png) PHP (PhpStorm/ WebStorm/ Intellij)) |
-|       ![](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/android-logcat.png) Android Logcat       |                                                                                                               |
+![intellij](preview/GapStyle%20Intellij.png)
 
 ## Actively Maintain Language
 
@@ -67,3 +51,10 @@ GapStyle helps you to:
 
 # Sponsor
 <a href="https://opencollective.com/gapstyle/contribute/backer-37397/checkout" target="_blank"><img alt="open collective badge" src="https://opencollective.com/gapstyle/tiers/backer.svg?avatarHeight=96" /></a>
+
+
+# Appendix
+<small><i>\* world's first color scheme uses affinitive color plate design\*\* to boost developers' productivity.
+
+\*\* affinitive color plate design uses similar colors to represent sematic-similar syntax, i.e., "class and abstract class", "function parameters, local variables, instance variables". See [GapStyle Specification](https://github.com/gaplo917/GapStyle/tree/master/spec#color-palette)
+</i></small>
