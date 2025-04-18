@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>color.scheme.GapStyle</id>
   <name>GapStyle Color Scheme</name>
-  <version>4.1</version>
+  <version>4.2</version>
   <vendor email="gaplotech@gmail.com" url="https://github.com/gaplo917/GapStyle">Gary Lo</vendor>
   <description><![CDATA[
     <h2><b>Being Productive Beyond Your Status Quo.</b></h2>
@@ -20,8 +20,13 @@
   ]]></description>
 
   <change-notes><![CDATA[
+      <h1>4.2</h1>
+      <ul>
+        <li>[Typescript] Typescript enum color #16</li>
+        <li>[XML] Bold custom tag for consistency</li>
+      </ul>
       <h1>4.1</h1>
-      <p>Being Productive Beyond Your Status Quo. Bring your productive experience further from GapStyle 3.1.</p>
+      <p>Being Productive Beyond Your Status Quo. Bring your productive experience further from GapStyle 4.1.</p>
       <ul>
         <li>[All] Enhance reassign variables style to</li>
         <li>[Elixir] Enhance Elixir styles</li>
@@ -31,7 +36,7 @@
         <li><a href=&quot;https://marketplace.visualstudio.com/items?itemName=gaplo917.gapstylevs&quot;>GapStyle VS 2.0</a> (VS Code support is available!)</li>
       </ul>
       <h1>4.0</h1>
-      <p>Being Productive Beyond Your Status Quo. Bring your productive experience further from GapStyle 3.1.</p>
+      <p>Being Productive Beyond Your Status Quo. Bring your productive experience further from GapStyle 4.0.</p>
       <ul>
         <li>Add Rust, Ruby, R, Erlang, Elixir Support</li>
         <li>Huge rework on all template language including HTML, XML, JSX, Angular Template, Vue Template, JSP, Velocity, JADE</li>
