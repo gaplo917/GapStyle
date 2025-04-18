@@ -1484,13 +1484,6 @@ tokenColors:
     settings:
       foreground: *LOCAL_VAR
 
-  - name: Typescript / Javascript Variable
-    scope:
-    - variable.other.constant.js  # Fix incorrect highlighting of pseudo-constants in js, jsx
-    - variable.other.constant.ts  # Fixes incorrect highlighting of pseudo-constants in ts
-    - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
-    - variable.other.constant.jsx # Fixes incorrect highlighting of pseudo-constants in tsx
-
   - name: Typescript / Javascript Default
     scope:
     - source.ts keyword.operator
@@ -1544,8 +1537,8 @@ tokenColors:
 
   - name: Typescript / Javascript Decorator
     scope:
-    - meta.decorator.ts # typescript
-    - source.ts meta.decorator.ts variable.other.readwrite.ts
+    - source.ts meta.decorator.ts meta.function-call.ts entity.name.function.ts
+    - source.ts meta.decorator.ts
     - source.js meta.decorator entity.name.function
     settings:
       foreground: *DECORATOR
@@ -2398,12 +2391,45 @@ tokenColors:
     - entity.other.ng-binding-name
     settings:
       foreground: *FUNCTION_PARAM
+
   - name: Angular Binding Punctuation
     scope:
     - meta.ng-binding punctuation.definition.string.begin.html
     - meta.ng-binding punctuation.definition.string.end.html
     settings:
       foreground: *DEFAULT
+
+  - name: Angular Data Binding
+    scope:
+    - expression.ng variable.other.object.ts
+    settings:
+      foreground: *FUNCTION_PARAM
+
+  - name: Angular Expression Variable
+    scope: expression.ng variable.other.readwrite.ts
+    settings:
+      foreground: *LOCAL_VAR
+
+  - name: Angular Expression Property
+    scope: expression.ng variable.other.property.ts
+    settings:
+      foreground: *MEMBER_VAR
+
+  - name: Angular TS (Standalone Component)
+    scope: meta.decorator.ts meta.objectliteral.ts text.html
+    settings:
+      foreground: *DEFAULT
+  
+  - name: Angular Type
+    scope: expression.ng entity.name.type.ts
+    settings:
+      foreground: *FUNCTION_PARAM
+
+  - name: Custom Type
+    scope: text.html meta.tag.custom entity.name.tag.html
+    settings:
+      fontStyle: bold
+
 # =============================================================================
 # Vue Template
 # =============================================================================
