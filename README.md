@@ -30,9 +30,13 @@ GapStyle helps you to:
 
 ## Compare with default theme
 
-![intellij](preview/GapStyle%20Intellij.png)
+#### Intellij
 
-![intellij](preview/GapStyle%20Intellij.png)
+![intellij](preview/GapStyleIntellij.png)
+
+#### VSCode
+
+![intellij](preview/GapStyleVS.png)
 
 ## Actively Maintain Language
 
@@ -43,7 +47,7 @@ GapStyle helps you to:
 | [XCode](https://github.com/gaplo917/GapStyle/tree/master/xcode)       | Swift, Objective C                                                                                                                                                              |
 | [Zed](https://github.com/gaplo917/GapStyle/tree/master/zed)           | All languages supported by Zed Editor                                                                                                                                           |
 
-# Learn More About GapStyle
+## Learn More About GapStyle
 
 ### How can GapStyle boost productivity?
 
@@ -55,6 +59,17 @@ GapStyle helps you to:
   - [Color Palette](spec/README.md#color-palette)
   - [Special Styling](spec/README.md#special-styling)
   - [Special File Type](spec/README.md#special-file-type)
+
+## Installation
+
+### Intellij - Marketplace install
+
+![marketplace install](preview/marketplace-install-intellij.png)
+
+### Intellij - Manual install@
+
+https://github.com/user-attachments/assets/e1b5e32e-3164-447e-9dd0-6af7538bc308
+
 
 # Sponsor
 <a href="https://opencollective.com/gapstyle/contribute/backer-37397/checkout" target="_blank"><img alt="open collective badge" src="https://opencollective.com/gapstyle/tiers/backer.svg?avatarHeight=96" /></a>
