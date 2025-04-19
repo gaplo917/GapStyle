@@ -60,16 +60,26 @@ GapStyle helps you to:
   - [Special Styling](spec/README.md#special-styling)
   - [Special File Type](spec/README.md#special-file-type)
 
-## Installation
+## Installations
 
 ### Intellij - Marketplace install
 
+Search GapStyle in Marketplace
+
 ![marketplace install](preview/marketplace-install-intellij.png)
 
-### Intellij - Manual install@
+### Intellij - Manual install
+
+Download the latest build in [GitHub Release](https://github.com/gaplo917/GapStyle/releases)
 
 https://github.com/user-attachments/assets/e1b5e32e-3164-447e-9dd0-6af7538bc308
 
+
+### VSCode - Marketplace install
+
+Search GapStyleVS in Marketplace
+
+![marketplace vs install](preview/markplace-gapstylevs.png)
 
 # Sponsor
 <a href="https://opencollective.com/gapstyle/contribute/backer-37397/checkout" target="_blank"><img alt="open collective badge" src="https://opencollective.com/gapstyle/tiers/backer.svg?avatarHeight=96" /></a>
