@@ -1,9 +1,11 @@
 <scheme name="GapStyle 4.3" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2018-10-15T04:33:26</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2021.2.0.0</property>
-        <property name="modified">2025-04-18T00:00:00</property>
+        <property name="ideVersion">2025.1.0.0</property>
+        <property name="version">4.3</property>
+        <property name="vendorMail">gaplotech@gmail.com</property>
+        <property name="vendorName">Gary Lo</property>
+        <property name="vendorUrl">https://github.com/gaplo917/GapStyle</property>
     </metaInfo>
     <option name="LINE_SPACING" value="1.2"/>
     <font>
