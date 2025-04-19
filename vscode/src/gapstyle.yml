@@ -1949,15 +1949,40 @@ tokenColors:
   - name: Go Keywords
     scope:
       - constant.language.go
+      - constant.language.null.go
+      - storage.type.error.go
     settings:
       foreground: *KEYWORD
       fontStyle: bold
+
   - name: Go System Type
     scope:
       - source.go storage.type
     settings:
       foreground: *KEYWORD
       fontStyle: bold
+
+  - name: Go Type
+    scope:
+      - entity.name.type.go
+    settings:
+      foreground: *CLASS
+      fontStyle: normal
+
+  - name: Go Variable
+    scope:
+      - variable.other.assignment.go
+      - variable.other.constant.go
+    settings:
+      foreground: *LOCAL_VAR
+
+  - name: Go Label
+    scope:
+      - variable.other.label.go
+    settings:
+      foreground: *DECORATOR
+
+
 # =============================================================================
 # GraphQL (GraphQL for VSCode)
 # =============================================================================
