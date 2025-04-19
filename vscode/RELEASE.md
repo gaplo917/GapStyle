@@ -1,6 +1,8 @@
 # Update Color scheme
 
-1. Build theme JSON from YAML: `npm run build`
+1. Check [Quickstart guide](vsc-extension-quickstart.md)
+2. Make changes to [src/gapstyle.yml](src/gapstyle.yml)
+3. Build theme JSON from YAML: `npm run build`
 
 # Update Version
 
