@@ -3,7 +3,9 @@
 The world-first\* productivity-oriented color scheme for intelliJ, VSCode to fill the gap between programming languages
 and human.
 
-![screenshots](https://raw.githubusercontent.com/gaplo917/GapStyle/master/vscode/screenshots/sample.ts.png)
+![screenshots](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/preview/GapStyleVS.png)
+
+![screenshots](https://cdn.jsdelivr.net/gh/gaplo917/GapStyle@master/vscode/screenshots/sample.ts.png)
 
 GapStyle is a **_world-first_\*** **_productivity-oriented_** and **_semantic-highlighting-driven_** designed color
 scheme that **_[each supported language](#actively-maintain-language)_** is tailored with
@@ -33,13 +35,13 @@ interface in Kotlin, Java, Scala, etc. See
 ## Enable Semantic Highlighting
 
 1. Command + Shift + P
-2. Search `settings.json` & Open
-3. Paste the follow config
+2. Search `Open User Settings (JSON)`
+3. Edit the following config
 
 ```
 {
     "workbench.colorTheme": "GapStyle VS",
-    "editor.semanticTokenColorCustomizations.enabled": true,
+    "editor.semanticHighlighting.enabled": true,
 }
 ```
 
@@ -53,15 +55,15 @@ interface in Kotlin, Java, Scala, etc. See
 
 1. Install the recommended font into your system (i.e. Hack JBM Ligatured CCG)
 2. Command + Shift + P
-3. Search `settings.json` & Open
-4. Paste the follow config
+3. Search `Open User Settings (JSON)`
+4. Edit the following config
 
 VSCode Editor Config (Full config)
 
 ```
 {
     "workbench.colorTheme": "GapStyle VS",
-    "editor.semanticTokenColorCustomizations": { "enabled": true },
+    "editor.semanticHighlighting.enabled": true,
     "editor.fontFamily": "'Hack JBM Ligatured CCG', 'Hack', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
 }

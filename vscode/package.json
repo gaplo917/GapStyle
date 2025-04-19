@@ -2,7 +2,7 @@
     "name": "gapstylevs",
     "displayName": "GapStyle VS",
     "description": "A world-first* productivity-oriented designed color scheme.",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "publisher": "gaplo917",
     "repository": {
         "type": "git",
@@ -42,13 +42,13 @@
         "dev": "nodemon -e yml --exec 'npm run build'",
         "build": "node ./scripts/build.js",
         "lint": "node ./scripts/lint.js",
-        "package": "vsce package -o ./bin/gapstylevs.vsix",
-        "publish": "vsce publish"
+        "package": "npx vsce package -o ./bin/gapstylevs.vsix",
+        "publish": "npx vsce publish"
     },
     "devDependencies": {
+        "@vscode/vsce": "^3.3.2",
         "js-yaml": "^3.13.1",
         "nodemon": "^2.0.2",
-        "tinycolor2": "^1.4.1",
-        "vsce": "^1.100.2"
+        "tinycolor2": "^1.4.1"
     }
 }

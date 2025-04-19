@@ -2,6 +2,11 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [2.1.0] - 2025-04-19
+
+- Support Python for semantic highlighting
+- Improve Rust semantic highlighting
+
 ## [2.0.0] - 2021-10-31
 
 - Add Dart, Ruby, Erlang, Elixir support

@@ -2,3 +2,9 @@
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
+test/**
+node_modules
+screenshots
+scripts
+src
+themes/gapstyle.shiki.json

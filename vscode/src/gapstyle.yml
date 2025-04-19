@@ -169,8 +169,8 @@ semanticTokenColors:
       fontStyle: ''
 
     class.builtin:
-      foreground: *KEYWORD
-      fontStyle: bold
+      foreground: *CLASS
+      fontStyle: italic
 
     class.defaultLibrary:
       fontStyle: italic
@@ -261,6 +261,9 @@ semanticTokenColors:
     genericType:
       foreground: *TYPE_PARAM
 
+    generic.attribute:
+      foreground: *MEMBER_VAR
+
     label:
       foreground: *DECORATOR
 
@@ -279,6 +282,18 @@ semanticTokenColors:
     selfParameter:
       foreground: *KEYWORD
       fontStyle: bold
+    
+    attributeBracket.attribute:
+      foreground: *DECORATOR
+
+    selfKeyword:
+      foreground: *KEYWORD
+      fontStyle: bold
+      
+    const:
+      foreground: *KEYWORD
+      fontStyle: bold
+
 
 tokenColors: 
 # =============================================================================
@@ -1816,6 +1831,13 @@ tokenColors:
       foreground: *DEFAULT
       fontStyle: ''
 
+  - name: Python Member Access
+    scope:
+    - meta.member.access.python
+    settings:
+      foreground: *MEMBER_VAR
+      fontStyle: ''
+
   - name: Python Keyword
     scope:
     - constant.language.python
@@ -1824,6 +1846,13 @@ tokenColors:
     - keyword.operator.logical.python
     settings:
       foreground: *KEYWORD
+      fontStyle: bold
+
+  - name: Python Class
+    scope:
+    - support.type.exception.python
+    settings:
+      foreground: *TYPE_PARAM
       fontStyle: bold
 
   - name: Python Arguments

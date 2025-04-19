@@ -27,3 +27,10 @@ Read
 - https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
 - https://dev.azure.com/gaplotech/_usersSettings/tokens
+
+
+### Check Marketplace
+
+- https://marketplace.visualstudio.com/items?itemName=gaplo917.gapstylevs
+
+- https://marketplace.visualstudio.com/manage/publishers/gaplo917/extensions/gapstylevs/hub
