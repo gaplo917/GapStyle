@@ -1,5 +1,5 @@
-const { readFile } = require('fs').promises
-const { join } = require('path')
+const fs = require('fs').promises
+const path = require('path')
 const { Type, Schema, load } = require('js-yaml')
 const tinycolor = require('tinycolor2')
 
@@ -47,8 +47,55 @@ const transformSoft = (yamlContent, yamlObj) => {
   )
 }
 
+function deepMerge(obj1, obj2) {
+  // Helper function to check if value is a plain object
+  function isPlainObject(value) {
+    return value && typeof value === 'object' && !Array.isArray(value);
+  }
+
+  // If obj2 is not an object or is null, return obj2 (override)
+  if (!isPlainObject(obj2)) {
+    return obj2;
+  }
+
+  // Start with a copy of obj1
+  const result = { ...obj1 };
+
+  // Iterate over keys in obj2
+  Object.keys(obj2).forEach(key => {
+    const value2 = obj2[key];
+    const value1 = obj1[key];
+
+    if (isPlainObject(value2) && isPlainObject(value1)) {
+      // Recursively merge if both are plain objects
+      result[key] = deepMerge(value1, value2);
+    } else {
+      // Otherwise, override with obj2's value (handles primitives, arrays, etc.)
+      result[key] = value2;
+    }
+  });
+
+  return result;
+}
+
+async function readVariantFolder(folderPath) {
+  const fileContents = [];
+
+  // Read the directory synchronously
+  const files = await fs.readdir(folderPath);
+
+  // Iterate through each item in the folder
+  for(let filePath of files) {
+    const fullPath = path.join(folderPath, filePath);
+    const filename = filePath.replace('.yml', '')
+    fileContents.push({ variant: filename, yamlFile: await fs.readFile(fullPath, 'utf8') });
+  }
+
+  return fileContents;
+}
+
 module.exports = async () => {
-  const yamlFile = await readFile(join(__dirname, '..', 'src', 'gapstyle.yml'), 'utf-8')
+  const yamlFile = await fs.readFile(path.join(__dirname, '..', 'src', 'gapstyle.yml'), 'utf-8')
 
   /** @type {Theme} */
   const base = load(yamlFile, { schema })
@@ -60,8 +107,14 @@ module.exports = async () => {
     }
   }
 
+  const variants = (await readVariantFolder(path.join(__dirname, '..', 'src', 'variants'))).map(({variant, yamlFile}) => {
+    const clone = JSON.parse(JSON.stringify(base))
+    return { variant, base: deepMerge(clone, load(yamlFile, { schema })) }
+  })
+
   return {
     base,
+    variants,
     soft: transformSoft(yamlFile, base), // not yet used
   }
 }

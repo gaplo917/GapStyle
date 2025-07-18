@@ -2,7 +2,7 @@
     "name": "gapstylevs",
     "displayName": "GapStyle VS",
     "description": "A world-first* productivity-oriented designed color scheme.",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "publisher": "gaplo917",
     "repository": {
         "type": "git",
@@ -35,6 +35,11 @@
                 "label": "GapStyle VS",
                 "uiTheme": "vs-dark",
                 "path": "./themes/gapstyle.json"
+            },
+            {
+                "label": "GapStyle VS Dark Modern",
+                "uiTheme": "vs-dark",
+                "path": "./themes/gapstyle-dark-modern.json"
             }
         ]
     },

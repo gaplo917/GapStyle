@@ -2,6 +2,10 @@
 
 All notable changes to the "gapstylevs" extension will be documented in this file.
 
+## [2.2.0] - 2025-07-19
+
+- Add GapStyle VS Dark Modern: Use Dark Modern theme as the base color [#52](https://github.com/gaplo917/GapStyle/issues/52).
+
 ## [2.1.0] - 2025-04-19
 
 - Support Python for semantic highlighting
