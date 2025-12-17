@@ -17,6 +17,6 @@ Update `intellij/GapStyle/META-INF/plugin.xml`
 
 # Submit
 
-1. Run `sh build.sh 5.0`
-2. Submit `intellij/GapStyle5.0.jar` to
+1. Run `sh build.sh 5.1`
+2. Submit `intellij/GapStyle5.1.jar` to
    https://plugins.jetbrains.com/plugin/10559-gapstyle-color-scheme

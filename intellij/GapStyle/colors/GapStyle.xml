@@ -1,8 +1,8 @@
-<scheme name="GapStyle 5.0" version="142" parent_scheme="Darcula">
+<scheme name="GapStyle 5.1" version="142" parent_scheme="Darcula">
     <metaInfo>
         <property name="ide">idea</property>
         <property name="ideVersion">2025.1.0.0</property>
-        <property name="version">5.0</property>
+        <property name="version">5.1</property>
         <property name="vendorMail">gaplotech@gmail.com</property>
         <property name="vendorName">Gary Lo</property>
         <property name="vendorUrl">https://github.com/gaplo917/GapStyle</property>
@@ -1663,7 +1663,7 @@
         </option>
         <option name="INJECTED_LANGUAGE_FRAGMENT">
             <value>
-                <option name="BACKGROUND" value="4ed000"/>
+                <option name="BACKGROUND" value="183c02"/>
             </value>
         </option>
         <option name="INLINE_PARAMETER_HINT">
@@ -2007,6 +2007,28 @@
                 <option name="FOREGROUND" value="629755"/>
                 <option name="FONT_TYPE" value="2"/>
             </value>
+        </option>
+        <option name="KOTLIN_DSL_STYLE1">
+          <value>
+            <option name="FOREGROUND" value="a6e22e" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
+        </option>
+        <option name="KOTLIN_DSL_STYLE2">
+          <value>
+            <option name="FOREGROUND" value="a6e22e" />
+          </value>
+        </option>
+        <option name="KOTLIN_DSL_STYLE3">
+          <value>
+            <option name="FOREGROUND" value="a6e22e" />
+          </value>
+        </option>
+        <option name="KOTLIN_DSL_STYLE4">
+          <value>
+            <option name="FOREGROUND" value="a6e22e" />
+            <option name="EFFECT_TYPE" value="1" />
+          </value>
         </option>
         <option name="KOTLIN_ENUM_ENTRY">
             <value>
@@ -2392,19 +2414,19 @@
         <option name="MARKDOWN_CODE_BLOCK">
             <value>
                 <option name="FOREGROUND" value="a9b7c6" />
-                <option name="BACKGROUND" value="383a3c" />
+        <option name="BACKGROUND" value="212125" />
             </value>
         </option>
         <option name="MARKDOWN_CODE_FENCE">
             <value>
                 <option name="FOREGROUND" value="a9b7c6" />
-                <option name="BACKGROUND" value="383a3c" />
+        <option name="BACKGROUND" value="212125" />
             </value>
         </option>
         <option name="MARKDOWN_CODE_SPAN">
             <value>
                 <option name="FOREGROUND" value="a9b7c6" />
-                <option name="BACKGROUND" value="383a3c" />
+        <option name="BACKGROUND" value="212125" />
             </value>
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_1">
@@ -3999,7 +4021,7 @@
         </option>
         <option name="TERMINAL_COMMAND_TO_RUN_USING_IDE">
             <value>
-                <option name="BACKGROUND" value="4ed000" />
+                <option name="BACKGROUND" value="183c02" />
             </value>
         </option>
         <option name="TEMPLATE_VARIABLE_ATTRIBUTES">
@@ -4286,7 +4308,6 @@
         <option name="XML_TAG_DATA">
             <value>
                 <option name="FOREGROUND" value="a9b7c6" />
-                <option name="BACKGROUND" value="2c2c2c" />
                 <option name="EFFECT_TYPE" value="5" />
             </value>
         </option>
